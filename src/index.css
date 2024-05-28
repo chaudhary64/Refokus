@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Raleway-Medium';
+    src: url("./Fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'SmoochSans-Light';
+    src: url("./Fonts/SmoochSans-Light.ttf");
+}
+
+@font-face {
+    font-family: 'SmoochSans-Medium';
+    src: url("./Fonts/SmoochSans-Medium.ttf");
+}
+
+body {
+    font-family: 'SmoochSans-Medium';
+}
