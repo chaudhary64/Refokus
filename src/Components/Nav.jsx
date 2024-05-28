@@ -19,7 +19,7 @@ const Nav = () => {
         <NavLink to="/carrers">Carrers</NavLink>
       </div>
       <div className="w-[60%] flex justify-end border-2 border-red-900">
-        <Button />
+        <Button text={"Start a Project"} />
       </div>
     </div>
   );
