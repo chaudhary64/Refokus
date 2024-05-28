@@ -18,7 +18,18 @@ const Nav = () => {
         <NavLink to="/news">News</NavLink>
         <NavLink to="/carrers">Carrers</NavLink>
       </div>
-      <div className="w-[60%] flex justify-end border-2 border-red-900">
+      <div className="w-[60%] flex gap-[4%] justify-end">
+        <div
+          id="Languages"
+          className="flex gap-2 tracking-wide text-sm font-sans"
+        >
+          <span className="flex justify-center items-center text-white">
+            EN
+          </span>
+          <span className="flex justify-center items-center text-[#4E4E55]">
+            DE
+          </span>
+        </div>
         <Button text={"Start a Project"} />
       </div>
     </div>
