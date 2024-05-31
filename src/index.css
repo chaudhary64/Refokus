@@ -17,6 +17,11 @@
     src: url("./Fonts/SmoochSans-Medium.ttf");
 }
 
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url("./Fonts/Satoshi-Regular.ttf");
+}
+
 body {
     font-family: 'SmoochSans-Medium';
     background-color: #000000;
