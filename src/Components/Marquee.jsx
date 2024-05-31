@@ -6,7 +6,9 @@ const Marquee = ({ id, length, src, number }) => {
     <div
       style={{ width: width + "%" }}
       className={`h-full ${
-        id == 1 ? "border-b-2 border-t-2 border-r-2" : "border-2"
+        id == 1
+          ? "border-b-[1px] border-t-[1px] border-r-[1px]"
+          : "border-[1px]"
       } border-[#3E3E46] flex justify-evenly items-center`}
     >
       <img src={`${src}`} alt="" />
