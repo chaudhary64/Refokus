@@ -1,4 +1,5 @@
 import React from "react";
+import Marquee from "./Marquee";
 
 const Marquees = () => {
   const marqueeData = [
@@ -28,7 +29,38 @@ const Marquees = () => {
       src: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63d6e83420934a94d642103b_NCC2021_LogoLockup%201.svg",
     },
   ];
-  return <div></div>;
+  return (
+    <div className="h-[10vh] w-full flex flex-nowrap overflow-hidden bg-red-200">
+      {/* First Marquee Conatiner */}
+      <div className="h-full w-full flex shrink-0">
+        {marqueeData.map((marquee) => {
+          return (
+            <Marquee
+              key={marquee.id}
+              id={marquee.id}
+              length={marqueeData.length}
+              src={marquee.src}
+              number={marquee.number}
+            />
+          );
+        })}
+      </div>
+      {/* Second Marquee Conatiner */}
+      <div className="h-full w-full flex shrink-0">
+        {marqueeData.map((marquee) => {
+          return (
+            <Marquee
+              key={marquee.id}
+              id={marquee.id}
+              length={marqueeData.length}
+              src={marquee.src}
+              number={marquee.number}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default Marquees;

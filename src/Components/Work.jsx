@@ -1,4 +1,5 @@
 import React from "react";
+import Marquees from "./Marquees";
 
 const Work = () => {
   return (
@@ -11,6 +12,7 @@ const Work = () => {
           Web Design, Webflow Development, Creative Development
         </p>
       </div>
+      <Marquees />
     </>
   );
 };
