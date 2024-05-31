@@ -141,7 +141,7 @@ const Work = () => {
           marqueeWithNumber={false}
         />
       </section>
-      <Cards />
+      <Cards marginTop={"30vh"} />
     </>
   );
 };
