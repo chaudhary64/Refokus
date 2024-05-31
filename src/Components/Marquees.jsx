@@ -30,7 +30,7 @@ const Marquees = () => {
     },
   ];
   return (
-    <div className="h-[10vh] w-full flex flex-nowrap overflow-hidden">
+    <div className="h-[10vh] w-full mt-[7vh] flex flex-nowrap overflow-hidden">
       {/* First Marquee Conatiner */}
       <div className="h-full w-full flex shrink-0">
         {marqueeData.map((marquee) => {
