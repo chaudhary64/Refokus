@@ -29,6 +29,7 @@ const Cards = ({ marginTop }) => {
         return (
           <Card
             key={card.id}
+            id={card.id}
             heading={card.heading}
             text={card.text}
             footer={card.footer}
