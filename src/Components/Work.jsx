@@ -1,6 +1,7 @@
 import React from "react";
 import Marquees from "./Marquees";
 import SliderSection from "./SliderSection";
+import Cards from "./Cards";
 
 const Work = () => {
   const marqueeDataWithNumber = [
@@ -140,6 +141,7 @@ const Work = () => {
           marqueeWithNumber={false}
         />
       </section>
+      <Cards />
     </>
   );
 };
