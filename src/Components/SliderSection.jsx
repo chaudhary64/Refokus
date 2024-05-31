@@ -169,6 +169,7 @@ const SliderSection = () => {
       {data.map((slide) => {
         return (
           <Slides
+            key={slide.id}
             id={slide.id}
             heading={slide.heading}
             description={slide.description}
