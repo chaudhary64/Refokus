@@ -2,7 +2,7 @@ import React from "react";
 
 const Marquee = ({ id, length, src, number }) => {
   const width = 100 / length;
-  return (
+  return number ? (
     <div
       style={{ width: width + "%" }}
       className={`h-full ${
@@ -13,6 +13,10 @@ const Marquee = ({ id, length, src, number }) => {
     >
       <img src={`${src}`} alt="" />
       <p className="text-4xl text-white">{number}</p>
+    </div>
+  ) : (
+    <div className={`h-full flex justify-evenly items-center`}>
+      <img src={`${src}`} alt="" />
     </div>
   );
 };
