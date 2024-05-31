@@ -1,5 +1,6 @@
 import React from "react";
 import Marquees from "./Marquees";
+import SliderSection from "./SliderSection";
 
 const Work = () => {
   return (
@@ -13,6 +14,7 @@ const Work = () => {
         </p>
       </div>
       <Marquees />
+      <SliderSection />
     </>
   );
 };
