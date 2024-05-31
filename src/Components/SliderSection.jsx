@@ -1,4 +1,5 @@
 import React from "react";
+import Slides from "./Slides";
 
 const SliderSection = () => {
   const data = [
@@ -163,7 +164,21 @@ const SliderSection = () => {
       bgColor: "#FF4747",
     },
   ];
-  return <div className="w-full mt-[14vh] border-4 border-cyan-300"></div>;
+  return (
+    <div className="w-full mt-[14vh] px-20 border-4 border-cyan-300">
+      {data.map((slide) => {
+        return (
+          <Slides
+            id={slide.id}
+            heading={slide.heading}
+            description={slide.description}
+            caseStudy={slide.caseStudy}
+            bgColor={slide.bgColor}
+          />
+        );
+      })}
+    </div>
+  );
 };
 
 export default SliderSection;
