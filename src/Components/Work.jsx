@@ -2,6 +2,7 @@ import React from "react";
 import Marquees from "./Marquees";
 import SliderSection from "./SliderSection";
 import Cards from "./Cards";
+import Footer from "./Footer";
 
 const Work = () => {
   const marqueeDataWithNumber = [
@@ -142,6 +143,7 @@ const Work = () => {
         />
       </section>
       <Cards marginTop={"30vh"} />
+      <Footer />
     </>
   );
 };
