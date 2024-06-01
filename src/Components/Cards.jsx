@@ -23,7 +23,7 @@ const Cards = ({ marginTop }) => {
   return (
     <div
       style={{ marginTop: marginTop }}
-      className={`h-[55vh] w-full px-20 flex gap-1`}
+      className={`h-[60vh] w-full px-20 flex gap-1`}
     >
       {cardData.map((card) => {
         return (

@@ -4,7 +4,7 @@ const Card = ({ heading, text, footer, header, button, width, id }) => {
   return (
     <div
       style={{ width: width }}
-      className={`h-full p-4 relative font-[Raleway-Medium] text-white bg-[#323238] ${
+      className={`h-full p-4 relative font-[Satoshi-Regular] text-white bg-[#323238] ${
         id == 2 ? "hover:bg-[#7443FF]" : "hover:bg-[#3E3E46]"
       } duration-200 rounded-2xl`}
     >
@@ -14,17 +14,17 @@ const Card = ({ heading, text, footer, header, button, width, id }) => {
         <FaArrowRight className="text-xs" />
       </span>
       {/* Text */}
-      <p className="mt-2 text-4xl whitespace-pre-wrap">{text}</p>
+      <p className="mt-2 text-2xl whitespace-pre-wrap">{text}</p>
       {/* Bottom Conditional Rendering */}
-      <span className="flex flex-col absolute bottom-3">
+      <span className="flex flex-col absolute gap-7 bottom-3">
         {header && (
-          <p className="text-[110px] font-[Raleway-Medium] tracking-tight">
+          <p className="text-[110px] leading-none font-[Satoshi-Regular] tracking-tight">
             {header}
           </p>
         )}
-        {footer && <p className="text-xl">{footer}</p>}
+        {footer && <p className="text-sm">{footer}</p>}
         {button && (
-          <button className="text-lg h-10 w-32 rounded-full border-[1px] border-white">
+          <button className="text-base h-10 w-32 rounded-full border-[1px] border-white">
             Contact Us
           </button>
         )}
