@@ -129,10 +129,7 @@ const Work = () => {
         marqueeWithNumber={true}
       />
       <SliderSection />
-      <section
-        id="BrandMarquees"
-        className="mt-[35vh] border-4 flex flex-col gap-10"
-      >
+      <section id="BrandMarquees" className="mt-[35vh] flex flex-col gap-10">
         <Marquees
           marqueeDataWithoutNumber={marqueeDataWithoutNumber[0]}
           marqueeWithNumber={false}

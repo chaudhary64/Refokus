@@ -165,7 +165,7 @@ const SliderSection = () => {
     },
   ];
   return (
-    <div className="w-full mt-[14vh] px-20 border-4 border-cyan-300">
+    <div className="w-full mt-[14vh] px-20">
       {data.map((slide) => {
         return (
           <Slides
