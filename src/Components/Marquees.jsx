@@ -6,6 +6,7 @@ const Marquees = ({
   marqueeDataWithNumber: marqueeData,
   marqueeWithNumber,
   marqueeDataWithoutNumber: marqueeDataBrands,
+  reverse,
 }) => {
   return marqueeWithNumber ? (
     // Marquee with number
@@ -53,20 +54,45 @@ const Marquees = ({
     </div>
   ) : (
     // Marquee without number
-    <div className="w-full flex flex-nowrap overflow-hidden">
-      {/* First Marquee Conatiner */}
-      <div className="h-full w-full flex justify-evenly gap-5 shrink-0">
-        {marqueeDataBrands.map((marquee) => {
-          return <Marquee key={marquee.id} id={marquee.id} src={marquee.src} />;
-        })}
-      </div>
-      {/* Second Marquee Conatiner */}
-      <div className="h-full w-full flex justify-evenly gap-5 shrink-0">
-        {marqueeDataBrands.map((marquee) => {
-          return <Marquee key={marquee.id} id={marquee.id} src={marquee.src} />;
-        })}
-      </div>
-    </div>
+    <section
+      id="marqueeDataWithoutNumber"
+      className="w-full flex flex-nowrap overflow-hidden"
+    >
+      <MotionConfig
+        animate={{
+          x: reverse ? ["0%", "-100%"] : ["-100%", "0%"], // Move from 0% to -100% of the container width
+          transition: {
+            duration: 30,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+          },
+        }}
+      >
+        {/* First Marquee Conatiner */}
+        <motion.div
+          initial={{ x: reverse ? "-100%" : 0 }}
+          className="h-full w-full flex justify-evenly gap-5 shrink-0"
+        >
+          {marqueeDataBrands.map((marquee) => {
+            return (
+              <Marquee key={marquee.id} id={marquee.id} src={marquee.src} />
+            );
+          })}
+        </motion.div>
+        {/* Second Marquee Conatiner */}
+        <motion.div
+          initial={{ x: reverse ? "-100%" : 0 }}
+          className="h-full w-full flex justify-evenly gap-5 shrink-0"
+        >
+          {marqueeDataBrands.map((marquee) => {
+            return (
+              <Marquee key={marquee.id} id={marquee.id} src={marquee.src} />
+            );
+          })}
+        </motion.div>
+      </MotionConfig>
+    </section>
   );
 };
 

@@ -137,6 +137,7 @@ const Work = () => {
         <Marquees
           marqueeDataWithoutNumber={marqueeDataWithoutNumber[1]}
           marqueeWithNumber={false}
+          reverse={true}
         />
       </section>
       <Cards marginTop={"30vh"} />
