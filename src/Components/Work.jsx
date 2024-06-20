@@ -3,6 +3,7 @@ import Marquees from "./Marquees";
 import SliderSection from "./SliderSection";
 import Cards from "./Cards";
 import Footer from "./Footer";
+import Images from "./Images";
 
 const Work = () => {
   const marqueeDataWithNumber = [
@@ -114,15 +115,63 @@ const Work = () => {
       },
     ],
   ];
+  const images = [
+    {
+      src: "/src/assets/images/01.png",
+      display: "inline-block",
+      top: "34%",
+      left: "40%",
+    },
+    {
+      src: "/src/assets/images/02.png",
+      display: "inline-block",
+      top: "40%",
+      left: "37%",
+    },
+    {
+      src: "/src/assets/images/03.png",
+      display: "inline-block",
+      top: "28%",
+      left: "43%",
+    },
+    {
+      src: "/src/assets/images/04.png",
+      display: "inline-block",
+      top: "45%",
+      left: "40%",
+    },
+    {
+      src: "/src/assets/images/05.png",
+      display: "inline-block",
+      top: "40%",
+      left: "45%",
+    },
+    {
+      src: "/src/assets/images/06.png",
+      display: "inline-block",
+      top: "39%",
+      left: "40%",
+    },
+  ];
   return (
     <>
-      <section className="h-[90vh] w-full py-5 flex flex-col justify-end items-center gap-10">
+      <section className="h-[90vh] w-full py-5 flex flex-col justify-end items-center gap-10 relative">
         <p className="text-[37vw] font-[Raleway-Medium] text-white font-thin tracking-tight leading-[0.8] select-none overflow-hidden">
           work
         </p>
         <p className="text-2xl text-[#646464] font-[SmoochSans-Light]">
           Web Design, Webflow Development, Creative Development
         </p>
+        {/* Rendering the images on scroll */}
+        {images.map((image) => (
+          <Images
+            key={Math.random()}
+            src={image.src}
+            display={image.display}
+            top={image.top}
+            left={image.left}
+          />
+        ))}
       </section>
       <Marquees
         marqueeDataWithNumber={marqueeDataWithNumber}
