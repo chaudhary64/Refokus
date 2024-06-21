@@ -118,36 +118,42 @@ const Work = () => {
   ];
   const imagesData = [
     {
+      id: 1,
       src: "/src/assets/images/01.png",
       display: "none",
       top: "34%",
       left: "40%",
     },
     {
+      id: 2,
       src: "/src/assets/images/02.png",
       display: "none",
       top: "40%",
       left: "37%",
     },
     {
+      id: 3,
       src: "/src/assets/images/03.png",
       display: "none",
       top: "28%",
       left: "43%",
     },
     {
+      id: 4,
       src: "/src/assets/images/04.png",
       display: "none",
       top: "45%",
       left: "40%",
     },
     {
+      id: 5,
       src: "/src/assets/images/05.png",
       display: "none",
       top: "40%",
       left: "45%",
     },
     {
+      id: 6,
       src: "/src/assets/images/06.png",
       display: "none",
       top: "39%",
