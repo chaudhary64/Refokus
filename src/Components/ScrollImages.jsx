@@ -1,6 +1,6 @@
 import React from "react";
 
-const Images = ({ src, display, top, left }) => {
+const ScrollImages = ({ src, display, top, left }) => {
   return (
     <img
       src={src}
@@ -11,4 +11,4 @@ const Images = ({ src, display, top, left }) => {
   );
 };
 
-export default Images;
+export default ScrollImages;

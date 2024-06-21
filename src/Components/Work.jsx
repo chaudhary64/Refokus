@@ -3,7 +3,7 @@ import Marquees from "./Marquees";
 import SliderSection from "./SliderSection";
 import Cards from "./Cards";
 import Footer from "./Footer";
-import Images from "./Images";
+import ScrollImages from "./ScrollImages";
 
 const Work = () => {
   const marqueeDataWithNumber = [
@@ -115,7 +115,7 @@ const Work = () => {
       },
     ],
   ];
-  const images = [
+  const imagesData = [
     {
       src: "/src/assets/images/01.png",
       display: "inline-block",
@@ -153,6 +153,7 @@ const Work = () => {
       left: "40%",
     },
   ];
+  const [images, setImages] = useState(imagesData);
   return (
     <>
       <section className="h-[90vh] w-full py-5 flex flex-col justify-end items-center gap-10 relative">
@@ -164,7 +165,7 @@ const Work = () => {
         </p>
         {/* Rendering the images on scroll */}
         {images.map((image) => (
-          <Images
+          <ScrollImages
             key={Math.random()}
             src={image.src}
             display={image.display}
