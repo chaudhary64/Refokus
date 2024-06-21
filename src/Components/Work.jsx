@@ -161,6 +161,44 @@ const Work = () => {
     },
   ];
   const [images, setImages] = useState(imagesData);
+  const { scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", () => showImages());
+
+  const showImages = () => {
+    let scroll = Math.round(scrollYProgress.get() * 100);
+    setImages((prevImages) => {
+      return prevImages.map((image) => {
+        if (scroll >= 0 && scroll < 1) {
+          return { ...image, display: "none" };
+        } else if (image.id === 1 && scroll >= 1 && scroll) {
+          return { ...image, display: "inline-block" };
+        } else if (image.id === 2 && scroll <= 2) {
+          return { ...image, display: "none" };
+        } else if (image.id === 2 && scroll >= 2) {
+          return { ...image, display: "inline-block" };
+        } else if (image.id === 3 && scroll <= 3) {
+          return { ...image, display: "none" };
+        } else if (image.id === 3 && scroll >= 3) {
+          return { ...image, display: "inline-block" };
+        } else if (image.id === 4 && scroll <= 4) {
+          return { ...image, display: "none" };
+        } else if (image.id === 4 && scroll >= 4) {
+          return { ...image, display: "inline-block" };
+        } else if (image.id === 5 && scroll <= 5) {
+          return { ...image, display: "none" };
+        } else if (image.id === 5 && scroll >= 5) {
+          return { ...image, display: "inline-block" };
+        } else if (image.id === 6 && scroll <= 6) {
+          return { ...image, display: "none" };
+        } else if (image.id === 6 && scroll >= 6) {
+          return { ...image, display: "inline-block" };
+        } else {
+          return image;
+        }
+      });
+    });
+  };
   return (
     <>
       <section className="h-[90vh] w-full py-5 flex flex-col justify-end items-center gap-10 relative">
