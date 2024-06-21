@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Marquees from "./Marquees";
 import SliderSection from "./SliderSection";
 import Cards from "./Cards";
 import Footer from "./Footer";
 import ScrollImages from "./ScrollImages";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 const Work = () => {
   const marqueeDataWithNumber = [
@@ -118,37 +119,37 @@ const Work = () => {
   const imagesData = [
     {
       src: "/src/assets/images/01.png",
-      display: "inline-block",
+      display: "none",
       top: "34%",
       left: "40%",
     },
     {
       src: "/src/assets/images/02.png",
-      display: "inline-block",
+      display: "none",
       top: "40%",
       left: "37%",
     },
     {
       src: "/src/assets/images/03.png",
-      display: "inline-block",
+      display: "none",
       top: "28%",
       left: "43%",
     },
     {
       src: "/src/assets/images/04.png",
-      display: "inline-block",
+      display: "none",
       top: "45%",
       left: "40%",
     },
     {
       src: "/src/assets/images/05.png",
-      display: "inline-block",
+      display: "none",
       top: "40%",
       left: "45%",
     },
     {
       src: "/src/assets/images/06.png",
-      display: "inline-block",
+      display: "none",
       top: "39%",
       left: "40%",
     },
