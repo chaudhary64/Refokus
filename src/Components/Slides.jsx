@@ -5,7 +5,7 @@ import { useState } from "react";
 const Slides = ({ id, heading, description, caseStudy, bgColor }) => {
   const [hide, setHide] = useState(true);
   return (
-    <div className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center">
+    <section className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center">
       <span className="flex text-white w-[65%] text-5xl">
         <p>{heading}</p>
       </span>
@@ -16,7 +16,7 @@ const Slides = ({ id, heading, description, caseStudy, bgColor }) => {
           {caseStudy && <Button text={"Case Study"} />}
         </span>
       </div>
-    </div>
+    </section>
   );
 };
 
