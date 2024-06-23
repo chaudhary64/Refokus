@@ -181,7 +181,9 @@ const SliderSection = () => {
       <span
         id="videoSlidesWrapper"
         className="inline-block absolute inset-0 bg-red-100/55 pointer-events-none"
-      ></span>
+      >
+        <div id="videoSlidesWrapperContainer" className="h-[37vh] w-[37vh] relative left-[30%] bg-red-800"></div>
+      </span>
     </section>
   );
 };
