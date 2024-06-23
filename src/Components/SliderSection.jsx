@@ -249,12 +249,12 @@ const SliderSection = () => {
       src: "/src/assets/videos/RocketChat.webm",
     },
   ];
-  const controls = useAnimation();
+  const Wrappercontrols = useAnimation();
   const videoSlidesControls = useAnimation();
 
   // This function is used to move the video wrapper to the corresponding slide and it was called in the Slides component so we need to pass it as a prop to the Slides component
   const MoveVideoWrapper = async (id) => {
-    await controls.start({ y: `${(id - 1) * 100}%` });
+    await Wrappercontrols.start({ y: `${(id - 1) * 100}%` });
     videoSlidesControls.start(
       { y: `-${(id - 1) * 100}%` },
       { duration: 0.25, ease: "easeInOut" }
@@ -281,7 +281,7 @@ const SliderSection = () => {
         className="inline-block absolute inset-0 bg-red-100/55 pointer-events-none"
       >
         <motion.div
-          animate={controls}
+          animate={Wrappercontrols}
           id="videoSlidesWrapperContainer"
           className="h-[37vh] w-fit relative left-[30%] flex flex-col pointer-events-none overflow-hidden"
         >
