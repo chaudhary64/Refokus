@@ -5,7 +5,10 @@ import { useState } from "react";
 const Slides = ({ id, heading, description, caseStudy, bgColor }) => {
   const [hide, setHide] = useState(true);
   return (
-    <section className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center">
+    <section
+      id={id}
+      className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center"
+    >
       <span className="flex text-white w-[65%] text-5xl">
         <p>{heading}</p>
       </span>
