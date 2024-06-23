@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const VideoSlides = ({src,id}) => {
+const VideoSlides = ({ src, id, videoSlidesControls }) => {
   return (
     <>
-      <video id={id} src={src} className="h-[37vh] pointer-events-none"></video>
+      <motion.video
+        animate={videoSlidesControls}
+        id={id}
+        src={src}
+        className="h-[37vh] pointer-events-none"
+      ></motion.video>
     </>
   );
 };

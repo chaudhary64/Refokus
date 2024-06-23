@@ -250,10 +250,12 @@ const SliderSection = () => {
     },
   ];
   const controls = useAnimation();
-  
+  const videoSlidesControls = useAnimation();
+
   // This function is used to move the video wrapper to the corresponding slide and it was called in the Slides component so we need to pass it as a prop to the Slides component
   const MoveVideoWrapper = (id) => {
     controls.start({ y: `${(id - 1) * 100}%` });
+    videoSlidesControls.start({ y: `-${(id - 1) * 100}%` });
   };
 
   return (
@@ -281,7 +283,14 @@ const SliderSection = () => {
           className="h-[37vh] w-fit relative left-[30%] flex flex-col pointer-events-none"
         >
           {videoData.map((item) => {
-            return <VideoSlides key={item.id} id={item.id} src={item.src} />;
+            return (
+              <VideoSlides
+                key={item.id}
+                id={item.id}
+                src={item.src}
+                videoSlidesControls={videoSlidesControls}
+              />
+            );
           })}
         </motion.div>
       </span>
