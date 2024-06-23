@@ -1,6 +1,8 @@
 import React from "react";
 import Slides from "./Slides";
 import VideoSlides from "./VideoSlides";
+import { motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
 
 const SliderSection = () => {
   const data = [
@@ -247,6 +249,13 @@ const SliderSection = () => {
       src: "/src/assets/videos/RocketChat.webm",
     },
   ];
+  const controls = useAnimation();
+  
+  // This function is used to move the video wrapper to the corresponding slide and it was called in the Slides component so we need to pass it as a prop to the Slides component
+  const MoveVideoWrapper = (id) => {
+    controls.start({ y: `${(id - 1) * 100}%` });
+  };
+
   return (
     <section id="sliderSection" className="w-full mt-[14vh] px-20 relative">
       {data.map((slide) => {
@@ -258,6 +267,7 @@ const SliderSection = () => {
             description={slide.description}
             caseStudy={slide.caseStudy}
             bgColor={slide.bgColor}
+            MoveVideoWrapper={MoveVideoWrapper}
           />
         );
       })}
@@ -265,14 +275,15 @@ const SliderSection = () => {
         id="videoSlidesWrapper"
         className="inline-block absolute inset-0 bg-red-100/55 pointer-events-none"
       >
-        <div
+        <motion.div
+          animate={controls}
           id="videoSlidesWrapperContainer"
-          className="h-[37vh] w-fit relative left-[30%] flex flex-col bg-red-800"
+          className="h-[37vh] w-fit relative left-[30%] flex flex-col pointer-events-none"
         >
           {videoData.map((item) => {
             return <VideoSlides key={item.id} id={item.id} src={item.src} />;
           })}
-        </div>
+        </motion.div>
       </span>
     </section>
   );

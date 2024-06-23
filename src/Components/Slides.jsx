@@ -2,10 +2,18 @@ import React from "react";
 import Button from "./Button";
 import { useState } from "react";
 
-const Slides = ({ id, heading, description, caseStudy, bgColor }) => {
+const Slides = ({
+  id,
+  heading,
+  description,
+  caseStudy,
+  bgColor,
+  MoveVideoWrapper,
+}) => {
   const [hide, setHide] = useState(true);
   return (
     <section
+      onMouseEnter={(e) => MoveVideoWrapper(e.target.id)}
       id={id}
       className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center"
     >
