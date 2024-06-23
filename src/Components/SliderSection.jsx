@@ -1,5 +1,6 @@
 import React from "react";
 import Slides from "./Slides";
+import VideoSlides from "./VideoSlides";
 
 const SliderSection = () => {
   const data = [
@@ -164,6 +165,88 @@ const SliderSection = () => {
       bgColor: "#FF4747",
     },
   ];
+  const videoData = [
+    {
+      id: 1,
+      src: "/src/assets/videos/Arqitel.webm",
+    },
+    {
+      id: 2,
+      src: "/src/assets/videos/Cula.mp4",
+    },
+    {
+      id: 3,
+      src: "/src/assets/videos/LayoutLand.mp4",
+    },
+    {
+      id: 4,
+      src: "/src/assets/videos/TTR.webm",
+    },
+    {
+      id: 5,
+      src: "/src/assets/videos/Maniv.mp4",
+    },
+    {
+      id: 6,
+      src: "/src/assets/videos/Singularity.webm",
+    },
+    {
+      id: 7,
+      src: "/src/assets/videos/LikeMagic.webm",
+    },
+    {
+      id: 8,
+      src: "/src/assets/videos/Silvr.webm",
+    },
+    {
+      id: 9,
+      src: "/src/assets/videos/Rainfall.webm",
+    },
+    {
+      id: 10,
+      src: "/src/assets/videos/Intenseye.webm",
+    },
+    {
+      id: 11,
+      src: "/src/assets/videos/Remind.webm",
+    },
+    {
+      id: 12,
+      src: "/src/assets/videos/Summon.webm",
+    },
+    {
+      id: 13,
+      src: "/src/assets/videos/Jungle.webm",
+    },
+    {
+      id: 14,
+      src: "/src/assets/videos/CandidHealth.webm",
+    },
+    {
+      id: 15,
+      src: "/src/assets/videos/Yahoo.webm",
+    },
+    {
+      id: 16,
+      src: "/src/assets/videos/YIR2022.webm",
+    },
+    {
+      id: 17,
+      src: "/src/assets/videos/YIR2021.webm",
+    },
+    {
+      id: 18,
+      src: "/src/assets/videos/Showcase.mp4",
+    },
+    {
+      id: 19,
+      src: "/src/assets/videos/Weglot.webm",
+    },
+    {
+      id: 20,
+      src: "/src/assets/videos/RocketChat.webm",
+    },
+  ];
   return (
     <section id="sliderSection" className="w-full mt-[14vh] px-20 relative">
       {data.map((slide) => {
@@ -182,7 +265,14 @@ const SliderSection = () => {
         id="videoSlidesWrapper"
         className="inline-block absolute inset-0 bg-red-100/55 pointer-events-none"
       >
-        <div id="videoSlidesWrapperContainer" className="h-[37vh] w-[37vh] relative left-[30%] bg-red-800"></div>
+        <div
+          id="videoSlidesWrapperContainer"
+          className="h-[37vh] w-fit relative left-[30%] flex flex-col bg-red-800"
+        >
+          {videoData.map((item) => {
+            return <VideoSlides key={item.id} id={item.id} src={item.src} />;
+          })}
+        </div>
       </span>
     </section>
   );

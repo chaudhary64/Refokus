@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const VideoSlides = () => {
+const VideoSlides = ({src,id}) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      <video id={id} src={src} className="h-[37vh] pointer-events-none"></video>
+    </>
+  );
+};
 
-export default VideoSlides
+export default VideoSlides;
