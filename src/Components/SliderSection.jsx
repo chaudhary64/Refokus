@@ -165,7 +165,7 @@ const SliderSection = () => {
     },
   ];
   return (
-    <section id="sliderSection" className="w-full mt-[14vh] px-20">
+    <section id="sliderSection" className="w-full mt-[14vh] px-20 relative">
       {data.map((slide) => {
         return (
           <Slides
@@ -178,6 +178,7 @@ const SliderSection = () => {
           />
         );
       })}
+      <span id="videoSlidesWrapper" className="inline-block absolute inset-0 bg-red-100/55 pointer-events-none"></span>
     </section>
   );
 };

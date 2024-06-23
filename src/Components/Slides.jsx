@@ -9,10 +9,10 @@ const Slides = ({ id, heading, description, caseStudy, bgColor }) => {
       id={id}
       className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center"
     >
-      <span className="flex text-white w-[65%] text-5xl">
+      <span className="flex text-white w-[65%] text-5xl pointer-events-none">
         <p>{heading}</p>
       </span>
-      <div className="w-[35%] flex flex-col justify-evenly gap-5">
+      <div className="w-[35%] flex flex-col justify-evenly gap-5 pointer-events-none">
         <p className="text-white text-[18px] w-[69%]">{description}</p>
         <span className={`flex gap-5 ${hide ? "opacity-0" : "opacity-1"}`}>
           <Button />
