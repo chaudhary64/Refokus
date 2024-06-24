@@ -254,7 +254,7 @@ const SliderSection = () => {
 
   // This function is used to move the video wrapper to the corresponding slide and it was called in the Slides component so we need to pass it as a prop to the Slides component
   const MoveVideoWrapper = async (id) => {
-    await Wrappercontrols.start({ y: `${(id - 1) * 100}%` });
+    await Wrappercontrols.start({ y: `${(id - 1) * 37}vh` });
     videoSlidesControls.start(
       { y: `-${(id - 1) * 100}%` },
       { duration: 0.25, ease: "easeInOut" }
@@ -283,7 +283,7 @@ const SliderSection = () => {
         <motion.div
           animate={Wrappercontrols}
           id="videoSlidesWrapperContainer"
-          className="h-[37vh] w-fit relative left-[30%] flex flex-col pointer-events-none overflow-hidden"
+          className="h-[50vh] w-fit absolute left-[30%] flex flex-col pointer-events-none overflow-hidden border-4 border-red-500"
         >
           {videoData.map((item) => {
             return (

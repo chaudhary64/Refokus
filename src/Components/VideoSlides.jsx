@@ -8,7 +8,7 @@ const VideoSlides = ({ src, id, videoSlidesControls }) => {
         animate={videoSlidesControls}
         id={id}
         src={src}
-        className="h-[37vh] pointer-events-none"
+        className="h-full w-full pointer-events-none object-cover"
       ></motion.video>
     </>
   );
