@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slides from "./Slides";
 import VideoSlides from "./VideoSlides";
 import { motion } from "framer-motion";
@@ -167,88 +167,108 @@ const SliderSection = () => {
       bgColor: "#FF4747",
     },
   ];
-  const videoData = [
+  const [videoData, setVideoData] = useState([
     {
       id: 1,
       src: "/src/assets/videos/Arqitel.webm",
+      play: false,
     },
     {
       id: 2,
       src: "/src/assets/videos/Cula.mp4",
+      play: false,
     },
     {
       id: 3,
       src: "/src/assets/videos/LayoutLand.mp4",
+      play: false,
     },
     {
       id: 4,
       src: "/src/assets/videos/TTR.webm",
+      play: false,
     },
     {
       id: 5,
       src: "/src/assets/videos/Maniv.mp4",
+      play: false,
     },
     {
       id: 6,
       src: "/src/assets/videos/Singularity.webm",
+      play: false,
     },
     {
       id: 7,
       src: "/src/assets/videos/LikeMagic.webm",
+      play: false,
     },
     {
       id: 8,
       src: "/src/assets/videos/Silvr.webm",
+      play: false,
     },
     {
       id: 9,
       src: "/src/assets/videos/Rainfall.webm",
+      play: false,
     },
     {
       id: 10,
       src: "/src/assets/videos/Intenseye.webm",
+      play: false,
     },
     {
       id: 11,
       src: "/src/assets/videos/Remind.webm",
+      play: false,
     },
     {
       id: 12,
       src: "/src/assets/videos/Summon.webm",
+      play: false,
     },
     {
       id: 13,
       src: "/src/assets/videos/Jungle.webm",
+      play: false,
     },
     {
       id: 14,
       src: "/src/assets/videos/CandidHealth.webm",
+      play: false,
     },
     {
       id: 15,
       src: "/src/assets/videos/Yahoo.webm",
+      play: false,
     },
     {
       id: 16,
       src: "/src/assets/videos/YIR2022.webm",
+      play: false,
     },
     {
       id: 17,
       src: "/src/assets/videos/YIR2021.webm",
+      play: false,
     },
     {
       id: 18,
       src: "/src/assets/videos/Showcase.mp4",
+      play: false,
     },
     {
       id: 19,
       src: "/src/assets/videos/Weglot.webm",
+      play: false,
     },
     {
       id: 20,
       src: "/src/assets/videos/RocketChat.webm",
+      play: false,
     },
-  ];
+  ]);
   const Wrappercontrols = useAnimation();
   const videoSlidesControls = useAnimation();
 
@@ -276,6 +296,7 @@ const SliderSection = () => {
             caseStudy={slide.caseStudy}
             bgColor={slide.bgColor}
             MoveVideoWrapper={MoveVideoWrapper}
+            setVideoData={setVideoData}
           />
         );
       })}
@@ -296,6 +317,7 @@ const SliderSection = () => {
                 id={item.id}
                 src={item.src}
                 videoSlidesControls={videoSlidesControls}
+                play={item.play}
               />
             );
           })}

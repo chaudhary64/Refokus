@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "./Button";
 import { useState } from "react";
 
@@ -9,14 +9,23 @@ const Slides = ({
   caseStudy,
   bgColor,
   MoveVideoWrapper,
+  setVideoData,
 }) => {
   const [hide, setHide] = useState(true);
   const MouseEnterHandler = (e) => {
     MoveVideoWrapper(e.target.id);
     setHide(false);
+    setVideoData((prev) =>
+      prev.map((item) =>
+        e.target.id == item.id
+          ? { ...item, play: true }
+          : { ...item, play: false }
+      )
+    );
   };
   const MouseLeaveHandler = (e) => {
     setHide(true);
+    setVideoData((prev) => prev.map((item) => ({ ...item, play: false })));
   };
   return (
     <section
