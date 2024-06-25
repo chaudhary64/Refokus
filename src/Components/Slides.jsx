@@ -13,7 +13,11 @@ const Slides = ({
   const [hide, setHide] = useState(true);
   return (
     <section
-      onMouseEnter={(e) => MoveVideoWrapper(e.target.id)}
+      onMouseEnter={(e) => {
+        MoveVideoWrapper(e.target.id);
+        setHide(false);
+      }}
+      onMouseLeave={() => setHide(true)}
       id={id}
       className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center"
     >
