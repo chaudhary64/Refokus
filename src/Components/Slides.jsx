@@ -11,13 +11,17 @@ const Slides = ({
   MoveVideoWrapper,
 }) => {
   const [hide, setHide] = useState(true);
+  const MouseEnterHandler = (e) => {
+    MoveVideoWrapper(e.target.id);
+    setHide(false);
+  };
+  const MouseLeaveHandler = (e) => {
+    setHide(true);
+  };
   return (
     <section
-      onMouseEnter={(e) => {
-        MoveVideoWrapper(e.target.id);
-        setHide(false);
-      }}
-      onMouseLeave={() => setHide(true)}
+      onMouseEnter={(e) => MouseEnterHandler(e)}
+      onMouseLeave={(e) => MouseLeaveHandler(e)}
       id={id}
       className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center"
     >
