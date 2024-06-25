@@ -281,7 +281,7 @@ const SliderSection = () => {
       })}
       <span
         id="videoSlidesWrapper"
-        className="inline-block absolute inset-0 bg-red-100/55 pointer-events-none"
+        className="inline-block absolute inset-0 pointer-events-none"
       >
         <motion.div
           animate={Wrappercontrols}
