@@ -26,7 +26,10 @@ const Slides = ({
       </span>
       <div className="w-[35%] flex flex-col justify-evenly gap-5 pointer-events-none">
         <p className="text-white text-[18px] w-[69%]">{description}</p>
-        <span className={`flex gap-5 ${hide ? "opacity-0" : "opacity-1"}`}>
+        <span
+          style={{ transition: "opacity 0.3s linear" }}
+          className={`flex gap-5 ${hide ? "opacity-0" : "opacity-1"}`}
+        >
           <Button />
           {caseStudy && <Button text={"Case Study"} />}
         </span>
