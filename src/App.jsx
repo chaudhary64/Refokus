@@ -1,7 +1,6 @@
 import React from "react";
-import Home from "./Components/Home";
-import Nav from "./Components/Nav";
-import RoutesForNav from "./Components/RoutesForNav";
+import Nav from "./Components/Nav/Nav.jsx";
+import RoutesForNav from "./Components/Nav/RoutesForNav.jsx";
 
 const App = () => {
   return (

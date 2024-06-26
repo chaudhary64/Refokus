@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Marquees from "./Marquees";
+import Marquees from "../Marquee/Marquees";
 import SliderSection from "./SliderSection";
 import Cards from "./Cards";
-import Footer from "./Footer";
+import Footer from "../Footer/Footer";
 import ScrollImages from "./ScrollImages";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 

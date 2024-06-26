@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import Work from "./Work";
-import About from "./About";
-import News from "./News";
-import Carrers from "./Carrers";
+import Home from "../Home/Home";
+import Work from "../Work/Work";
+import About from "../About/About";
+import News from "../News/News";
+import Carrers from "../Carrers/Carrers";
 
 const RoutesForNav = () => {
   return (

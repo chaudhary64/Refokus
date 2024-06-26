@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Button from "./Button";
+import Button from "../Buttons/Button";
 import { useState } from "react";
 
 const Slides = ({
