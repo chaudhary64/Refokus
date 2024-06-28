@@ -4,7 +4,7 @@ import Button from "../Buttons/Button";
 
 const Nav = () => {
   return (
-    <div className="h-[10vh] w-full px-20 fixed flex gap-[3%] items-center bg-black">
+    <div className="h-[10vh] w-full px-20 sticky top-0 z-[9999] flex gap-[3%] items-center bg-black">
       <img
         className="w-[6%]"
         src="https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63349803431f1562dccf1802_refokus%20logo.svg"
