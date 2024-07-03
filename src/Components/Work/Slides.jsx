@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Button from "../Buttons/Button";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Slides = ({
   id,
@@ -10,8 +10,11 @@ const Slides = ({
   bgColor,
   MoveVideoWrapper,
   setVideoData,
+  x,
+  sliderWidth,
 }) => {
   const [hide, setHide] = useState(true);
+  const Slides = useRef(null);
   const MouseEnterHandler = (e) => {
     MoveVideoWrapper(e.target.id);
     setHide(false);
@@ -27,10 +30,17 @@ const Slides = ({
     setHide(true);
     setVideoData((prev) => prev.map((item) => ({ ...item, play: false })));
   };
+  const MouseMoveHandler = (e) => {
+    const slidesWidth = Slides.current.getBoundingClientRect().width;
+    const xNew = ((e.clientX / slidesWidth) * 2 - 1) * 0.5; // Make the value between -0.5 and 0.5
+    x.set(xNew);
+  };
   return (
     <section
+      ref={Slides}
       onMouseEnter={(e) => MouseEnterHandler(e)}
       onMouseLeave={(e) => MouseLeaveHandler(e)}
+      onMouseMove={(e) => MouseMoveHandler(e)}
       id={id}
       className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center"
     >
