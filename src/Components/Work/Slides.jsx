@@ -11,7 +11,7 @@ const Slides = ({
   MoveVideoWrapper,
   setVideoData,
   x,
-  y
+  y,
 }) => {
   const [hide, setHide] = useState(true);
   const Slides = useRef(null);
@@ -47,7 +47,11 @@ const Slides = ({
       onMouseLeave={(e) => MouseLeaveHandler(e)}
       onMouseMove={(e) => MouseMoveHandler(e)}
       id={id}
-      className="h-[37vh] w-full font-[Satoshi-Regular] flex justify-between items-center"
+      style={{
+        backgroundColor: hide ? "" : bgColor,
+        transition: "all 0.8s cubic-bezier(.86,0,.07,1)",
+      }}
+      className="h-[37vh] w-full px-20 font-[Satoshi-Regular] flex justify-between items-center hover:scale-y-[1.05]"
     >
       <span className="flex text-white w-[65%] text-5xl pointer-events-none">
         <p>{heading}</p>
