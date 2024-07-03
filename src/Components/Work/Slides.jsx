@@ -11,7 +11,7 @@ const Slides = ({
   MoveVideoWrapper,
   setVideoData,
   x,
-  sliderWidth,
+  y
 }) => {
   const [hide, setHide] = useState(true);
   const Slides = useRef(null);
@@ -32,8 +32,13 @@ const Slides = ({
   };
   const MouseMoveHandler = (e) => {
     const slidesWidth = Slides.current.getBoundingClientRect().width;
-    const xNew = ((e.clientX / slidesWidth) * 2 - 1) * 0.5; // Make the value between -0.5 and 0.5
+    const slidesHeight = Slides.current.getBoundingClientRect().height;
+    const xCoordinate = e.nativeEvent.offsetX;
+    const yCoordinate = e.nativeEvent.offsetY;
+    const xNew = ((xCoordinate / slidesWidth) * 2 - 1) * 0.5; // Make the value between -0.5 and 0.5
+    const yNew = ((yCoordinate / slidesHeight) * 2 - 1) * 0.5; // Make the value between -0.5 and 0.5
     x.set(xNew);
+    y.set(yNew);
   };
   return (
     <section

@@ -277,7 +277,6 @@ const SliderSection = () => {
   const MoveVideoWrapper = async (id) => {
     await Wrappercontrols.start({
       top: `${id * 37}vh`,
-      y: "-85%",
     });
     videoSlidesControls.start(
       { y: `-${(id - 1) * 100}%` },
@@ -286,7 +285,13 @@ const SliderSection = () => {
   };
 
   const x = useMotionValue(0);
+  const y = useMotionValue(0);
   const xMoveVideoWrapper = useTransform(x, [-0.5, 0, 0.5], [-100, 0, 100]);
+  const yMoveVideoWrapper = useTransform(
+    y,
+    [-0.5, 0, 0.5],
+    ["-95%", "-85%", "-75%"]
+  );
 
   return (
     <section id="sliderSection" className="w-full mt-[14vh] px-20 relative">
@@ -302,6 +307,7 @@ const SliderSection = () => {
             MoveVideoWrapper={MoveVideoWrapper}
             setVideoData={setVideoData}
             x={x}
+            y={y}
           />
         );
       })}
@@ -315,7 +321,7 @@ const SliderSection = () => {
           style={{
             top: "37vh",
             x: xMoveVideoWrapper,
-            y: "-85%",
+            y: yMoveVideoWrapper,
           }}
           className="h-[50vh] w-fit absolute left-[30%] flex flex-col pointer-events-none rounded-3xl overflow-hidden"
         >
