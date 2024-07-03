@@ -276,7 +276,7 @@ const SliderSection = () => {
   const MoveVideoWrapper = async (id) => {
     await Wrappercontrols.start({
       top: `${id * 37}vh`,
-      transform: "translateY(-85%)",
+      y: "-85%",
     });
     videoSlidesControls.start(
       { y: `-${(id - 1) * 100}%` },
@@ -307,7 +307,11 @@ const SliderSection = () => {
         <motion.div
           animate={Wrappercontrols}
           id="videoSlidesWrapperContainer"
-          style={{ top: "37vh", transform: "translateY(-85%)" }}
+          style={{
+            top: "37vh",
+            x: "0",
+            y: "-85%",
+          }}
           className="h-[50vh] w-fit absolute left-[30%] flex flex-col pointer-events-none rounded-3xl overflow-hidden"
         >
           {videoData.map((item) => {
