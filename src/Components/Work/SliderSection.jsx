@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slides from "./Slides";
 import VideoSlides from "./VideoSlides";
-import { motion } from "framer-motion";
+import { motion, useTransform, useMotionValue } from "framer-motion";
 import { useAnimation } from "framer-motion";
+import { useAnimate } from "framer-motion";
 
 const SliderSection = () => {
   const data = [
@@ -271,6 +272,7 @@ const SliderSection = () => {
   ]);
   const Wrappercontrols = useAnimation();
   const videoSlidesControls = useAnimation();
+  const sliderSection = useRef(null);
 
   // This function is used to move the video wrapper to the corresponding slide and it was called in the Slides component so we need to pass it as a prop to the Slides component
   const MoveVideoWrapper = async (id) => {
@@ -284,8 +286,23 @@ const SliderSection = () => {
     );
   };
 
+  const x = useMotionValue(0);
+  const xMoveVideoWrapper = useTransform(x, [-0.5, 0, 0.5], [-100, 0, 100]);
+
+  const MouseMoveHandler = (e) => {
+    const sliderWidth = sliderSection.current.getBoundingClientRect().width;
+    const xNew = ((e.clientX / sliderWidth) * 2 - 1) * 0.5; // Make the value between -0.5 and 0.5
+    x.set(xNew);
+    console.log(e.target);
+  };
+
   return (
-    <section id="sliderSection" className="w-full mt-[14vh] px-20 relative">
+    <section
+      ref={sliderSection}
+      onMouseMove={(e) => MouseMoveHandler(e)}
+      id="sliderSection"
+      className="w-full mt-[14vh] px-20 relative border-4"
+    >
       {data.map((slide) => {
         return (
           <Slides
@@ -309,7 +326,7 @@ const SliderSection = () => {
           id="videoSlidesWrapperContainer"
           style={{
             top: "37vh",
-            x: "0",
+            x: xMoveVideoWrapper,
             y: "-85%",
           }}
           className="h-[50vh] w-fit absolute left-[30%] flex flex-col pointer-events-none rounded-3xl overflow-hidden"
