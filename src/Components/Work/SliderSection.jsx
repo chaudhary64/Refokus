@@ -284,6 +284,13 @@ const SliderSection = () => {
     );
   };
 
+  const opacityController = (num) => {
+    Wrappercontrols.start({
+      opacity: num,
+      transition: { duration: 0.6, ease: [0.86, 0, 0.07, 1] },
+    });
+  };
+
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const xMoveVideoWrapper = useTransform(x, [-0.5, 0, 0.5], [-100, 0, 100]);
@@ -306,6 +313,7 @@ const SliderSection = () => {
             bgColor={slide.bgColor}
             MoveVideoWrapper={MoveVideoWrapper}
             setVideoData={setVideoData}
+            opacityController={opacityController}
             x={x}
             y={y}
           />
@@ -316,6 +324,7 @@ const SliderSection = () => {
         className="inline-block absolute inset-0 pointer-events-none"
       >
         <motion.div
+          initial={{ opacity: 0 }}
           animate={Wrappercontrols}
           id="videoSlidesWrapperContainer"
           style={{

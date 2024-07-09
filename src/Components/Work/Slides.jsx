@@ -10,6 +10,7 @@ const Slides = ({
   bgColor,
   MoveVideoWrapper,
   setVideoData,
+  opacityController,
   x,
   y,
 }) => {
@@ -43,8 +44,14 @@ const Slides = ({
   return (
     <section
       ref={Slides}
-      onMouseEnter={(e) => MouseEnterHandler(e)}
-      onMouseLeave={(e) => MouseLeaveHandler(e)}
+      onMouseEnter={(e) => {
+        MouseEnterHandler(e);
+        opacityController(1);
+      }}
+      onMouseLeave={(e) => {
+        MouseLeaveHandler(e);
+        opacityController(0);
+      }}
       onMouseMove={(e) => MouseMoveHandler(e)}
       id={id}
       style={{
