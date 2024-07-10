@@ -14,7 +14,7 @@ const Loader = ({ children }) => {
     if (path === "/work") return "WORK.";
     if (path === "/about") return "ABOUT.";
     if (path === "/news") return "NEWS.";
-    if (path === "/carrers") return "CARRERS.";
+    if (path === "/careers") return "CARRERS.";
   }
 
   return (

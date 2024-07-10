@@ -56,7 +56,7 @@ const RoutesForNav = () => {
           }
         />
         <Route
-          path="/carrers"
+          path="/careers"
           element={
             // Wrapping the Carrers Component with Loader Component
             <Loader>
