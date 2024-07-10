@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
   return (
-    <div className='h-[94vh] w-full bg-cyan-300 text-9xl flex justify-center items-center'>
-      I am About
-    </div>
-  )
-}
+    <section className="h-fit w-full flex justify-center items-center">
+      <section
+        id="ForwardThinking"
+        className="h-[90vh] w-full p-20 text-[200px] leading-[0.75] tracking-wide text-white border-4 relative"
+      >
+        <p>Forward</p>
+        <p>
+          <span className="tracking-[-50px]">--</span> Thinking
+        </p>
+      </section>
+    </section>
+  );
+};
 
-export default About
+export default About;
