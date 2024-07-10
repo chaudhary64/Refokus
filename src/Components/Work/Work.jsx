@@ -201,7 +201,7 @@ const Work = () => {
   };
   return (
     <>
-      <section className="h-[90vh] w-full py-5 flex flex-col justify-end items-center gap-10 relative">
+      <section className="h-[90vh] w-full py-5 flex flex-col justify-end items-center gap-10 relative overflow-hidden">
         <p className="text-[37vw] font-[Raleway-Medium] text-white font-thin tracking-tight leading-[0.8] select-none overflow-hidden">
           work
         </p>
