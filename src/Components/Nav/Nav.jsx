@@ -51,7 +51,9 @@ const Nav = () => {
           {({ isActive }) => (
             <>
               Home{" "}
-              <AnimatePresence>{isActive && <Indicator />}</AnimatePresence>
+              <AnimatePresence initial={false}>
+                {isActive && <Indicator />}
+              </AnimatePresence>
             </>
           )}
         </NavLink>
@@ -59,7 +61,9 @@ const Nav = () => {
           {({ isActive }) => (
             <>
               Work{" "}
-              <AnimatePresence>{isActive && <Indicator />}</AnimatePresence>
+              <AnimatePresence initial={false}>
+                {isActive && <Indicator />}
+              </AnimatePresence>
             </>
           )}
         </NavLink>
@@ -67,7 +71,9 @@ const Nav = () => {
           {({ isActive }) => (
             <>
               About{" "}
-              <AnimatePresence>{isActive && <Indicator />}</AnimatePresence>
+              <AnimatePresence initial={false}>
+                {isActive && <Indicator />}
+              </AnimatePresence>
             </>
           )}
         </NavLink>
@@ -75,7 +81,9 @@ const Nav = () => {
           {({ isActive }) => (
             <>
               News{" "}
-              <AnimatePresence>{isActive && <Indicator />}</AnimatePresence>
+              <AnimatePresence initial={false}>
+                {isActive && <Indicator />}
+              </AnimatePresence>
             </>
           )}
         </NavLink>
@@ -83,7 +91,9 @@ const Nav = () => {
           {({ isActive }) => (
             <>
               Careers
-              <AnimatePresence>{isActive && <Indicator />}</AnimatePresence>
+              <AnimatePresence initial={false}>
+                {isActive && <Indicator />}
+              </AnimatePresence>
             </>
           )}
         </NavLink>
