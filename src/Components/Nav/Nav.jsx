@@ -14,13 +14,13 @@ const Nav = () => {
   }, [location]);
 
   return (
-    <nav className="h-[10vh] w-full px-20 sticky top-0 z-[9999] flex gap-[3.5%] items-center font-[Satoshi-Regular] bg-black">
+    <nav className="h-[10vh] w-full sticky top-0 z-[9999] grid grid-cols-8 justify-center items-center font-[Satoshi-Regular] bg-black overflow-hidden">
       {/* Refokus Logo */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="6%"
         viewBox="0 0 84 22"
         fill="none"
+        className="w-24 justify-self-center self-center"
       >
         <path
           fillRule="evenodd"
@@ -46,7 +46,7 @@ const Nav = () => {
         />
       </svg>
       {/* Navigation Links */}
-      <div className="text-sm w-[37%] tracking-wider text-[#f3f0f0] flex justify-evenly">
+      <div className="text-sm tracking-wider text-[#f3f0f0] col-[2_/_7] flex justify-start items-center pl-14 gap-7">
         <NavLink to="/" className="relative px-1">
           {({ isActive }) => (
             <>
@@ -98,7 +98,7 @@ const Nav = () => {
           )}
         </NavLink>
       </div>
-      <div className="w-[57%] flex gap-[4%] justify-end">
+      <div className="col-[7_/_-1] flex gap-4 justify-center border-yellow-500">
         <div
           id="Languages"
           className="flex gap-2 tracking-wide text-sm font-sans"
