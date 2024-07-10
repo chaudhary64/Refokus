@@ -21,7 +21,8 @@ const Cards = ({ marginTop }) => {
     },
   ];
   return (
-    <div
+    <section
+      id="CardHolder"
       style={{ marginTop: marginTop }}
       className={`h-[60vh] w-full px-20 flex gap-1`}
     >
@@ -40,7 +41,7 @@ const Cards = ({ marginTop }) => {
         );
       })}
       ;
-    </div>
+    </section>
   );
 };
 
