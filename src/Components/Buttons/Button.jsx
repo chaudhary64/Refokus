@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = ({ text = "Live Website" }) => {
   return (
-    <div className="h-[38px] w-36 rounded-full flex justify-evenly items-center bg-white">
+    <div className="px-4 py-2 rounded-full flex justify-center gap-3 items-center bg-white">
       <p className="text-sm tracking-wide font-[Satoshi-Regular]">{text}</p>
       <span style={{ transform: "translateY(35%)" }}>
         <svg
