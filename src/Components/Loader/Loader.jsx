@@ -23,6 +23,7 @@ const Loader = ({ children }) => {
       <motion.div
         // Animations
         exit={{ display: "none", transition: { delay: 1.75 } }}
+        className="overflow-hidden"
       >
         {children} {/* Displaying the Component which is wrapped in it */}
       </motion.div>
