@@ -1,14 +1,14 @@
 import React from "react";
 
-const BlurCards = ({ heading, number, text }) => {
+const BlurCards = ({ heading, number, text, top, left }) => {
   return (
     <div
-      style={{ backdropFilter: "blur(50px)" }}
-      className="min-h-96 w-96 px-5 grid auto-rows-min item content-evenly border border-[#1C191A] text-white bg-[#0A0A0A] rounded-3xl"
+      style={{ backdropFilter: "blur(50px)", top, left }}
+      className="min-h-[400px] w-[440px] p-6 grid auto-rows-min item content-evenly border border-[#1C191A] text-white leading-none bg-[#0A0A0A] rounded-3xl absolute"
     >
-      <p className="text-xl">{heading}</p>
-      <p className="text-9xl">{number}</p>
-      <p className="text-lg">{text}</p>
+      <p className="text-3xl">{heading}</p>
+      <p className="text-[150px]">{number}</p>
+      <p className="text-xl">{text}</p>
     </div>
   );
 };

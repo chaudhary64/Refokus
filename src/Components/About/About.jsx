@@ -8,18 +8,24 @@ const About = () => {
       heading: "Our People",
       number: "25+",
       text: "We are a world-class team of experts working remotely across different time zones, mostly in Germany, the UK, Argentina, and the US East Coast—the world's leading hubs for creative talent.",
+      top: "5%",
+      left: "3%",
     },
     {
       id: 2,
       heading: "Our Awards",
       number: "77",
       text: "We are results-driven and people-focused (but awards are nice too!). We've won website of the day from multiple awards organizations and have been nominated twice for Webflow Agency of the year.",
+      top: "25%",
+      left: "50%",
     },
     {
       id: 3,
       heading: "Our History",
       number: "2021",
       text: "We are proud of our short history, positioning ourselves as market leaders and demonstrating that great work fuels growth.",
+      top: "55%",
+      left: "15%",
     },
   ];
   return (
@@ -101,8 +107,12 @@ const About = () => {
       </section>
       <section
         id="BlurCards"
-        className="h-screen w-full border-4 border-purple-500"
-      ></section>
+        className="h-[140vh] w-full border-4 border-purple-500 relative"
+      >
+        {blurCardsData.map((data) => (
+          <BlurCards key={data.id} {...data} />
+        ))}
+      </section>
     </section>
   );
 };
