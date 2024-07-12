@@ -1,8 +1,9 @@
 import React from "react";
+import BlurCards from "../Cards/BlurCards";
 
 const About = () => {
   return (
-    <section className="h-fit w-full flex justify-center items-center overflow-hidden">
+    <section className="h-fit w-full overflow-hidden">
       <section
         id="ForwardThinking"
         className="h-[115vh] w-full p-20 text-[200px] leading-[0.75] tracking-wide text-white relative"
@@ -78,6 +79,10 @@ const About = () => {
           />
         </div>
       </section>
+      <section
+        id="BlurCards"
+        className="h-screen w-full border-4 border-purple-500"
+      ></section>
     </section>
   );
 };
