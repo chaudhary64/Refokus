@@ -17,7 +17,7 @@ const About = () => {
       number: "77",
       text: "We are results-driven and people-focused (but awards are nice too!). We've won website of the day from multiple awards organizations and have been nominated twice for Webflow Agency of the year.",
       top: "25%",
-      left: "50%",
+      left: "55%",
     },
     {
       id: 3,
@@ -112,6 +112,54 @@ const About = () => {
         {blurCardsData.map((data) => (
           <BlurCards key={data.id} {...data} />
         ))}
+        {/* ImagesHolder */}
+        <div className="inset-0 absolute z-1 ">
+          <img
+            src="/src/assets/images/about/03.webp"
+            style={{
+              top: "33%",
+              left: "34%",
+            }}
+            className="w-36 absolute rounded-md"
+            alt="03"
+          />
+          <img
+            src="/src/assets/images/about/09.webp"
+            style={{
+              top: "31%",
+              right: "20%",
+            }}
+            className="h-40 absolute rounded-md"
+            alt="09"
+          />
+          <img
+            src="/src/assets/images/about/10.png"
+            style={{
+              top: "63%",
+              left: "53%",
+            }}
+            className="h-32 absolute rounded-md"
+            alt="10"
+          />
+          <img
+            src="/src/assets/images/about/03.webp"
+            style={{
+              top: "80%",
+              left: "10%",
+            }}
+            className="w-32 absolute rounded-md"
+            alt="03"
+          />
+          <img
+            src="/src/assets/images/about/12.webp"
+            style={{
+              top: "92%",
+              left: "42%",
+            }}
+            className="w-52 absolute rounded-md"
+            alt="12"
+          />
+        </div>
       </section>
     </section>
   );
