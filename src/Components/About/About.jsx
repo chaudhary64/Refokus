@@ -2,6 +2,26 @@ import React from "react";
 import BlurCards from "../Cards/BlurCards";
 
 const About = () => {
+  const blurCardsData = [
+    {
+      id: 1,
+      heading: "Our People",
+      number: "25+",
+      text: "We are a world-class team of experts working remotely across different time zones, mostly in Germany, the UK, Argentina, and the US East Coast—the world's leading hubs for creative talent.",
+    },
+    {
+      id: 2,
+      heading: "Our Awards",
+      number: "77",
+      text: "We are results-driven and people-focused (but awards are nice too!). We've won website of the day from multiple awards organizations and have been nominated twice for Webflow Agency of the year.",
+    },
+    {
+      id: 3,
+      heading: "Our History",
+      number: "2021",
+      text: "We are proud of our short history, positioning ourselves as market leaders and demonstrating that great work fuels growth.",
+    },
+  ];
   return (
     <section className="h-fit w-full overflow-hidden">
       <section
