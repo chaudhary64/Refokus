@@ -158,6 +158,17 @@ const About = () => {
           />
         </div>
       </section>
+      <section
+        id="ExpandVideo"
+        className="h-[300vh] w-full mt-80 border-4 border-purple-500 relative"
+      >
+        <div
+          id="Holder"
+          // The value from top is same as the height of the Navbar
+          className="h-[75vh] w-full sticky top-[10vh] bg-red-500"
+        ></div>
+      </section>
+      <section className="h-screen w-full"></section>
     </section>
   );
 };
