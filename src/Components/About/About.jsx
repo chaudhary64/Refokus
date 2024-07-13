@@ -165,8 +165,38 @@ const About = () => {
         <div
           id="Holder"
           // The value from top is same as the height of the Navbar
-          className="h-[75vh] w-full sticky top-[10vh] bg-red-500"
-        ></div>
+          className="h-[72vh] w-full sticky top-[10vh] flex flex-nowrap justify-center items-center gap-5 overflow-clip bg-red-500"
+        >
+          <img
+            className="h-[40%] shrink-0"
+            src="/src/assets/images/about/13.webp"
+            alt="13"
+          />
+          <img
+            className="h-[65%] shrink-0"
+            src="/src/assets/images/about/14.webp"
+            alt="14"
+          />
+          <div className="h-full w-[20%] shrink-0 border-4">
+            <video
+              autoPlay
+              muted
+              loop
+              src="/src/assets/videos/AboutPageVideo.webm"
+              className="h-full w-full object-cover"
+            ></video>
+          </div>
+          <img
+            className="h-[65%] shrink-0"
+            src="/src/assets/images/about/15.webp"
+            alt="15"
+          />
+          <img
+            className="h-[40%] shrink-0"
+            src="/src/assets/images/about/16.webp"
+            alt="16"
+          />
+        </div>
       </section>
       <section className="h-screen w-full"></section>
     </section>
