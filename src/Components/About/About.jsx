@@ -29,7 +29,7 @@ const About = () => {
     },
   ];
   return (
-    <section className="h-fit w-full overflow-hidden">
+    <section className="h-fit w-full">
       <section
         id="ForwardThinking"
         className="h-[115vh] w-full p-20 text-[200px] leading-[0.75] tracking-wide text-white relative"
@@ -105,10 +105,7 @@ const About = () => {
           />
         </div>
       </section>
-      <section
-        id="BlurCards"
-        className="h-[140vh] w-full border-4 border-purple-500 relative"
-      >
+      <section id="BlurCards" className="h-[140vh] w-full relative">
         {blurCardsData.map((data) => (
           <BlurCards key={data.id} {...data} />
         ))}
