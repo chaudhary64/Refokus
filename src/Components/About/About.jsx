@@ -1,6 +1,7 @@
 import React from "react";
 import BlurCards from "../Cards/BlurCards";
 import Marquees from "../Marquee/Marquees";
+import Expander from "./Expander";
 
 const About = () => {
   const blurCardsData = [
@@ -110,6 +111,44 @@ const About = () => {
         src: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275f0442508aceaec02_accel.svg",
       },
     ],
+  ];
+  const expanderData = [
+    {
+      id: 1,
+      question: "What type of clients do you work with?",
+      answer:
+        "We work with a range from startups to Fortune 500 companies, including some cool niches like Venture Capital firms. Sometimes we work with founders, and other times with marketing managers, but what's most important is that our clients are ready to break the mold and refocus their brand and website with unique experiences.",
+    },
+    {
+      id: 2,
+      question: "How big does my project need to be?",
+      answer:
+        "It doesn't matter the size; we build everything from single-page landings to enterprise-level migrations of 1000+ pages and anything in between.",
+    },
+    {
+      id: 3,
+      question: "What's your pricing looking like?",
+      answer:
+        "Our pricing typically ranges from $25k to $150k, though most of our projects are around $50k. We like to work smart with budgets and strategize around your needs. For example, if you have a few pages but not a big budget, we could do something really cool for the homepage and opt for CMS templates or a component-driven approach for internal pages. But if you give us a huge budget, we can go crazy, add 3D animations, and all the good stuff.",
+    },
+    {
+      id: 4,
+      question: "Do you also make normal websites?",
+      answer:
+        "We get this a lot. Yes, we do make normal websites, but with our own twist. Everything we do feels high-end and carefully crafted, and it doesn't need to be crazy animated to feel amazing.",
+    },
+    {
+      id: 5,
+      question: "Is Refokus a Webflow agency?",
+      answer:
+        "We are a Webflow Enterprise Partner and have been nominated (twice) for Webflow Agency of the Year. So yeah, we are kind of a Webflow agency, but not your typical one: we use Webflow as an engineering tool, coding cool stuff on top like GSAP animations, WebGL, and some other black magic.",
+    },
+    {
+      id: 6,
+      question: "How much time do you need for websites?",
+      answer:
+        "Typically, it's between 8 to 12 weeks, but we also have huge 6-month projects for large enterprise clients and created campaign pages in 4 weeks.",
+    },
   ];
   return (
     <section className="h-fit w-full">
@@ -323,6 +362,12 @@ const About = () => {
           reverse={true}
         />
       </section>
+      <section className="h-fit w-full mt-32  border-4 border-purple-500">
+        {expanderData.map((data) => (
+          <Expander key={data.id} {...data} />
+        ))}
+      </section>
+      <section className="h-screen w-full"></section>
     </section>
   );
 };
