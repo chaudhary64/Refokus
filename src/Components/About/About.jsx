@@ -195,7 +195,24 @@ const About = () => {
           />
         </div>
       </section>
-      <section className="h-screen w-full"></section>
+      <div className="mt-32 text-white text-8xl leading-[0.9]">
+        <p className="pl-10">Design driven</p>
+        <p className="pl-28">Technology empowered</p>
+        <p className="pl-48">Human focused</p>
+      </div>
+      <div className="mt-12 text-2xl text-[#dbd9e0] leading-none pl-10 flex justify-center gap-[7%]">
+        <p className="h-full max-w-[30%]">
+          We believe that the synergy between design and technology is
+          unprecedentedly sculpting our world, enhancing our lives, fuelling
+          creativity, boosting efficiency, and constantly redefining the limits
+          of what's possible.
+        </p>
+        <p className="h-full max-w-[30%]">
+          This approach, combined with a human-focused mindset, results in the
+          new breed of agency we are creating, one that delivers more value, in
+          less time, and with a better experience for everyone involved.
+        </p>
+      </div>
     </section>
   );
 };
