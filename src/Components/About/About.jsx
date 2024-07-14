@@ -213,6 +213,22 @@ const About = () => {
           less time, and with a better experience for everyone involved.
         </p>
       </div>
+      <section id="Steffi&Leo" className="mt-16">
+        <img
+          className="h-96 ml-10"
+          src="/src/assets/images/about/17.png"
+          alt=""
+        />
+        <div className="mt-10 text-white px-20 flex justify-between">
+          <p className="text-2xl min-w-fit leading-none">
+            Steffi & Leo <br /> Refokus Founders
+          </p>
+          <p className="text-6xl max-w-[65%] leading-[0.9]">
+            “Our goal is to create websites that tell stories, making them stand
+            out in a digital world where uniqueness is increasingly rare.”
+          </p>
+        </div>
+      </section>
     </section>
   );
 };
