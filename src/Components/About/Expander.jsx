@@ -1,20 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-const Expander = ({question, answer}) => {
+const Expander = ({ question, answer }) => {
   const containerControls = useAnimation();
   const paraControls = useAnimation();
   const paraToAppear = useRef();
   const container = useRef();
   const [direction, setDirection] = useState("forward");
-  const [initialHeight, setInitialHeight] = useState(0);
-  const beginAnimation = () => {
-    let heightPara = paraToAppear.current.getBoundingClientRect().height;
-    let heightContainer = container.current.getBoundingClientRect().height;
-    setInitialHeight(heightContainer);
+  const [height, setHeight] = useState({
+    container: 0,
+    para: 0,
+  });
 
+  useEffect(() => {
+    let heightContainer = container.current.getBoundingClientRect().height;
+    let heightPara = paraToAppear.current.getBoundingClientRect().height;
+    setHeight({ container: heightContainer, para: heightPara });
+  }, []);
+
+  const beginAnimation = () => {
     containerControls.start({
-      height: heightPara + heightContainer,
+      height: height.container + height.para,
       transition: { duration: 0.5 },
     });
     paraControls.start({
@@ -31,7 +37,7 @@ const Expander = ({question, answer}) => {
 
   const closeAnimation = () => {
     containerControls.start({
-      height: initialHeight,
+      height: height.container,
       transition: { duration: 0.5 },
     });
     paraControls.start({
@@ -52,15 +58,15 @@ const Expander = ({question, answer}) => {
         onClick={() =>
           direction === "forward" ? beginAnimation() : closeAnimation()
         }
-        className="shrink-0 w-full text-white text-3xl py-4 flex justify-between px-10 border-b-2 relative overflow-clip"
+        className="shrink-0 w-full text-white text-3xl py-2 flex justify-between px-10 border-b-2 relative overflow-clip"
       >
-        <p>{question}</p>
-        <p>+</p>
+        <p className="h-fit pointer-events-none">{question}</p>
+        <p className="h-fit pointer-events-none">+</p>
         <motion.p
           ref={paraToAppear}
           initial={{ bottom: "100%", opacity: 0 }}
           animate={paraControls}
-          className="absolute left-0 h-fit w-full px-10 pb-4 text-xl leading-none"
+          className="absolute left-0 h-fit w-fit mx-10 text-xl leading-none pointer-events-none"
         >
           {answer}
         </motion.p>
