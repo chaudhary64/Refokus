@@ -158,14 +158,11 @@ const About = () => {
           />
         </div>
       </section>
-      <section
-        id="ExpandVideo"
-        className="h-[300vh] w-full mt-80 border-4 border-purple-500 relative"
-      >
+      <section id="ExpandVideo" className="h-[300vh] w-full mt-80 relative">
         <div
           id="Holder"
           // The value from top is same as the height of the Navbar
-          className="h-[72vh] w-full sticky top-[10vh] flex flex-nowrap justify-center items-center gap-5 overflow-clip bg-red-500"
+          className="h-[75vh] w-full sticky top-[15vh] flex flex-nowrap justify-center items-center gap-8 overflow-clip"
         >
           <img
             className="h-[40%] shrink-0"
@@ -177,7 +174,7 @@ const About = () => {
             src="/src/assets/images/about/14.webp"
             alt="14"
           />
-          <div className="h-full w-[20%] shrink-0 border-4">
+          <div className="h-full w-[24%] shrink-0 rounded-3xl overflow-clip">
             <video
               autoPlay
               muted
