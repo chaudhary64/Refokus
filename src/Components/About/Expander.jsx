@@ -1,57 +1,73 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useMotionValue } from "framer-motion";
 
 const Expander = ({ question, answer }) => {
   const containerControls = useAnimation();
   const paraControls = useAnimation();
+  const plusControls = useAnimation();
   const paraToAppear = useRef();
+  const rotateInitial = useMotionValue(0);
   const container = useRef();
-  const [direction, setDirection] = useState("forward");
-  const [height, setHeight] = useState({
+  const [data, setData] = useState({
     container: 0,
     para: 0,
+    direction: "forward",
   });
 
   useEffect(() => {
     document.fonts.ready.then(() => {
       let heightContainer = container.current.getBoundingClientRect().height;
       let heightPara = paraToAppear.current.getBoundingClientRect().height;
-      setHeight({ container: heightContainer, para: heightPara });
+      setData({
+        container: heightContainer,
+        para: heightPara,
+        direction: "forward",
+      });
       console.log(heightContainer, heightPara);
     });
   }, []);
 
   const beginAnimation = () => {
     containerControls.start({
-      height: height.container + height.para,
-      transition: { duration: 0.5 },
-    });
-    paraControls.start({
-      bottom: 0,
+      height: data.container + data.para,
       transition: { duration: 0.5 },
     });
     paraControls.start({
       opacity: 1,
-      transition: { delay: 0.25, duration: 0.25 },
+      transition: { delay: 0.3, duration: 0.5 },
+    });
+    paraControls.start({
+      top: data.container - 12,
+      y: 0,
+      transition: { duration: 0.5 },
+    });
+    plusControls.start({
+      rotate: rotateInitial.get() + 45,
+      transition: { duration: 0.5 },
     });
 
-    setDirection("backward");
+    setData({ ...data, direction: "backward" });
   };
 
   const closeAnimation = () => {
     containerControls.start({
-      height: height.container,
+      height: data.container,
       transition: { duration: 0.5 },
     });
     paraControls.start({
       opacity: 0,
-      transition: { duration: 0.13 },
+      transition: { duration: 0.25 },
     });
     paraControls.start({
-      bottom: "100%",
+      top: 0,
+      y: "-100%",
       transition: { duration: 1 },
     });
-    setDirection("forward");
+    plusControls.start({
+      rotate: rotateInitial.get() + 45,
+      transition: { duration: 0.5 },
+    });
+    setData({ ...data, direction: "forward" });
   };
   return (
     <>
@@ -59,17 +75,23 @@ const Expander = ({ question, answer }) => {
         ref={container}
         animate={containerControls}
         onClick={() =>
-          direction === "forward" ? beginAnimation() : closeAnimation()
+          data.direction === "forward" ? beginAnimation() : closeAnimation()
         }
-        className="shrink-0 w-full text-white text-3xl py-2 flex justify-between px-10 border-b-2 relative overflow-clip"
+        className="shrink-0 w-full text-[#e8e3e3] text-4xl tracking-wide py-3 flex justify-between border-b border-[#807E7E] select-none relative overflow-clip"
       >
         <p className="h-fit pointer-events-none">{question}</p>
-        <p className="h-fit pointer-events-none">+</p>
+        <motion.p
+          animate={plusControls}
+          style={{ rotate: rotateInitial }}
+          className="h-fit pointer-events-none text-[#807E7E]"
+        >
+          +
+        </motion.p>
         <motion.p
           ref={paraToAppear}
-          initial={{ bottom: "100%", opacity: 0 }}
+          initial={{ top: 0, y: "-100%", opacity: 0 }}
           animate={paraControls}
-          className="absolute left-0 h-fit w-fit mx-10 text-xl leading-none pointer-events-none"
+          className="absolute left-0 h-fit w-fit pt-3 pb-1 text-xl leading-none pointer-events-none"
         >
           {answer}
         </motion.p>

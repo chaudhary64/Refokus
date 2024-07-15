@@ -362,7 +362,7 @@ const About = () => {
           reverse={true}
         />
       </section>
-      <section className="h-fit w-full mt-32  border-4 border-purple-500">
+      <section className="h-fit w-full mt-52 px-20">
         {expanderData.map((data) => (
           <Expander key={data.id} {...data} />
         ))}
