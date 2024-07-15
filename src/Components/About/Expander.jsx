@@ -13,9 +13,12 @@ const Expander = ({ question, answer }) => {
   });
 
   useEffect(() => {
-    let heightContainer = container.current.getBoundingClientRect().height;
-    let heightPara = paraToAppear.current.getBoundingClientRect().height;
-    setHeight({ container: heightContainer, para: heightPara });
+    document.fonts.ready.then(() => {
+      let heightContainer = container.current.getBoundingClientRect().height;
+      let heightPara = paraToAppear.current.getBoundingClientRect().height;
+      setHeight({ container: heightContainer, para: heightPara });
+      console.log(heightContainer, heightPara);
+    });
   }, []);
 
   const beginAnimation = () => {
