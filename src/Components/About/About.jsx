@@ -2,6 +2,8 @@ import React from "react";
 import BlurCards from "../Cards/BlurCards";
 import Marquees from "../Marquee/Marquees";
 import Expander from "./Expander";
+import Cards from "../Cards/Cards";
+import Footer from "../Footer/Footer";
 
 const About = () => {
   const blurCardsData = [
@@ -367,7 +369,8 @@ const About = () => {
           <Expander key={data.id} {...data} />
         ))}
       </section>
-      <section className="h-screen w-full"></section>
+      <Cards marginTop={"35vh"} />
+      <Footer />
     </section>
   );
 };
