@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useLenis } from "lenis/react";
@@ -16,6 +16,16 @@ const Loader = ({ children }) => {
     if (path === "/news") return "NEWS.";
     if (path === "/careers") return "CARRERS.";
   }
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1800);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   return (
     <>
