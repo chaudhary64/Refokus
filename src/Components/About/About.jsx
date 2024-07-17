@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import BlurCards from "../Cards/BlurCards";
 import Marquees from "../Marquee/Marquees";
 import Expander from "./Expander";
 import Cards from "../Cards/Cards";
 import Footer from "../Footer/Footer";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 const About = () => {
   const blurCardsData = [
@@ -152,6 +158,60 @@ const About = () => {
         "Typically, it's between 8 to 12 weeks, but we also have huge 6-month projects for large enterprise clients and created campaign pages in 4 weeks.",
     },
   ];
+  const pinnedElem = useRef();
+  const { scrollYProgress: scrollY } = useScroll();
+  const { scrollYProgress: scrollYPinned } = useScroll({
+    target: pinnedElem,
+    offset: ["start end", "end start"],
+  });
+
+  // ImagesScrolling Info
+  const image1Left = useTransform(scrollY, [0, 0.03], ["18%", "15%"]);
+  const image1Scale = useTransform(scrollY, [0.025, 0.035], [1, 0.8]);
+
+  const imageTop = useTransform(scrollY, [0, 0.03], ["0%", "-10%"]);
+  const image2Scale = useTransform(scrollY, [0.025, 0.035], [1, 0.8]);
+
+  const image11Left = useTransform(scrollY, [0, 0.07], ["44%", "50%"]);
+  const image11Top = useTransform(scrollY, [0, 0.07], ["14%", "8%"]);
+  const image11Scale = useTransform(scrollY, [0.03, 0.07], [1, 0.8]);
+
+  const image4Top = useTransform(scrollY, [0, 0.1], ["54%", "40%"]);
+  const image4Scale = useTransform(scrollY, [0.08, 0.1], [1, 0.8]);
+
+  const image5Top = useTransform(scrollY, [0, 0.095], ["40%", "30%"]);
+  const image5Right = useTransform(scrollY, [0, 0.095], ["18%", "30%"]);
+  const image5Scale = useTransform(scrollY, [0.06, 0.09], [1, 0.8]);
+
+  const image6Left = useTransform(scrollY, [0, 0.13], ["13%", "0%"]);
+  const image6Scale = useTransform(scrollY, [0.1, 0.12], [1, 0.8]);
+
+  const image7Left = useTransform(scrollY, [0, 0.15], ["50%", "40%"]);
+  const image7Top = useTransform(scrollY, [0, 0.15], ["70%", "55%"]);
+  const image7Scale = useTransform(scrollY, [0.1, 0.12], [1, 0.8]);
+
+  const image3Top = useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]);
+
+  const image9Top = useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]);
+  const image9Right = useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]);
+
+  const image10Top = useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]);
+
+  const image8Left = useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]);
+
+  const image12Left = useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]);
+
+  // VideoHolder Width Increaser
+  const holderWidth = useTransform(scrollYPinned, [0, 1], ["24%", "98%"]);
+  const sideItemsScale = useTransform(scrollYPinned, [0, 1], [1, 0.7]);
+
+  // Some Text
+
+  const para1 = useTransform(scrollY, [0.61, 0.7], [10, 40]);
+  const para2 = useTransform(scrollY, [0.61, 0.7], [10, 112]);
+  const para3 = useTransform(scrollY, [0.61, 0.7], [10, 192]);
+
+  useMotionValueEvent(scrollY, "change", (l) => console.log(l));
   return (
     <section className="h-fit w-full">
       <section
@@ -164,65 +224,72 @@ const About = () => {
         </p>
         {/* ImageContainer */}
         <div className="absolute z-[-1] inset-0 overflow-hidden">
-          <img
+          <motion.img
             src="/src/assets/images/about/01.webp"
             style={{
               top: "0%",
-              left: "18%",
+              left: image1Left,
+              scale: image1Scale,
             }}
             className="w-52 rounded-md absolute"
             alt="01"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/02.webp"
             style={{
-              top: "0%",
+              top: imageTop,
               right: "3%",
+              scale: image2Scale,
             }}
             className="w-44 rounded-md absolute"
             alt="02"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/11.webp"
             style={{
-              top: "14%",
-              left: "44%",
+              top: image11Top,
+              left: image11Left,
+              scale: image11Scale,
             }}
             className="w-36 rounded-md absolute"
             alt="11"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/04.png"
             style={{
-              top: "54%",
+              top: image4Top,
               left: "30%",
+              scale: image4Scale,
             }}
             className="w-36 rounded-md absolute"
             alt="04"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/05.webp"
             style={{
-              top: "40%",
-              right: "18%",
+              top: image5Top,
+              right: image5Right,
+              scale: image5Scale,
             }}
             className="w-56 rounded-md absolute"
             alt="05"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/06.webp"
             style={{
               top: "65%",
-              left: "13%",
+              left: image6Left,
+              scale: image6Scale,
             }}
             className="w-40 rounded-md absolute"
             alt="06"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/07.png"
             style={{
-              top: "70%",
-              left: "50%",
+              top: image7Top,
+              left: image7Left,
+              scale: image7Scale,
             }}
             className="h-44 rounded-md absolute"
             alt="07"
@@ -235,94 +302,108 @@ const About = () => {
         ))}
         {/* ImagesHolder */}
         <div className="inset-0 absolute z-1 ">
-          <img
+          <motion.img
             src="/src/assets/images/about/03.webp"
             style={{
-              top: "33%",
+              top: image3Top,
               left: "34%",
             }}
             className="w-36 absolute rounded-md"
             alt="03"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/09.webp"
             style={{
-              top: "31%",
-              right: "20%",
+              top: image9Top,
+              right: image9Right,
             }}
             className="h-40 absolute rounded-md"
             alt="09"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/10.png"
             style={{
-              top: "63%",
-              left: "53%",
+              top: image10Top,
+              left: "52%",
             }}
-            className="h-32 absolute rounded-md"
+            className="h-36 absolute rounded-md"
             alt="10"
           />
-          <img
-            src="/src/assets/images/about/03.webp"
+          <motion.img
+            src="/src/assets/images/about/08.webp"
             style={{
               top: "80%",
-              left: "10%",
+              left: image8Left,
             }}
-            className="w-32 absolute rounded-md"
-            alt="03"
+            className="w-40 absolute rounded-md"
+            alt="08"
           />
-          <img
+          <motion.img
             src="/src/assets/images/about/12.webp"
             style={{
               top: "92%",
-              left: "42%",
+              left: image12Left,
             }}
-            className="w-52 absolute rounded-md"
+            className="w-56 absolute rounded-md"
             alt="12"
           />
         </div>
       </section>
-      <section id="ExpandVideo" className="h-[300vh] w-full mt-80 relative">
+      <section
+        ref={pinnedElem}
+        id="ExpandVideo"
+        className="h-[300vh] w-full mt-80 relative"
+      >
         <div
           id="Holder"
           // The value from top is same as the height of the Navbar
-          className="h-[75vh] w-full sticky top-[15vh] flex flex-nowrap justify-center items-center gap-8 overflow-clip"
+          className="h-[75vh] w-full sticky top-[15vh] flex flex-nowrap justify-center items-center gap-1 overflow-clip"
         >
-          <img
+          <motion.img
+            style={{ scale: sideItemsScale }}
             className="h-[40%] shrink-0"
             src="/src/assets/images/about/13.webp"
             alt="13"
           />
-          <img
+          <motion.img
+            style={{ scale: sideItemsScale }}
             className="h-[65%] shrink-0"
             src="/src/assets/images/about/14.webp"
             alt="14"
           />
-          <div className="h-full w-[24%] shrink-0 rounded-3xl overflow-clip">
+          <motion.div
+            style={{ width: holderWidth }}
+            className="h-full shrink-0 rounded-3xl overflow-hidden"
+          >
             <video
               autoPlay
               muted
               loop
               src="/src/assets/videos/AboutPageVideo.webm"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-3xl"
             ></video>
-          </div>
-          <img
+          </motion.div>
+          <motion.img
+            style={{ scale: sideItemsScale }}
             className="h-[65%] shrink-0"
             src="/src/assets/images/about/15.webp"
             alt="15"
           />
-          <img
+          <motion.img
+            style={{ scale: sideItemsScale }}
             className="h-[40%] shrink-0"
             src="/src/assets/images/about/16.webp"
             alt="16"
           />
         </div>
       </section>
+      {/* Some Text */}
       <div className="mt-32 text-white text-8xl leading-[0.9]">
-        <p className="pl-10">Design driven</p>
-        <p className="pl-28">Technology empowered</p>
-        <p className="pl-48">Human focused</p>
+        <motion.p style={{ paddingLeft: para1 }}>Design driven</motion.p>
+        <motion.p style={{ paddingLeft: para2 }}>Technology empowered</motion.p>
+        <motion.p style={{ paddingLeft: para3 }} className="pl-48">
+          Human focused
+        </motion.p>
       </div>
       <div className="mt-12 text-2xl text-[#dbd9e0] leading-none pl-10 flex justify-center gap-[7%]">
         <p className="h-full max-w-[30%]">
