@@ -210,6 +210,7 @@ const About = () => {
   const para1 = useTransform(scrollY, [0.61, 0.7], [10, 40]);
   const para2 = useTransform(scrollY, [0.61, 0.7], [10, 112]);
   const para3 = useTransform(scrollY, [0.61, 0.7], [10, 192]);
+  const sideRotation = useTransform(scrollYPinned, [0.15, 0.5], [0, 180]);
 
   useMotionValueEvent(scrollY, "change", (l) => console.log(l));
   return (
@@ -356,17 +357,18 @@ const About = () => {
       >
         <div
           id="Holder"
+          style={{ perspective: "3000px" }}
           // The value from top is same as the height of the Navbar
           className="h-[75vh] w-full sticky top-[15vh] flex flex-nowrap justify-center items-center gap-1 overflow-clip"
         >
           <motion.img
-            style={{ scale: sideItemsScale }}
+            style={{ scale: sideItemsScale, rotateY: sideRotation }}
             className="h-[40%] shrink-0"
             src="/src/assets/images/about/13.webp"
             alt="13"
           />
           <motion.img
-            style={{ scale: sideItemsScale }}
+            style={{ scale: sideItemsScale, rotateY: sideRotation }}
             className="h-[65%] shrink-0"
             src="/src/assets/images/about/14.webp"
             alt="14"
@@ -384,13 +386,13 @@ const About = () => {
             ></video>
           </motion.div>
           <motion.img
-            style={{ scale: sideItemsScale }}
+            style={{ scale: sideItemsScale, rotateY: sideRotation }}
             className="h-[65%] shrink-0"
             src="/src/assets/images/about/15.webp"
             alt="15"
           />
           <motion.img
-            style={{ scale: sideItemsScale }}
+            style={{ scale: sideItemsScale, rotateY: sideRotation }}
             className="h-[40%] shrink-0"
             src="/src/assets/images/about/16.webp"
             alt="16"
