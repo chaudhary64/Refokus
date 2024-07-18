@@ -204,13 +204,13 @@ const About = () => {
   // VideoHolder Width Increaser
   const holderWidth = useTransform(scrollYPinned, [0, 1], ["24%", "98%"]);
   const sideItemsScale = useTransform(scrollYPinned, [0, 1], [1, 0.7]);
+  const sideRotation = useTransform(scrollYPinned, [0.15, 0.5], [0, 180]);
 
   // Some Text
 
   const para1 = useTransform(scrollY, [0.61, 0.7], [10, 40]);
   const para2 = useTransform(scrollY, [0.61, 0.7], [10, 112]);
   const para3 = useTransform(scrollY, [0.61, 0.7], [10, 192]);
-  const sideRotation = useTransform(scrollYPinned, [0.15, 0.5], [0, 180]);
 
   useMotionValueEvent(scrollY, "change", (l) => console.log(l));
   return (
