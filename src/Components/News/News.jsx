@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Para from "./Para";
+import Cards from "../Cards/Cards";
+import Footer from "../Footer/Footer";
 import { IoIosSearch } from "react-icons/io";
 
 const News = () => {
@@ -26,7 +29,8 @@ const News = () => {
       category: "Article",
       heading:
         "The Future of Web Design: Webflow's Unmatched Advantage Over WordPress",
-      description: "",
+      description:
+        "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence.",
     },
     {
       id: 4,
@@ -99,7 +103,8 @@ const News = () => {
       id: 13,
       category: "Article",
       heading: "Fighting the flood of generic content",
-      description: "",
+      description:
+        "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence.",
     },
     {
       id: 14,
@@ -243,7 +248,8 @@ const News = () => {
       id: 33,
       category: "Resource",
       heading: "Refokus Tool: API Filler for Webflow",
-      description: "",
+      description:
+        "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence.",
     },
     {
       id: 34,
@@ -493,7 +499,9 @@ const News = () => {
             <p
               onClick={() => setActiveFormat(true)}
               className={`leading-none ${
-                activeFormat ? "border-b" : ""
+                activeFormat
+                  ? "border-b"
+                  : "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence."
               } cursor-grab`}
             >
               List
@@ -501,7 +509,9 @@ const News = () => {
             <p
               onClick={() => setActiveFormat(false)}
               className={`leading-none ${
-                activeFormat ? "" : "border-b"
+                activeFormat
+                  ? "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence."
+                  : "border-b"
               } cursor-grab`}
             >
               Grid
@@ -511,6 +521,14 @@ const News = () => {
         {/* Dot at upper Side */}
         <span className="h-1.5 w-1.5 rounded-full absolute bg-white top-[-10px] left-1 -translate-y-full"></span>
       </div>
+      {/* Para */}
+      <section className="h-fit w-[95%] mx-auto flex flex-col">
+        {data.map((item) => (
+          <Para key={item.id} {...item} />
+        ))}
+      </section>
+      <Cards marginTop={"35vh"} />
+      <Footer />
     </>
   );
 };
