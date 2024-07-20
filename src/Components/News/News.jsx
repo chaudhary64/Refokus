@@ -11,7 +11,7 @@ const News = () => {
       heading:
         "The Strategic Importance of a Cool Website for Venture Capital Firms",
       description:
-        "Learn how a cool website can enhance a venture capital firm’s ability to showcase its successes and attract innovative startups.",
+        "Learn how a cool website can enhance a venture capital firm's ability to showcase its successes and attract innovative startups.",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ const News = () => {
     },
     {
       id: 4,
-      category: "Article",
+      category: "News",
       heading: "Spotlight on Innovation: Webflow's Case Study of Refokus",
       description:
         "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence.",
@@ -41,11 +41,11 @@ const News = () => {
       heading:
         "Elevating Web Development: How Refokus Harnesses Webflow and Emerging Technologies",
       description:
-        "Webflow’s case study on Refokus celebrates our innovative web development work, showcasing how we leverage the no-code platform to create exceptional digital experiences.",
+        "Webflow's case study on Refokus celebrates our innovative web development work, showcasing how we leverage the no-code platform to create exceptional digital experiences.",
     },
     {
       id: 6,
-      category: "Article",
+      category: "News",
       heading:
         "Elevating Your Brand: Why a Custom Webflow Website is a Game-Changer for Startups and Enterprises",
       description:
@@ -60,7 +60,7 @@ const News = () => {
     },
     {
       id: 8,
-      category: "Article",
+      category: "News",
       heading:
         "Maximizing SEO on Webflow: How Webflow Empowers Your Site's Search Performance",
       description:
@@ -79,11 +79,11 @@ const News = () => {
       heading:
         "Refokus at Webflow Conf 2023: A Fusion of Design and Technology",
       description:
-        "Refokus leverages Webflow to blend emotional design with the latest technology, crafting web experiences that connect and convert. Explore our journey with Webflow and why it’s our platform of choice for pushing digital boundaries.",
+        "Refokus leverages Webflow to blend emotional design with the latest technology, crafting web experiences that connect and convert. Explore our journey with Webflow and why it's our platform of choice for pushing digital boundaries.",
     },
     {
       id: 11,
-      category: "Article",
+      category: "News",
       heading: "Emotional Engagement: The Heart of Web Design at Refokus",
       description:
         "At Webflow Conf 2023, Refokus co-founders presented 'Driven by Design, Empowered by Technology,' showcasing how they're pioneering a new era of emotionally engaging websites.",
@@ -103,7 +103,7 @@ const News = () => {
     },
     {
       id: 14,
-      category: "Article",
+      category: "News",
       heading: "Perfect Meeting Memory",
       description:
         "No-code will forever be a misnomer. Its name implies a removal of technical limitations, but in reality, the promise has always been about what could be done if those barriers to entry were replaced with bridges.",
@@ -114,24 +114,25 @@ const News = () => {
       heading:
         "Refokus and the Future of AI in Web Design: A Spotlight on Webflow's Blog Feature",
       description:
-        "Ever since ChatGPT hit the scene, LinkedIn feeds have been bombarded with generic content (and we thought it couldn’t get worse). It's time to end this.",
+        "Ever since ChatGPT hit the scene, LinkedIn feeds have been bombarded with generic content (and we thought it couldn't get worse). It's time to end this.",
     },
     {
       id: 16,
-      category: "Article",
+      category: "Resource",
       heading: "Design Iteration empowered by AI",
-      description: "",
+      description:
+        "No-code will forever be a misnomer. Its name implies a removal of technical limitations, but in reality, the promise has always been about what could be done if those barriers to entry were replaced with bridges.",
     },
     {
       id: 17,
-      category: "Article",
+      category: "News",
       heading: "Beyond the AI buzzword",
       description:
         "Note-Taking is the backbone of every meeting, but it can be distracting from the actual point of the meeting. Luckily, now there is AI powered, perfect meeting memory.",
     },
     {
       id: 18,
-      category: "Article",
+      category: "Resource",
       heading: "A new age of discovery beyond SEO",
       description:
         "Dive into Webflow's blog feature with Refokus's Leo Zakour for an insightful exploration of AI in web design. Learn how artificial intelligence is transforming the creative process in web development.",
@@ -145,7 +146,7 @@ const News = () => {
     },
     {
       id: 20,
-      category: "Article",
+      category: "News",
       heading: "Perceived obsolescence, fast-forwarded",
       description:
         "AI has stormed into our lives, popping up in various products and services. But are all of these integrations adding real value? Or are they just trendy accessories?",
@@ -159,10 +160,10 @@ const News = () => {
     },
     {
       id: 22,
-      category: "Article",
+      category: "News",
       heading: "No-Code, No-Compromises",
       description:
-        "People are scared. To be fair, they’ve always been, for many reasons. The fear of AI is not just about taking over Terminator style, but of its broader economic impact. This time, the wave of automation is different.",
+        "People are scared. To be fair, they've always been, for many reasons. The fear of AI is not just about taking over Terminator style, but of its broader economic impact. This time, the wave of automation is different.",
     },
     {
       id: 23,
@@ -173,14 +174,14 @@ const News = () => {
     },
     {
       id: 24,
-      category: "Article",
+      category: "News",
       heading: "Redefining value in an AI & No-Code world",
       description:
         "Refokus unveils 'Time to Refokus AI' — a cutting-edge chatbot experience leveraging GPT API to navigate emerging tech, design, and digital strategy insights.",
     },
     {
       id: 25,
-      category: "Article",
+      category: "News",
       heading:
         "Reflecting on a Year of Breakthroughs: Refokus's 2022 Year in Review",
       description:
@@ -188,15 +189,15 @@ const News = () => {
     },
     {
       id: 26,
-      category: "Article",
+      category: "Resource",
       heading:
         "Our Refokus on the future, a new website made in Webflow for our agency",
       description:
-        "It’s time for a new breed of agency that combining design, innovation and forward-thinking can help brands create better experiences, not just more of the same.",
+        "It's time for a new breed of agency that combining design, innovation and forward-thinking can help brands create better experiences, not just more of the same.",
     },
     {
       id: 27,
-      category: "Article",
+      category: "News",
       heading: "Refokus Proudly Sponsors Webflow Conf 2022 in San Francisco",
       description:
         "AI is moving so fast, it's breaking necks. By now, no one should doubt the paradigm shifts it will cause across every industry. Along with it, we should ask ourselves, how do we define value in this new digital era?",
@@ -207,11 +208,11 @@ const News = () => {
       heading:
         "Introducing the New Hub for Refokus Tools: Elevating Your Webflow Experience",
       description:
-        "Explore Refokus’s 2022 Year in Review, highlighting a year filled with innovation, growth, and community, solidifying our position as a top Webflow Agency.",
+        "Explore Refokus's 2022 Year in Review, highlighting a year filled with innovation, growth, and community, solidifying our position as a top Webflow Agency.",
     },
     {
       id: 29,
-      category: "Article",
+      category: "News",
       heading:
         "Refokus 2022 Offsite: Where Work Meets Play, Innovation, and Homemade Pasta",
       description:
@@ -236,17 +237,17 @@ const News = () => {
       category: "Article",
       heading: "Refokus Tool: Time to read for Webflow",
       description:
-        "Refokus’s 2022 offsite in Hamburg was a memorable mix of work, play, and culinary exploration, strengthening our team spirit and setting new goals for the future.",
+        "Refokus's 2022 offsite in Hamburg was a memorable mix of work, play, and culinary exploration, strengthening our team spirit and setting new goals for the future.",
     },
     {
       id: 33,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus Tool: API Filler for Webflow",
       description: "",
     },
     {
       id: 34,
-      category: "Article",
+      category: "News",
       heading:
         "Unleashing Creativity and Growth with Refokus & Webflow: A Masterclass Recap",
       description:
@@ -278,7 +279,7 @@ const News = () => {
     },
     {
       id: 38,
-      category: "Article",
+      category: "News",
       heading: "Refokus Tool: CMS Load More for Webflow",
       description:
         "Our Co-Founder and CEO Leo is walking through 4 case studies to show the potential of showcase-websites for Brand Positioning, New Market Reach, Employer Branding & Event Promotion. Ali Ferrante, Account Executive at Webflow, explains how Webflow empowers Refokus to build award-winning websites.",
@@ -292,7 +293,7 @@ const News = () => {
     },
     {
       id: 40,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus's Baltic Sea Retreat: Charting the Course for 2022",
       description:
         "Experience the highlights from OMR 2022 with Refokus and Webflow: Masterclasses on growth, Instagram takeovers, and a showcase of digital marketing's future.",
@@ -320,7 +321,7 @@ const News = () => {
     },
     {
       id: 44,
-      category: "Article",
+      category: "News",
       heading: "Refokus Tool: Rich Text Enhancer",
       description:
         "Refokus sets a dynamic course for 2022 with strategic planning on collaboration, innovation, and culture at their Baltic Sea retreat.",
@@ -334,7 +335,7 @@ const News = () => {
     },
     {
       id: 46,
-      category: "Article",
+      category: "Resource",
       heading:
         "Refokus CEO, Leo, Shares Insights in Webflow Blog: The Engineering Advantage of No-Code",
       description:
@@ -350,10 +351,10 @@ const News = () => {
     },
     {
       id: 48,
-      category: "Article",
+      category: "News",
       heading: "Refokus Tool: Slider Generator",
       description:
-        "Make your Webflow site’s text come alive with Refokus's Rich Text Enhancer. This tool boosts readability and aesthetic appeal, enhancing user engagement through better text presentation.",
+        "Make your Webflow site's text come alive with Refokus's Rich Text Enhancer. This tool boosts readability and aesthetic appeal, enhancing user engagement through better text presentation.",
     },
     {
       id: 49,
@@ -364,7 +365,7 @@ const News = () => {
     },
     {
       id: 50,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus Tool: Page Transitions for Webflow",
       description:
         "Leo from Refokus discusses the engineering benefits of no-code platforms like Webflow, highlighting efficiency and innovation.",
@@ -386,7 +387,7 @@ const News = () => {
     },
     {
       id: 53,
-      category: "Article",
+      category: "News",
       heading: "Refokus Tool: CMS Filters for Webflow",
       description:
         "Transform your Webflow site with dynamic, aesthetic Masonry Layouts from Refokus. Ideal for any content type, our tool brings visual harmony and engagement to your website.",
@@ -400,7 +401,7 @@ const News = () => {
     },
     {
       id: 55,
-      category: "Article",
+      category: "Resource",
       heading:
         "Refokus Champions Webflow Community as Gold Sponsor of #CloneComp 2021",
       description:
@@ -424,7 +425,7 @@ const News = () => {
     },
     {
       id: 58,
-      category: "Article",
+      category: "News",
       heading:
         "Leo from Refokus Joins Finsweet's Critique #4 Panel to Elevate Webflow Design Standards",
       description:
@@ -432,7 +433,7 @@ const News = () => {
     },
     {
       id: 59,
-      category: "Article",
+      category: "Resource",
       heading:
         "Refokus Ascends to Webflow Enterprise Partner Status in Record Time",
       description:
@@ -443,7 +444,7 @@ const News = () => {
       category: "Article",
       heading: "Broken Windows Theory And Tools For Product Teams",
       description:
-        "Streamline your Webflow development with Refokus’s expert CSS nomenclature styleguide, promoting efficiency and scalability.",
+        "Streamline your Webflow development with Refokus's expert CSS nomenclature styleguide, promoting efficiency and scalability.",
     },
   ]);
   return (
