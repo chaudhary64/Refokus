@@ -6,8 +6,8 @@ import { IoIosSearch } from "react-icons/io";
 
 const News = () => {
   const [active, setActive] = useState(false);
-  const [activeFormat, setActiveFormat] = useState(true);
-  const [data, setData] = useState([
+  const [activeFormat, setActiveFormat] = useState(false);
+  const data = [
     {
       id: 1,
       category: "Article",
@@ -28,14 +28,14 @@ const News = () => {
       id: 3,
       category: "Article",
       heading:
-        "The Future of Web Design: Webflow's Unmatched Advantage Over WordPress",
+        "The Future of Web Design Webflow's Unmatched Advantage Over WordPress",
       description:
         "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence.",
     },
     {
       id: 4,
       category: "News",
-      heading: "Spotlight on Innovation: Webflow's Case Study of Refokus",
+      heading: "Spotlight on Innovation Webflow's Case Study of Refokus",
       description:
         "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence.",
     },
@@ -43,7 +43,7 @@ const News = () => {
       id: 5,
       category: "Article",
       heading:
-        "Elevating Web Development: How Refokus Harnesses Webflow and Emerging Technologies",
+        "Elevating Web Development How Refokus Harnesses Webflow and Emerging Technologies",
       description:
         "Webflow's case study on Refokus celebrates our innovative web development work, showcasing how we leverage the no-code platform to create exceptional digital experiences.",
     },
@@ -51,14 +51,14 @@ const News = () => {
       id: 6,
       category: "News",
       heading:
-        "Elevating Your Brand: Why a Custom Webflow Website is a Game-Changer for Startups and Enterprises",
+        "Elevating Your Brand Why a Custom Webflow Website is a Game-Changer for Startups and Enterprises",
       description:
         "Explore how Refokus transcends traditional web development, using Webflow and the latest technologies to craft unique, high-performing websites optimized for the digital future",
     },
     {
       id: 7,
       category: "Article",
-      heading: "Refokus: Your Webflow Agency",
+      heading: "Refokus Your Webflow Agency",
       description:
         "Explore the transformative power of custom Webflow websites with Refokus and learn how a unique, high-end digital presence can position your startup or enterprise as a market leader. Dive into success stories and the distinct advantages of choosing a premium Webflow agency.",
     },
@@ -66,7 +66,7 @@ const News = () => {
       id: 8,
       category: "News",
       heading:
-        "Maximizing SEO on Webflow: How Webflow Empowers Your Site's Search Performance",
+        "Maximizing SEO on Webflow How Webflow Empowers Your Site's Search Performance",
       description:
         "Looking for a Webflow agency that prioritizes custom design, strategic partnership, and has a track record of award-winning projects? Discover the Refokus difference and why we're the fit for your brand.",
     },
@@ -80,15 +80,14 @@ const News = () => {
     {
       id: 10,
       category: "Article",
-      heading:
-        "Refokus at Webflow Conf 2023: A Fusion of Design and Technology",
+      heading: "Refokus at Webflow Conf 2023 A Fusion of Design and Technology",
       description:
         "Refokus leverages Webflow to blend emotional design with the latest technology, crafting web experiences that connect and convert. Explore our journey with Webflow and why it's our platform of choice for pushing digital boundaries.",
     },
     {
       id: 11,
       category: "News",
-      heading: "Emotional Engagement: The Heart of Web Design at Refokus",
+      heading: "Emotional Engagement The Heart of Web Design at Refokus",
       description:
         "At Webflow Conf 2023, Refokus co-founders presented 'Driven by Design, Empowered by Technology,' showcasing how they're pioneering a new era of emotionally engaging websites.",
     },
@@ -117,7 +116,7 @@ const News = () => {
       id: 15,
       category: "Article",
       heading:
-        "Refokus and the Future of AI in Web Design: A Spotlight on Webflow's Blog Feature",
+        "Refokus and the Future of AI in Web Design A Spotlight on Webflow's Blog Feature",
       description:
         "Ever since ChatGPT hit the scene, LinkedIn feeds have been bombarded with generic content (and we thought it couldn't get worse). It's time to end this.",
     },
@@ -159,7 +158,7 @@ const News = () => {
     {
       id: 21,
       category: "Article",
-      heading: "Time to Refokus AI: Pioneering a New Era of Digital Engagement",
+      heading: "Time to Refokus AI Pioneering a New Era of Digital Engagement",
       description:
         "The world of digital marketing is no longer just about humans. AI with its unmatched information processing capabilities is changing the way we research and make decisions.",
     },
@@ -188,7 +187,7 @@ const News = () => {
       id: 25,
       category: "News",
       heading:
-        "Reflecting on a Year of Breakthroughs: Refokus's 2022 Year in Review",
+        "Reflecting on a Year of Breakthroughs Refokus's 2022 Year in Review",
       description:
         "The no-code movement is more than a simple toy for tech enthusiasts, it is a step in the digital evolution aiming to improve processes and the quality of products.",
     },
@@ -211,7 +210,7 @@ const News = () => {
       id: 28,
       category: "Article",
       heading:
-        "Introducing the New Hub for Refokus Tools: Elevating Your Webflow Experience",
+        "Introducing the New Hub for Refokus Tools Elevating Your Webflow Experience",
       description:
         "Explore Refokus's 2022 Year in Review, highlighting a year filled with innovation, growth, and community, solidifying our position as a top Webflow Agency.",
     },
@@ -219,35 +218,35 @@ const News = () => {
       id: 29,
       category: "News",
       heading:
-        "Refokus 2022 Offsite: Where Work Meets Play, Innovation, and Homemade Pasta",
+        "Refokus 2022 Offsite Where Work Meets Play, Innovation, and Homemade Pasta",
       description:
         "The idea for Refokus started out of a desire to create the agency of our dreams. One that does things differently, we can proudly say: we did it. We got even more coming up, and our new website is just the begining.",
     },
     {
       id: 30,
       category: "Article",
-      heading: "Refokus Tool: Automatic Tabs for Webflow",
+      heading: "Refokus Tool Automatic Tabs for Webflow",
       description:
         "Refokus sponsors Webflow Conf 2022, inviting you to join us in San Francisco for an inspiring exploration of no-code development and web design excellence. ",
     },
     {
       id: 31,
       category: "Article",
-      heading: "Refokus Tool: Form Validator for Webflow",
+      heading: "Refokus Tool Form Validator for Webflow",
       description:
         "Dive into the redesigned Refokus Tools website, your hub for free Webflow tools designed to enhance your design workflow and project effectiveness.",
     },
     {
       id: 32,
       category: "Article",
-      heading: "Refokus Tool: Time to read for Webflow",
+      heading: "Refokus Tool Time to read for Webflow",
       description:
         "Refokus's 2022 offsite in Hamburg was a memorable mix of work, play, and culinary exploration, strengthening our team spirit and setting new goals for the future.",
     },
     {
       id: 33,
       category: "Resource",
-      heading: "Refokus Tool: API Filler for Webflow",
+      heading: "Refokus Tool API Filler for Webflow",
       description:
         "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence.",
     },
@@ -255,7 +254,7 @@ const News = () => {
       id: 34,
       category: "News",
       heading:
-        "Unleashing Creativity and Growth with Refokus & Webflow: A Masterclass Recap",
+        "Unleashing Creativity and Growth with Refokus & Webflow A Masterclass Recap",
       description:
         "Transform your Webflow site's content organization with Refokus's Automatic Tabs. This tool makes creating dynamic, user-friendly tabs effortless, enhancing navigation and user experience.",
     },
@@ -271,7 +270,7 @@ const News = () => {
       id: 36,
       category: "Article",
       heading:
-        "Refokus & Webflow at OMR 2022: Leading Digital Innovation Together",
+        "Refokus & Webflow at OMR 2022 Leading Digital Innovation Together",
       description:
         "Increase user engagement on your Webflow site by displaying 'Time to Read' for articles with Refokus's tool. Quick setup, seamless integration, and improved reader experience.",
     },
@@ -279,28 +278,28 @@ const News = () => {
       id: 37,
       category: "Article",
       heading:
-        "Celebrating Refokus's Stellar Inaugural Year: A Look Back at 2021",
+        "Celebrating Refokus's Stellar Inaugural Year A Look Back at 2021",
       description:
         "Simplify content updates on your Webflow site with the API Filler tool by Refokus. Automate the process, ensuring your site remains dynamic and updated with the latest information.",
     },
     {
       id: 38,
       category: "News",
-      heading: "Refokus Tool: CMS Load More for Webflow",
+      heading: "Refokus Tool CMS Load More for Webflow",
       description:
         "Our Co-Founder and CEO Leo is walking through 4 case studies to show the potential of showcase-websites for Brand Positioning, New Market Reach, Employer Branding & Event Promotion. Ali Ferrante, Account Executive at Webflow, explains how Webflow empowers Refokus to build award-winning websites.",
     },
     {
       id: 39,
       category: "Article",
-      heading: "Refokus Tool: CMS Prev/Next for Webflow",
+      heading: "Refokus Tool CMS Prev/Next for Webflow",
       description:
         "With seven nominations at the Webflow Awards 2022, Refokus is recognized for its excellence in web design and development, highlighting its status as a top Webflow Agency and Enterprise Partner.",
     },
     {
       id: 40,
       category: "Resource",
-      heading: "Refokus's Baltic Sea Retreat: Charting the Course for 2022",
+      heading: "Refokus's Baltic Sea Retreat Charting the Course for 2022",
       description:
         "Experience the highlights from OMR 2022 with Refokus and Webflow: Masterclasses on growth, Instagram takeovers, and a showcase of digital marketing's future.",
     },
@@ -314,7 +313,7 @@ const News = () => {
     {
       id: 42,
       category: "Article",
-      heading: "Refokus Tool: Social Share for Webflow",
+      heading: "Refokus Tool Social Share for Webflow",
       description:
         "Keep your audience engaged with the CMS Load More tool from Refokus, designed for Webflow sites. This tool facilitates dynamic content loading, enhancing usability and site speed.",
     },
@@ -328,14 +327,14 @@ const News = () => {
     {
       id: 44,
       category: "News",
-      heading: "Refokus Tool: Rich Text Enhancer",
+      heading: "Refokus Tool Rich Text Enhancer",
       description:
         "Refokus sets a dynamic course for 2022 with strategic planning on collaboration, innovation, and culture at their Baltic Sea retreat.",
     },
     {
       id: 45,
       category: "Article",
-      heading: "Refokus Tool: Copy to Clipboard for Webflow",
+      heading: "Refokus Tool Copy to Clipboard for Webflow",
       description:
         "When we decided to start Refokus, the most important ingredient we wanted to take special care of was culture.",
     },
@@ -343,7 +342,7 @@ const News = () => {
       id: 46,
       category: "Resource",
       heading:
-        "Refokus CEO, Leo, Shares Insights in Webflow Blog: The Engineering Advantage of No-Code",
+        "Refokus CEO, Leo, Shares Insights in Webflow Blog The Engineering Advantage of No-Code",
       description:
         "Boost your Webflow site's engagement with easy-to-implement social share buttons from Refokus. As a top Webflow agency, we make social sharing seamless and stylish.",
     },
@@ -351,35 +350,35 @@ const News = () => {
       id: 47,
       category: "Article",
       heading:
-        "Unveiling the Truth: Refokus Tackles No-Code Misconceptions on Webflow Blog",
+        "Unveiling the Truth Refokus Tackles No-Code Misconceptions on Webflow Blog",
       description:
         "Refokus triumphs at the Webflow Conference 2022, winning the Webflow Partners Award for Surprise and Delight with their standout design for the Weglot for Germany website.",
     },
     {
       id: 48,
       category: "News",
-      heading: "Refokus Tool: Slider Generator",
+      heading: "Refokus Tool Slider Generator",
       description:
         "Make your Webflow site's text come alive with Refokus's Rich Text Enhancer. This tool boosts readability and aesthetic appeal, enhancing user engagement through better text presentation.",
     },
     {
       id: 49,
       category: "Article",
-      heading: "Refokus Tool: Masonry Layout for Webflow",
+      heading: "Refokus Tool Masonry Layout for Webflow",
       description:
         "Enable effortless content copying on your Webflow site with the 'Copy to Clipboard' tool by Refokus. Improve user interaction with a simple click-to-copy functionality.",
     },
     {
       id: 50,
       category: "Resource",
-      heading: "Refokus Tool: Page Transitions for Webflow",
+      heading: "Refokus Tool Page Transitions for Webflow",
       description:
         "Leo from Refokus discusses the engineering benefits of no-code platforms like Webflow, highlighting efficiency and innovation.",
     },
     {
       id: 51,
       category: "Article",
-      heading: "Refokus Tool: CMS Tabs for Webflow",
+      heading: "Refokus Tool CMS Tabs for Webflow",
       description:
         "Join Refokus in exploring the misconceptions of no-code development on the Webflow blog, offering a fresh perspective on the capabilities and future of no-code web design and development.",
     },
@@ -387,21 +386,21 @@ const News = () => {
       id: 52,
       category: "Article",
       heading:
-        "Introducing Refokus Tools: Revolutionizing Webflow with No-Code Innovation",
+        "Introducing Refokus Tools Revolutionizing Webflow with No-Code Innovation",
       description:
         "Effortlessly create custom sliders in Webflow with the Slider Generator by Refokus. Discover a user-friendly way to enhance your Webflow sites, brought to you by a leading Webflow agency.",
     },
     {
       id: 53,
       category: "News",
-      heading: "Refokus Tool: CMS Filters for Webflow",
+      heading: "Refokus Tool CMS Filters for Webflow",
       description:
         "Transform your Webflow site with dynamic, aesthetic Masonry Layouts from Refokus. Ideal for any content type, our tool brings visual harmony and engagement to your website.",
     },
     {
       id: 54,
       category: "Article",
-      heading: "Refokus Tool: Image Magnifier for Webflow",
+      heading: "Refokus Tool Image Magnifier for Webflow",
       description:
         "Bring your Webflow site to life with elegant page transitions. Refokus's tool makes it simple to add sophisticated animations, boosting user engagement and elevating your site's design.",
     },
@@ -425,7 +424,7 @@ const News = () => {
       id: 57,
       category: "Article",
       heading:
-        "Revolutionizing Marketing with Design Systems: Insights from Refokus on Webflow Blog",
+        "Revolutionizing Marketing with Design Systems Insights from Refokus on Webflow Blog",
       description:
         "Streamline your Webflow site with dynamic CMS Filters from Refokus. This tool simplifies sorting and filtering content, offering an intuitive experience for users and designers alike.",
     },
@@ -452,7 +451,8 @@ const News = () => {
       description:
         "Streamline your Webflow development with Refokus's expert CSS nomenclature styleguide, promoting efficiency and scalability.",
     },
-  ]);
+  ];
+  const [grid, setGrid] = useState(true);
   return (
     <>
       <div className="h-fit w-[95%] mx-auto my-16 pr-10 flex justify-between items-center bg-black text-white">
@@ -497,7 +497,10 @@ const News = () => {
           </div>
           <div className="text-white flex items-center gap-3">
             <p
-              onClick={() => setActiveFormat(true)}
+              onClick={() => {
+                setActiveFormat(true);
+                setGrid(false);
+              }}
               className={`leading-none ${
                 activeFormat
                   ? "border-b"
@@ -507,7 +510,10 @@ const News = () => {
               List
             </p>
             <p
-              onClick={() => setActiveFormat(false)}
+              onClick={() => {
+                setActiveFormat(false);
+                setGrid(true);
+              }}
               className={`leading-none ${
                 activeFormat
                   ? "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence."
@@ -522,9 +528,13 @@ const News = () => {
         <span className="h-1.5 w-1.5 rounded-full absolute bg-white top-[-10px] left-1 -translate-y-full"></span>
       </div>
       {/* Para */}
-      <section className="h-fit w-[95%] mx-auto flex flex-col">
+      <section
+        className={`h-fit w-[95%] mx-auto ${
+          grid ? "grid grid-cols-3 gap-[0px_3%]" : "flex flex-col"
+        }`}
+      >
         {data.map((item) => (
-          <Para key={item.id} {...item} />
+          <Para key={item.id} {...item} grid={grid} />
         ))}
       </section>
       <Cards marginTop={"35vh"} />
