@@ -6,6 +6,9 @@ import { IoIosSearch } from "react-icons/io";
 
 const News = () => {
   const [active, setActive] = useState(false);
+  const [artcileActive, setArticleActive] = useState(false);
+  const [newsActive, setNewsActive] = useState(false);
+  const [resourceActive, setResourceActive] = useState(false);
   const data = [
     {
       id: 1,
@@ -493,34 +496,66 @@ const News = () => {
         {/* RightPart */}
         <span className="h-fit w-fit flex items-center gap-16 text-lg tracking-wider">
           <div className="h-fit w-fit flex justify-center items-center gap-3">
-            <span className={`bg-white py-0.5 px-3.5 rounded-full`}>All</span>
             <span
+              onClick={() => {
+                setInput("");
+                setArticleActive(false);
+                setNewsActive(false);
+                setResourceActive(false);
+              }}
+              className={`bg-white py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
+            >
+              All
+            </span>
+            <span
+              onClick={() => {
+                setInput("Article");
+                setArticleActive(true);
+                setNewsActive(false);
+                setResourceActive(false);
+              }}
               style={{
                 transition: "background-color 0.7s ease",
               }}
               className={`${
-                grid ? "bg-[#3E3E46] text-[#bdbddc]" : "bg-white"
-              } py-0.5 px-3.5 rounded-full`}
+                grid || artcileActive
+                  ? "bg-[#3E3E46] text-[#bdbddc]"
+                  : "bg-white"
+              } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
             >
               Article
             </span>
             <span
+              onClick={() => {
+                setInput("News");
+                setNewsActive(true);
+                setArticleActive(false);
+                setResourceActive(false);
+              }}
               style={{
                 transition: "background-color 0.7s 0.15s ease",
               }}
               className={`${
-                grid ? "bg-[#3E3E46] text-[#bdbddc]" : "bg-white"
-              } py-0.5 px-3.5 rounded-full`}
+                grid || newsActive ? "bg-[#3E3E46] text-[#bdbddc]" : "bg-white"
+              } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
             >
               News
             </span>
             <span
+              onClick={() => {
+                setInput("Resource");
+                setResourceActive(true);
+                setNewsActive(false);
+                setArticleActive(false);
+              }}
               style={{
                 transition: "background-color 0.7s 0.3s ease",
               }}
               className={`${
-                grid ? "bg-[#3E3E46] text-[#bdbddc]" : "bg-white"
-              } py-0.5 px-3.5 rounded-full`}
+                grid || resourceActive
+                  ? "bg-[#3E3E46] text-[#bdbddc]"
+                  : "bg-white"
+              } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
             >
               Resource
             </span>
