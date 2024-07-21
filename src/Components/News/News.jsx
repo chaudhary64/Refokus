@@ -451,7 +451,14 @@ const News = () => {
         "Streamline your Webflow development with Refokus's expert CSS nomenclature styleguide, promoting efficiency and scalability.",
     },
   ];
+  const [input, setInput] = useState("");
   const [grid, setGrid] = useState(false);
+  function search(data) {
+    let arr = [...data];
+    return arr.filter((item) => {
+      return item.category.toLowerCase().includes(input.toLowerCase());
+    });
+  }
   return (
     <>
       <div className="h-fit w-[95%] mx-auto my-16 pr-10 flex justify-between items-center bg-black text-white">
@@ -472,6 +479,7 @@ const News = () => {
           <input
             onFocus={() => setActive(true)}
             onBlur={() => setActive(false)}
+            onChange={(e) => setInput(e.target.value)}
             style={{
               transition: "border 0.5s linear",
               border: active ? "2px solid #A88BF7" : "2px solid transparent",
@@ -573,7 +581,11 @@ const News = () => {
             </section>
           </>
         ) : (
-          data.map((item) => <Para key={item.id} {...item} grid={grid} />)
+          <>
+            {search(data).map((item, index) => (
+              <Para key={item.id} {...item} grid={grid} />
+            ))}
+          </>
         )}
       </section>
 
