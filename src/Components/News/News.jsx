@@ -6,7 +6,6 @@ import { IoIosSearch } from "react-icons/io";
 
 const News = () => {
   const [active, setActive] = useState(false);
-  const [activeFormat, setActiveFormat] = useState(false);
   const data = [
     {
       id: 1,
@@ -18,7 +17,7 @@ const News = () => {
     },
     {
       id: 2,
-      category: "Article",
+      category: "News",
       heading:
         "Why Refokus is the Best Partner to Build Your Venture Capital Website",
       description:
@@ -79,14 +78,14 @@ const News = () => {
     },
     {
       id: 10,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus at Webflow Conf 2023 A Fusion of Design and Technology",
       description:
         "Refokus leverages Webflow to blend emotional design with the latest technology, crafting web experiences that connect and convert. Explore our journey with Webflow and why it's our platform of choice for pushing digital boundaries.",
     },
     {
       id: 11,
-      category: "News",
+      category: "Resource",
       heading: "Emotional Engagement The Heart of Web Design at Refokus",
       description:
         "At Webflow Conf 2023, Refokus co-founders presented 'Driven by Design, Empowered by Technology,' showcasing how they're pioneering a new era of emotionally engaging websites.",
@@ -122,7 +121,7 @@ const News = () => {
     },
     {
       id: 16,
-      category: "Resource",
+      category: "News",
       heading: "Design Iteration empowered by AI",
       description:
         "No-code will forever be a misnomer. Its name implies a removal of technical limitations, but in reality, the promise has always been about what could be done if those barriers to entry were replaced with bridges.",
@@ -143,7 +142,7 @@ const News = () => {
     },
     {
       id: 19,
-      category: "Article",
+      category: "News",
       heading: "Onboarding your team to harness the power of AI",
       description:
         "In a world where everything looks the same, uniqueness is the only weapon marketers have to win over competition. But uniqueness comes from innovation, and the only way to break through into innovative communication is with deep exploration and iteration.",
@@ -157,7 +156,7 @@ const News = () => {
     },
     {
       id: 21,
-      category: "Article",
+      category: "News",
       heading: "Time to Refokus AI Pioneering a New Era of Digital Engagement",
       description:
         "The world of digital marketing is no longer just about humans. AI with its unmatched information processing capabilities is changing the way we research and make decisions.",
@@ -171,7 +170,7 @@ const News = () => {
     },
     {
       id: 23,
-      category: "Article",
+      category: "News",
       heading: "Time to Refokus",
       description:
         "As a human race, we are driven by a constant desire for progress, improvement, and innovation. The perception of obsolescence plays a key role in keeping us motivated to innovate and push boundaries.",
@@ -208,7 +207,7 @@ const News = () => {
     },
     {
       id: 28,
-      category: "Article",
+      category: "News",
       heading:
         "Introducing the New Hub for Refokus Tools Elevating Your Webflow Experience",
       description:
@@ -245,7 +244,7 @@ const News = () => {
     },
     {
       id: 33,
-      category: "Resource",
+      category: "News",
       heading: "Refokus Tool API Filler for Webflow",
       description:
         "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence.",
@@ -284,14 +283,14 @@ const News = () => {
     },
     {
       id: 38,
-      category: "News",
+      category: "Resource",
       heading: "Refokus Tool CMS Load More for Webflow",
       description:
         "Our Co-Founder and CEO Leo is walking through 4 case studies to show the potential of showcase-websites for Brand Positioning, New Market Reach, Employer Branding & Event Promotion. Ali Ferrante, Account Executive at Webflow, explains how Webflow empowers Refokus to build award-winning websites.",
     },
     {
       id: 39,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus Tool CMS Prev/Next for Webflow",
       description:
         "With seven nominations at the Webflow Awards 2022, Refokus is recognized for its excellence in web design and development, highlighting its status as a top Webflow Agency and Enterprise Partner.",
@@ -319,21 +318,21 @@ const News = () => {
     },
     {
       id: 43,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus Wins Webflow Partners Award for Surprise and Delight",
       description:
         "Improve content navigation on your Webflow site with the CMS Prev-Next tool from Refokus. A simple solution to add intuitive prev-next buttons to your CMS collections.",
     },
     {
       id: 44,
-      category: "News",
+      category: "Resource",
       heading: "Refokus Tool Rich Text Enhancer",
       description:
         "Refokus sets a dynamic course for 2022 with strategic planning on collaboration, innovation, and culture at their Baltic Sea retreat.",
     },
     {
       id: 45,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus Tool Copy to Clipboard for Webflow",
       description:
         "When we decided to start Refokus, the most important ingredient we wanted to take special care of was culture.",
@@ -356,14 +355,14 @@ const News = () => {
     },
     {
       id: 48,
-      category: "News",
+      category: "Resource",
       heading: "Refokus Tool Slider Generator",
       description:
         "Make your Webflow site's text come alive with Refokus's Rich Text Enhancer. This tool boosts readability and aesthetic appeal, enhancing user engagement through better text presentation.",
     },
     {
       id: 49,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus Tool Masonry Layout for Webflow",
       description:
         "Enable effortless content copying on your Webflow site with the 'Copy to Clipboard' tool by Refokus. Improve user interaction with a simple click-to-copy functionality.",
@@ -392,14 +391,14 @@ const News = () => {
     },
     {
       id: 53,
-      category: "News",
+      category: "Resource",
       heading: "Refokus Tool CMS Filters for Webflow",
       description:
         "Transform your Webflow site with dynamic, aesthetic Masonry Layouts from Refokus. Ideal for any content type, our tool brings visual harmony and engagement to your website.",
     },
     {
       id: 54,
-      category: "Article",
+      category: "Resource",
       heading: "Refokus Tool Image Magnifier for Webflow",
       description:
         "Bring your Webflow site to life with elegant page transitions. Refokus's tool makes it simple to add sophisticated animations, boosting user engagement and elevating your site's design.",
@@ -414,7 +413,7 @@ const News = () => {
     },
     {
       id: 56,
-      category: "Article",
+      category: "Resource",
       heading:
         "Streamlining Webflow Development with Refokus Styleguide for CSS Nomenclature",
       description:
@@ -422,7 +421,7 @@ const News = () => {
     },
     {
       id: 57,
-      category: "Article",
+      category: "Resource",
       heading:
         "Revolutionizing Marketing with Design Systems Insights from Refokus on Webflow Blog",
       description:
@@ -452,7 +451,7 @@ const News = () => {
         "Streamline your Webflow development with Refokus's expert CSS nomenclature styleguide, promoting efficiency and scalability.",
     },
   ];
-  const [grid, setGrid] = useState(true);
+  const [grid, setGrid] = useState(false);
   return (
     <>
       <div className="h-fit w-[95%] mx-auto my-16 pr-10 flex justify-between items-center bg-black text-white">
@@ -487,38 +486,51 @@ const News = () => {
         <span className="h-fit w-fit flex items-center gap-16 text-lg tracking-wider">
           <div className="h-fit w-fit flex justify-center items-center gap-3">
             <span className={`bg-white py-0.5 px-3.5 rounded-full`}>All</span>
-            <span className={`bg-white py-0.5 px-3.5 rounded-full`}>
+            <span
+              style={{
+                transition: "background-color 0.7s ease",
+              }}
+              className={`${
+                grid ? "bg-[#3E3E46] text-[#bdbddc]" : "bg-white"
+              } py-0.5 px-3.5 rounded-full`}
+            >
               Article
             </span>
-            <span className={`bg-white py-0.5 px-3.5 rounded-full`}>News</span>
-            <span className={`bg-white py-0.5 px-3.5 rounded-full`}>
+            <span
+              style={{
+                transition: "background-color 0.7s 0.15s ease",
+              }}
+              className={`${
+                grid ? "bg-[#3E3E46] text-[#bdbddc]" : "bg-white"
+              } py-0.5 px-3.5 rounded-full`}
+            >
+              News
+            </span>
+            <span
+              style={{
+                transition: "background-color 0.7s 0.3s ease",
+              }}
+              className={`${
+                grid ? "bg-[#3E3E46] text-[#bdbddc]" : "bg-white"
+              } py-0.5 px-3.5 rounded-full`}
+            >
               Resource
             </span>
           </div>
           <div className="text-white flex items-center gap-3">
             <p
               onClick={() => {
-                setActiveFormat(true);
                 setGrid(false);
               }}
-              className={`leading-none ${
-                activeFormat
-                  ? "border-b"
-                  : "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence."
-              } cursor-grab`}
+              className={`leading-none ${grid ? "" : "border-b"} cursor-grab`}
             >
               List
             </p>
             <p
               onClick={() => {
-                setActiveFormat(false);
                 setGrid(true);
               }}
-              className={`leading-none ${
-                activeFormat
-                  ? "Unlock the future of web design with Webflow, offering unmatched advantages over WordPress. From intuitive design interfaces to superior site performance and SEO, learn why Webflow is the preferred platform for businesses aiming for digital excellence."
-                  : "border-b"
-              } cursor-grab`}
+              className={`leading-none ${grid ? "border-b" : ""} cursor-grab`}
             >
               Grid
             </p>
@@ -533,10 +545,38 @@ const News = () => {
           grid ? "grid grid-cols-3 gap-[0px_3%]" : "flex flex-col"
         }`}
       >
-        {data.map((item) => (
-          <Para key={item.id} {...item} grid={grid} />
-        ))}
+        {grid ? (
+          <>
+            <section>
+              {data.map(
+                (item, index) =>
+                  item.category === "Article" && (
+                    <Para key={item.id} {...item} grid={grid} />
+                  )
+              )}
+            </section>
+            <section>
+              {data.map(
+                (item, index) =>
+                  item.category === "News" && (
+                    <Para key={item.id} {...item} grid={grid} />
+                  )
+              )}
+            </section>
+            <section>
+              {data.map(
+                (item, index) =>
+                  item.category === "Resource" && (
+                    <Para key={item.id} {...item} grid={grid} />
+                  )
+              )}
+            </section>
+          </>
+        ) : (
+          data.map((item) => <Para key={item.id} {...item} grid={grid} />)
+        )}
       </section>
+
       <Cards marginTop={"35vh"} />
       <Footer />
     </>
