@@ -456,7 +456,7 @@ const News = () => {
   function search(data) {
     let arr = [...data];
     return arr.filter((item) => {
-      return item.category.toLowerCase().includes(input.toLowerCase());
+      return item.category.toLowerCase().includes(input.trim().toLowerCase());
     });
   }
   return (
