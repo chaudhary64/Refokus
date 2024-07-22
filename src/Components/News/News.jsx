@@ -6,6 +6,7 @@ import { IoIosSearch } from "react-icons/io";
 
 const News = () => {
   const [active, setActive] = useState(false);
+  const [allActive, setAllActive] = useState(true);
   const [artcileActive, setArticleActive] = useState(false);
   const [newsActive, setNewsActive] = useState(false);
   const [resourceActive, setResourceActive] = useState(false);
@@ -499,62 +500,70 @@ const News = () => {
             <span
               onClick={() => {
                 setInput("");
+                setAllActive(true);
                 setArticleActive(false);
                 setNewsActive(false);
                 setResourceActive(false);
               }}
-              className={`bg-white py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
+              className={`${
+                allActive ? "bg-white" : "bg-[#3E3E46] text-[#bdbddc]"
+              } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
             >
               All
             </span>
             <span
               onClick={() => {
-                setInput("Article");
-                setArticleActive(true);
-                setNewsActive(false);
-                setResourceActive(false);
+                if (!grid) {
+                  setInput("Article");
+                  setArticleActive(true);
+                  setNewsActive(false);
+                  setResourceActive(false);
+                  setAllActive(false);
+                }
               }}
               style={{
                 transition: "background-color 0.7s ease",
               }}
               className={`${
-                grid || artcileActive
-                  ? "bg-[#3E3E46] text-[#bdbddc]"
-                  : "bg-white"
+                artcileActive ? "bg-white" : "bg-[#3E3E46] text-[#bdbddc]"
               } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
             >
               Article
             </span>
             <span
               onClick={() => {
-                setInput("News");
-                setNewsActive(true);
-                setArticleActive(false);
-                setResourceActive(false);
+                if (!grid) {
+                  setInput("News");
+                  setNewsActive(true);
+                  setArticleActive(false);
+                  setResourceActive(false);
+                  setAllActive(false);
+                }
               }}
               style={{
                 transition: "background-color 0.7s 0.15s ease",
               }}
               className={`${
-                grid || newsActive ? "bg-[#3E3E46] text-[#bdbddc]" : "bg-white"
+                newsActive ? "bg-white" : "bg-[#3E3E46] text-[#bdbddc]"
               } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
             >
               News
             </span>
             <span
               onClick={() => {
-                setInput("Resource");
-                setResourceActive(true);
-                setNewsActive(false);
-                setArticleActive(false);
+                if (!grid) {
+                  setInput("Resource");
+                  setResourceActive(true);
+                  setNewsActive(false);
+                  setArticleActive(false);
+                  setAllActive(false);
+                }
               }}
               style={{
                 transition: "background-color 0.7s 0.3s ease",
               }}
               className={`${
-                grid || resourceActive
-                  ? "bg-[#3E3E46] text-[#bdbddc]"
-                  : "bg-white"
+                resourceActive ? "bg-white" : "bg-[#3E3E46] text-[#bdbddc]"
               } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
             >
               Resource
@@ -572,6 +581,10 @@ const News = () => {
             <p
               onClick={() => {
                 setGrid(true);
+                setArticleActive(false);
+                setNewsActive(false);
+                setResourceActive(false);
+                setAllActive(true);
               }}
               className={`leading-none ${grid ? "border-b" : ""} cursor-grab`}
             >
