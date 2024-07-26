@@ -6,7 +6,7 @@ const Button = ({ text = "Live Website", bgColor = "white" }) => {
       style={{
         backgroundColor: bgColor,
         color: bgColor === "white" ? "black" : "white",
-        border: bgColor === "transparent" ? "1px solid red" : "none",
+        border: bgColor === "transparent" ? "1px solid white" : "none",
       }}
       className={`px-4 py-2 h-fit w-fit rounded-full flex justify-center gap-3 items-center`}
     >
