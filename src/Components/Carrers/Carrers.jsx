@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import Positions from "./Positions";
+import Footer from "../Footer/Footer";
 
 const Carrers = () => {
   return (
-    <div className='h-[94vh] w-full bg-pink-600 text-9xl flex justify-center items-center overflow-hidden'>
-      I am Carrers
-    </div>
-  )
-}
+    <>
+      <p className="w-[95%] mx-auto my-20 pr-10 text-9xl text-end text-white">
+        Carrers
+      </p>
+      <section className="mb-14">
+        <Positions title="Operations" role="Senior Project Manager" />
+        <Positions title="Development" role="Webflow Developer" />
+      </section>
+      <Footer />
+    </>
+  );
+};
 
-export default Carrers
+export default Carrers;

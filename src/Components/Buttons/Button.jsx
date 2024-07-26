@@ -1,8 +1,15 @@
 import React from "react";
 
-const Button = ({ text = "Live Website" }) => {
+const Button = ({ text = "Live Website", bgColor = "white" }) => {
   return (
-    <div className="px-4 py-2 rounded-full flex justify-center gap-3 items-center bg-white">
+    <div
+      style={{
+        backgroundColor: bgColor,
+        color: bgColor === "white" ? "black" : "white",
+        border: bgColor === "transparent" ? "1px solid red" : "none",
+      }}
+      className={`px-4 py-2 h-fit w-fit rounded-full flex justify-center gap-3 items-center`}
+    >
       <p className="text-sm tracking-wide font-[Satoshi-Regular]">{text}</p>
       <span style={{ transform: "translateY(35%)" }}>
         <svg
