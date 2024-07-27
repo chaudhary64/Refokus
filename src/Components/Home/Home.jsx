@@ -3,6 +3,7 @@ import Marquees from "../Marquee/Marquees";
 import OverviewWork from "./OverviewWork";
 import Button from "../Buttons/Button";
 import { Link } from "react-router-dom";
+import ExpandingArrow from "./ExpandingArrow";
 
 const Home = () => {
   const marqueeDataWithoutNumber = [
@@ -246,6 +247,35 @@ const Home = () => {
         marqueeDataWithNumber={marqueeDataWithNumber}
         marqueeWithNumber={true}
       />
+      {/* ForwardThinking */}
+      <section className="h-fit w-[95%] mx-auto mt-36 flex justify-evenly text-white relative">
+        <div>
+          <span className="text-[180px] leading-[0.8] tracking-wide">
+            <p>Forward</p>
+            <p className="pl-20">Thinking</p>
+          </span>
+          <p className="mt-12 pl-20 text-xl tracking-wider">
+            Redefining the creative world with design, <br /> innovation, and
+            forward-thinking as a <br /> leading Webflow Agency.
+          </p>
+          <span className="inline-block pl-20 mt-10">
+            <Button text={"News & Insights"} bgColor="transparent" />
+          </span>
+        </div>
+        <span className="flex flex-col gap-5">
+          <video
+            autoPlay
+            muted
+            loop
+            src="/src/assets/videos/Refokus-2022.webm"
+            className="h-screen w-full object-cover rounded-2xl relative"
+          ></video>
+          <p className="text-white text-xl tracking-wider">
+            Refokus 2022 Offsite Where Work Meets Play, Innovation, and Homemade
+            Pasta.
+          </p>
+        </span>
+      </section>
     </>
   );
 };
