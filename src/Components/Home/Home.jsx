@@ -1,5 +1,8 @@
 import React from "react";
 import Marquees from "../Marquee/Marquees";
+import OverviewWork from "./OverviewWork";
+import Button from "../Buttons/Button";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const marqueeDataWithoutNumber = [
@@ -84,6 +87,75 @@ const Home = () => {
       },
     ],
   ];
+  const overviewWorkData = [
+    {
+      id: 1,
+      heading: "ARQITEL",
+      img1: "/src/assets/images/home/1u.webp",
+      img2: "/src/assets/images/home/1l.webp",
+      video: "/src/assets/videos/Arqitel.webm",
+      bgColor: "#5355EE",
+      rightUpperText: "Concept, Design, 3D, Webflow+WebGL Development",
+      rightLowerText:
+        "With a continuous 3D animation, we showcase Arqitel approach and show how migration data translates into real estate.",
+    },
+    {
+      id: 2,
+      heading: "Cula",
+      img1: "/src/assets/images/home/2u.png",
+      img2: "/src/assets/images/home/2l.png",
+      video: "/src/assets/videos/Cula.mp4",
+      bgColor: "#4A576B",
+      rightUpperText: "Concept, Design, 3D, Webflow+WebGL Development",
+      rightLowerText:
+        "We immersed ourselves in a 3D world we created to explain how Cula's platform collects data from carbon removal processes and converts them into carbon credit certificates.",
+    },
+    {
+      id: 3,
+      heading: "INTENSEYE",
+      img1: "/src/assets/images/home/3u.webp",
+      img2: "/src/assets/images/home/3l.webp",
+      video: "/src/assets/videos/Intenseye.webm",
+      bgColor: "#1626F3",
+      rightUpperText: "Concept, Design, Webflow Development",
+      rightLowerText:
+        "An interactive learning game that can educate and entertain you on the basics of web layouts in Webflow.",
+    },
+    {
+      id: 4,
+      heading: "TTR",
+      img1: "/src/assets/images/home/4u.jpg",
+      img2: "/src/assets/images/home/4l.jpg",
+      video: "/src/assets/videos/TTR.webm",
+      bgColor: "#4A576B",
+      rightUpperText:
+        "Concept, Design, 3D, Webflow+WebGL Development, AI Integrations",
+      rightLowerText:
+        "We've created an interactive site using generative AI to allow users to engage with our thinking about Ai, industry trends and design.",
+    },
+    {
+      id: 5,
+      heading: "Maniv",
+      img1: "/src/assets/images/home/5u.png",
+      img2: "/src/assets/images/home/5l.png",
+      video: "/src/assets/videos/Maniv.mp4",
+      bgColor: "#2DCB76",
+      rightUpperText: "Branding, Design, Webflow+GSAP Development",
+      rightLowerText:
+        "A global early-stage venture fund partnering with founders to advance cleaner, safer, and more sustainable movement of people and goods.",
+    },
+    {
+      id: 6,
+      heading: "SILVR",
+      img1: "/src/assets/images/home/6u.jpg",
+      img2: "/src/assets/images/home/6l.jpg",
+      video: "/src/assets/videos/Silvr.webm",
+      bgColor: "#FF7548",
+      rightUpperText: "Design, Webflow Development",
+      rightLowerText:
+        "We teamed up with financing solutions provider Silvr to audit, refine and evolve their brand.",
+    },
+  ];
   return (
     <>
       <section className="h-fit w-[95%] mx-auto pt-20 text-white">
@@ -131,6 +203,17 @@ const Home = () => {
           marqueeWithNumber={false}
           reverse={true}
         />
+      </section>
+      <section
+        id="overviewWork"
+        className="h-fit w-[95%] mx-auto mt-20 flex flex-col items-center"
+      >
+        {overviewWorkData.map((data) => (
+          <OverviewWork key={data.id} {...data} />
+        ))}
+        <Link to="/work" className="mt-10">
+          <Button text={"View All Work"} bgColor="transparent" />
+        </Link>
       </section>
     </>
   );
