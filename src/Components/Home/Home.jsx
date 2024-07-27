@@ -275,6 +275,30 @@ const Home = () => {
           </p>
         </span>
       </section>
+      <section className="h-[90vh] w-[95%] mx-auto mt-20 text-white relative">
+        <div className="absolute left-[15%] top-0">
+          <img
+            className="w-80 rounded-2xl"
+            src="/src/assets/images/about/03.webp"
+            alt=""
+          />
+          <p className="mt-5 text-center text-xl tracking-wider">
+            Why Refokus is the Best Partner to Build Your <br /> Venture Capital
+            Website
+          </p>
+        </div>
+        <div className="absolute right-[15%] bottom-0">
+          <img
+            className="w-96 rounded-2xl"
+            src="/src/assets/images/home/webflow-enterprise-partner.png"
+            alt=""
+          />
+          <p className="mt-3 text-center text-xl tracking-wider">
+            Webflow Agency Case Study of Refokus as a leading <br /> Webflow
+            Enterprise Partner
+          </p>
+        </div>
+      </section>
     </>
   );
 };
