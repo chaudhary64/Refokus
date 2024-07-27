@@ -3,6 +3,8 @@ import Marquees from "../Marquee/Marquees";
 import OverviewWork from "./OverviewWork";
 import Button from "../Buttons/Button";
 import { Link } from "react-router-dom";
+import Cards from "../Cards/Cards";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   const marqueeDataWithoutNumber = [
@@ -275,7 +277,7 @@ const Home = () => {
           </p>
         </span>
       </section>
-      <section className="h-[90vh] w-[95%] mx-auto mt-20 text-white relative">
+      <section className="h-[90vh] w-[95%] mx-auto mt-40 text-white relative">
         <div className="absolute left-[15%] top-0">
           <img
             className="w-80 rounded-2xl"
@@ -299,6 +301,8 @@ const Home = () => {
           </p>
         </div>
       </section>
+      <Cards marginTop={"30vh"} />
+      <Footer />
     </>
   );
 };
