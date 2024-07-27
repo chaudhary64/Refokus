@@ -5,6 +5,12 @@ import Button from "../Buttons/Button";
 import { Link } from "react-router-dom";
 import Cards from "../Cards/Cards";
 import Footer from "../Footer/Footer";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 const Home = () => {
   const marqueeDataWithoutNumber = [
@@ -185,15 +191,37 @@ const Home = () => {
         "We teamed up with financing solutions provider Silvr to audit, refine and evolve their brand.",
     },
   ];
+
+  const { scrollYProgress: scroll } = useScroll();
+  const videoElem = useTransform(scroll, [0.7, 0.9], [0, -300]);
+  const leftImageX  = useTransform(scroll, [0.8, 1], [0, -85]);
+  const leftImageY  = useTransform(scroll, [0.8, 1], [0, -85]);
+  const rightImageX = useTransform(scroll, [0.85, 1], [0, 80]);
+  const rightImageY = useTransform(scroll, [0.85, 1], [0, -80]);
+  useMotionValueEvent(scroll, "change", (latest) => {
+    console.log(latest);
+  });
   return (
     <>
       <section className="h-fit w-[95%] mx-auto pt-20 text-white">
-        <div className="text-9xl leading-[0.95] tracking-wider">
-          <span>
-            <p>We Develop</p>
-          </span>
-          <span>
-            <p>
+        <span className="text-9xl leading-[0.95] tracking-wider">
+          <div className="overflow-hidden">
+            <motion.p
+              initial={{ top: 200 }}
+              animate={{ top: 0 }}
+              transition={{ duration: 1.2 }}
+              className="relative"
+            >
+              We Develop
+            </motion.p>
+          </div>
+          <div className="overflow-hidden">
+            <motion.p
+              initial={{ top: 200 }}
+              animate={{ top: 0 }}
+              transition={{ duration: 1.2, delay: 0.3 }}
+              className="relative"
+            >
               <span
                 style={{
                   color: "transparent",
@@ -206,10 +234,15 @@ const Home = () => {
                 amazing
               </span>
               websites
-            </p>
-          </span>
-          <span>
-            <p>
+            </motion.p>
+          </div>
+          <div className="overflow-hidden">
+            <motion.p
+              initial={{ top: 200 }}
+              animate={{ top: 0 }}
+              transition={{ duration: 1.2, delay: 0.6 }}
+              className="relative"
+            >
               for your
               <span
                 style={{
@@ -223,15 +256,20 @@ const Home = () => {
                 buisness
               </span>
               <span>.</span>
-            </p>
-          </span>
-        </div>
-        <span className="mt-20 text-lg inline-block h-fit w-full tracking-wider">
-          <p className="text-center">
+            </motion.p>
+          </div>
+        </span>
+        <span className="mt-20 text-lg inline-block h-fit w-full tracking-wider overflow-hidden">
+          <motion.p
+            initial={{ top: 200 }}
+            animate={{ top: 0 }}
+            transition={{ duration: 1.2, delay: 0.9 }}
+            className="text-center relative"
+          >
             Refokus is a forward-thinking web agency that combines Web Design,
             Webflow Development, and Creative Development to create cool
             websites that help brands position themselves as market leaders.
-          </p>
+          </motion.p>
         </span>
       </section>
       <section id="BrandMarquees" className="mt-[20vh] flex flex-col gap-10">
@@ -247,7 +285,7 @@ const Home = () => {
       </section>
       <section
         id="overviewWork"
-        className="h-fit w-[95%] mx-auto mt-20 flex flex-col items-center"
+        className="h-fit w-[95%] mx-auto mt-20 flex flex-col gap-8 items-center"
       >
         {overviewWorkData.map((data) => (
           <OverviewWork key={data.id} {...data} />
@@ -275,7 +313,10 @@ const Home = () => {
             <Button text={"News & Insights"} bgColor="transparent" />
           </span>
         </div>
-        <span className="flex flex-col gap-5">
+        <motion.span
+          style={{ y: videoElem }}
+          className="flex flex-col gap-5 relative"
+        >
           <video
             autoPlay
             muted
@@ -287,10 +328,13 @@ const Home = () => {
             Refokus 2022 Offsite Where Work Meets Play, Innovation, and Homemade
             Pasta.
           </p>
-        </span>
+        </motion.span>
       </section>
       <section className="h-[90vh] w-[95%] mx-auto mt-40 text-white relative">
-        <div className="absolute left-[15%] top-0">
+        <motion.div
+          style={{ y: leftImageY , x : leftImageX }}
+          className="absolute left-[15%] top-0"
+        >
           <img
             className="w-80 rounded-2xl"
             src="/src/assets/images/about/03.webp"
@@ -300,8 +344,11 @@ const Home = () => {
             Why Refokus is the Best Partner to Build Your <br /> Venture Capital
             Website
           </p>
-        </div>
-        <div className="absolute right-[15%] bottom-0">
+        </motion.div>
+        <motion.div
+          style={{ y: rightImageY , x: rightImageX}}
+          className="absolute right-[15%] bottom-0"
+        >
           <img
             className="w-96 rounded-2xl"
             src="/src/assets/images/home/webflow-enterprise-partner.png"
@@ -311,9 +358,9 @@ const Home = () => {
             Webflow Agency Case Study of Refokus as a leading <br /> Webflow
             Enterprise Partner
           </p>
-        </div>
+        </motion.div>
       </section>
-      <Cards marginTop={"30vh"} />
+      <Cards marginTop={"20vh"} />
       <Footer />
     </>
   );

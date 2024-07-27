@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "../Buttons/Button";
+import { motion, useInView } from "framer-motion";
 
 const OverviewWork = ({
   heading,
@@ -10,10 +11,17 @@ const OverviewWork = ({
   rightUpperText,
   rightLowerText,
 }) => {
+  const elem = useRef(null);
+  const isInView = useInView(elem, { threshold: 0.1, once: true });
+
   return (
-    <div
+    <motion.div
+      ref={elem}
+      initial={{ scale: 0.85 }}
+      animate={{ scale: isInView ? 1 : 0.85 }}
+      transition={{ duration: 1 }}
       style={{ backgroundColor: bgColor }}
-      className="h-fit w-full text-white flex gap-5 my-10 p-5 rounded-xl overflow-hidden"
+      className="h-fit w-full text-white flex gap-5 p-5 rounded-xl overflow-hidden"
     >
       {/* LeftPart */}
       <div className="h-full w-1/2 flex flex-col gap-5 justify-evenly overflow-hidden">
@@ -38,7 +46,7 @@ const OverviewWork = ({
           <Button text={"Start a Project"} />
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
