@@ -188,7 +188,7 @@ const Home = () => {
   return (
     <>
       <section className="h-fit w-[95%] mx-auto pt-20 text-white">
-        <div className="text-9xl leading-[0.95]">
+        <div className="text-9xl leading-[0.95] tracking-wider">
           <span>
             <p>We Develop</p>
           </span>
@@ -198,7 +198,7 @@ const Home = () => {
                 style={{
                   color: "transparent",
                   background:
-                    "linear-gradient(90deg, rgba(18,245,197,1) 0%, rgba(213,35,238,1) 40%, rgba(216,32,238,1) 60%, rgba(0,212,255,1) 100%)",
+                    "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,35,192,1) 40%, rgba(238,32,215,1) 60%, rgba(0,212,255,1) 100%)",
                   backgroundClip: "text",
                 }}
                 className="inline-block h-fit text-transparent"
@@ -210,12 +210,24 @@ const Home = () => {
           </span>
           <span>
             <p>
-              for your business <span>.</span>
+              for your
+              <span
+                style={{
+                  color: "transparent",
+                  background:
+                    "linear-gradient(90deg, rgba(245,18,98,1) 0%, rgba(238,35,192,1) 40%, rgba(216,32,238,1) 60%, rgba(0,212,255,1) 100%)",
+                  backgroundClip: "text",
+                }}
+                className="inline-block h-fit text-transparent"
+              >
+                buisness
+              </span>
+              <span>.</span>
             </p>
           </span>
         </div>
-        <span className="mt-16 text-xl inline-block h-fit w-fit tracking-wider">
-          <p>
+        <span className="mt-20 text-lg inline-block h-fit w-full tracking-wider">
+          <p className="text-center">
             Refokus is a forward-thinking web agency that combines Web Design,
             Webflow Development, and Creative Development to create cool
             websites that help brands position themselves as market leaders.
