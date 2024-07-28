@@ -194,8 +194,8 @@ const Home = () => {
 
   const { scrollYProgress: scroll } = useScroll();
   const videoElem = useTransform(scroll, [0.7, 0.9], [0, -300]);
-  const leftImageX  = useTransform(scroll, [0.8, 1], [0, -85]);
-  const leftImageY  = useTransform(scroll, [0.8, 1], [0, -85]);
+  const leftImageX = useTransform(scroll, [0.8, 1], [0, -85]);
+  const leftImageY = useTransform(scroll, [0.8, 1], [0, -85]);
   const rightImageX = useTransform(scroll, [0.85, 1], [0, 80]);
   const rightImageY = useTransform(scroll, [0.85, 1], [0, -80]);
   useMotionValueEvent(scroll, "change", (latest) => {
@@ -210,7 +210,7 @@ const Home = () => {
               initial={{ top: 200 }}
               animate={{ top: 0 }}
               transition={{ duration: 1.2 }}
-              className="relative"
+              className="relative pl-20"
             >
               We Develop
             </motion.p>
@@ -220,7 +220,7 @@ const Home = () => {
               initial={{ top: 200 }}
               animate={{ top: 0 }}
               transition={{ duration: 1.2, delay: 0.3 }}
-              className="relative"
+              className="relative pl-40"
             >
               <span
                 style={{
@@ -241,7 +241,7 @@ const Home = () => {
               initial={{ top: 200 }}
               animate={{ top: 0 }}
               transition={{ duration: 1.2, delay: 0.6 }}
-              className="relative"
+              className="relative pl-80"
             >
               for your
               <span
@@ -263,7 +263,7 @@ const Home = () => {
           <motion.p
             initial={{ top: 200 }}
             animate={{ top: 0 }}
-            transition={{ duration: 1.2, delay: 0.9 }}
+            transition={{ duration: 1.2, delay: 0.7 }}
             className="text-center relative"
           >
             Refokus is a forward-thinking web agency that combines Web Design,
@@ -332,7 +332,7 @@ const Home = () => {
       </section>
       <section className="h-[90vh] w-[95%] mx-auto mt-40 text-white relative">
         <motion.div
-          style={{ y: leftImageY , x : leftImageX }}
+          style={{ y: leftImageY, x: leftImageX }}
           className="absolute left-[15%] top-0"
         >
           <img
@@ -346,7 +346,7 @@ const Home = () => {
           </p>
         </motion.div>
         <motion.div
-          style={{ y: rightImageY , x: rightImageX}}
+          style={{ y: rightImageY, x: rightImageX }}
           className="absolute right-[15%] bottom-0"
         >
           <img
