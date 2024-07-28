@@ -64,7 +64,7 @@ const Expander = ({ question, answer }) => {
       transition: { duration: 1 },
     });
     plusControls.start({
-      rotate: rotateInitial.get() + 45,
+      rotate: rotateInitial.get() - 45,
       transition: { duration: 0.5 },
     });
     setData({ ...data, direction: "forward" });
