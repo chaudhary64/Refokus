@@ -241,7 +241,7 @@ const Home = () => {
               initial={{ top: 200 }}
               animate={{ top: 0 }}
               transition={{ duration: 1.2, delay: 0.6 }}
-              className="relative pl-80"
+              className="relative pl-[270px]"
             >
               for your
               <span
