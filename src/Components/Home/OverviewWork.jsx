@@ -31,13 +31,15 @@ const OverviewWork = ({
       </div>
       {/* RightPart */}
       <div className="h-full w-1/2 flex flex-col gap-9">
-        <video
-          muted
-          loop
-          autoPlay
-          src={video}
-          className="w-full rounded-xl"
-        ></video>
+        <span className="inline-block overflow-hidden rounded-xl">
+          <video
+            muted
+            loop
+            autoPlay
+            src={video}
+            className="w-full rounded-xl"
+          ></video>
+        </span>
         <span className="text-xl px-5 tracking-wider leading-none flex flex-col gap-3">
           <p>{rightUpperText}</p>
           <p>{rightLowerText}</p>
