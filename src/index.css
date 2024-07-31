@@ -27,6 +27,16 @@ body {
     background-color: #000000;
 }
 
+body::-webkit-scrollbar {
+    width: 2px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
 /* Lenis */
 
 html.lenis,
