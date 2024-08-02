@@ -20,7 +20,7 @@ const Nav = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 84 22"
         fill="none"
-        className="w-24 justify-self-center self-center"
+        className="w-16 lg:w-20 pl-5 md:pl-0 justify-self-center self-center"
       >
         <path
           fillRule="evenodd"
@@ -46,7 +46,7 @@ const Nav = () => {
         />
       </svg>
       {/* Navigation Links */}
-      <div className="text-sm tracking-wider text-[#f3f0f0] col-[2_/_7] flex justify-start items-center pl-14 gap-7">
+      <div className="text-xs lg:text-sm tracking-wider text-[#f3f0f0] col-[2_/_7] flex justify-start items-center pl-10 sm:pl-14 gap-[5%] sm:gap-7">
         <NavLink to="/" className="relative px-1">
           {({ isActive }) => (
             <>
@@ -101,7 +101,7 @@ const Nav = () => {
       <div className="col-[7_/_-1] flex gap-4 justify-center border-yellow-500">
         <div
           id="Languages"
-          className="flex gap-2 tracking-wide text-sm font-sans"
+          className="hidden md:flex gap-2 tracking-wide text-sm font-sans"
         >
           <span className="flex justify-center items-center text-white">
             EN
@@ -110,7 +110,9 @@ const Nav = () => {
             DE
           </span>
         </div>
-        <Button text={"Start a Project"} />
+        <span className="hidden sm:inline-block">
+          <Button text={"Start a Project"} />
+        </span>
       </div>
     </nav>
   );

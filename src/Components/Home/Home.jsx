@@ -255,7 +255,7 @@ const Home = () => {
               >
                 buisness
               </span>
-              <span>.</span>
+              <span></span>
             </motion.p>
           </div>
         </span>
