@@ -466,8 +466,10 @@ const News = () => {
   return (
     <>
       <div className="h-fit w-[95%] mx-auto my-16 pr-10 flex justify-between items-center bg-black text-white">
-        <p className="text-[110px] leading-none font-[Satoshi-Regular]">NEWS</p>
-        <p className="text-xl tracking-widest">
+        <p className="text-lg sm:text-4xl md:text-6xl lg:text-[120px] leading-none font-[Satoshi-Regular]">
+          NEWS
+        </p>
+        <p className="text-xs sm:text-lg md:text-xl lg:text-2xl tracking-widest">
           Web Design, Webflow Development, <br /> Agency Life and more news and
           insights <br /> from Refokus Team.
         </p>
