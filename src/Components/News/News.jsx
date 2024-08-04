@@ -474,9 +474,9 @@ const News = () => {
           insights <br /> from Refokus Team.
         </p>
       </div>
-      <div className="h-fit w-[95%] mx-auto py-5 pr-10 border-t border-[#3e3e46] flex justify-between items-center relative">
+      <div className="h-fit w-[95%] mx-auto py-5 pr-5 md:pr-10 border-t border-[#3e3e46] flex justify-between items-center relative">
         {/* LeftPart */}
-        <span className="inline-block h-fit w-fit relative">
+        <span className="hidden sm:inline-block h-fit w-fit relative">
           <IoIosSearch
             className={`${
               active ? "text-[#A88BF7]" : "text-[#d7d7dc]"
@@ -491,13 +491,13 @@ const News = () => {
               border: active ? "2px solid #A88BF7" : "2px solid transparent",
               outline: "none",
             }}
-            className="rounded-full py-0.5 pl-10 pr-12 bg-[#3E3E46] text-lg tracking-wider text-[#d7d7dc]"
+            className="rounded-full lg:py-0.5 pl-10 pr-12 bg-[#3E3E46] text-lg tracking-wider text-[#d7d7dc]"
             type="text"
             placeholder="Search Something"
           />
         </span>
         {/* RightPart */}
-        <span className="h-fit w-fit flex items-center gap-16 text-lg tracking-wider">
+        <span className="h-fit w-fit flex items-center gap-5 md:gap-16 text-sm sm:text-base md:text-lg tracking-wider">
           <div className="h-fit w-fit flex justify-center items-center gap-3">
             <span
               onClick={() => {
@@ -571,7 +571,7 @@ const News = () => {
               Resource
             </span>
           </div>
-          <div className="text-white flex items-center gap-3">
+          <div className="text-white hidden sm:flex items-center gap-3">
             <p
               onClick={() => {
                 setGrid(false);
