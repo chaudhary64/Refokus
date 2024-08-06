@@ -509,7 +509,7 @@ const News = () => {
               }}
               className={`${
                 allActive ? "bg-white" : "bg-[#3E3E46] text-[#bdbddc]"
-              } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
+              } px-2.5 sm:px-3.5 py-0.5 min-[470px]:py-1 sm:py-1.5 leading-none rounded-full cursor-grab`}
             >
               All
             </span>
@@ -528,7 +528,7 @@ const News = () => {
               }}
               className={`${
                 artcileActive ? "bg-white" : "bg-[#3E3E46] text-[#bdbddc]"
-              } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
+              } px-2.5 sm:px-3.5 py-0.5 min-[470px]:py-1 sm:py-1.5 leading-none rounded-full cursor-grab`}
             >
               Article
             </span>
@@ -547,7 +547,7 @@ const News = () => {
               }}
               className={`${
                 newsActive ? "bg-white" : "bg-[#3E3E46] text-[#bdbddc]"
-              } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
+              } px-2.5 sm:px-3.5 py-0.5 min-[470px]:py-1 sm:py-1.5 leading-none rounded-full cursor-grab`}
             >
               News
             </span>
@@ -566,7 +566,7 @@ const News = () => {
               }}
               className={`${
                 resourceActive ? "bg-white" : "bg-[#3E3E46] text-[#bdbddc]"
-              } py-1.5 px-3.5 leading-none rounded-full cursor-grab`}
+              } px-2.5 sm:px-3.5 py-0.5 min-[470px]:py-1 sm:py-1.5 leading-none rounded-full cursor-grab`}
             >
               Resource
             </span>
