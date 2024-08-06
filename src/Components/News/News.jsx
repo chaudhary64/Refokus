@@ -497,7 +497,7 @@ const News = () => {
           />
         </span>
         {/* RightPart */}
-        <span className="h-fit w-fit flex items-center gap-5 md:gap-16 text-sm sm:text-base md:text-lg tracking-wider">
+        <span className="h-fit w-full sm:w-fit flex items-center max-sm:justify-between gap-5 md:gap-16 text-sm sm:text-base md:text-lg tracking-wider">
           <div className="h-fit w-fit flex justify-center items-center gap-3">
             <span
               onClick={() => {
@@ -571,7 +571,7 @@ const News = () => {
               Resource
             </span>
           </div>
-          <div className="text-white hidden sm:flex items-center gap-3">
+          <div className="text-white flex items-center gap-3">
             <p
               onClick={() => {
                 setGrid(false);
