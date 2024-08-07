@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="h-[10vh] px-20 w-full flex items-center relative">
-      <span className="flex gap-7 font-[Satoshi-Regular] text-[#585863]">
+    <div className="h-[10vh] w-[95%] mx-auto flex justify-between items-center relative">
+      <span className="flex max-[530px]:w-full max-[530px]:justify-evenly min-[530px]:gap-5 md:gap-7 font-[Satoshi-Regular] text-[#585863] max-[400px]:text-[11px] text-xs sm:text-sm md:text-base">
         <p>Privacy Policy</p>
         <p>Cookie Policy</p>
         <p>Impressum</p>
@@ -11,8 +11,7 @@ const Footer = () => {
         <p>Webflow Agency</p>
       </span>
       <svg
-        className="absolute right-20"
-        width="166"
+        className="max-[530px]:hidden w-20 sm:w-28 md:w-32 lg:w-36"
         height="28"
         viewBox="0 0 166 28"
         fill="none"
