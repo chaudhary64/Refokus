@@ -22,6 +22,11 @@
     src: url("./Fonts/Satoshi-Regular.ttf");
 }
 
+@font-face {
+    font-family: 'GreyQo-Regular';
+    src: url("./Fonts/GreyQo-Regular.ttf");
+}
+
 body {
     font-family: 'SmoochSans-Medium';
     background-color: #000000;

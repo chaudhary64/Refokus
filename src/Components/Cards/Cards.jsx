@@ -9,7 +9,7 @@ const Cards = ({ marginTop }) => {
       text: "Insights \nand behind the scenes",
       footer: "Explore what drives our team.",
       button: false,
-      width: "32%",
+      width: "33%",
     },
     {
       id: 2,
@@ -17,14 +17,14 @@ const Cards = ({ marginTop }) => {
       text: "Let's get to it, \ntogether.",
       header: "Start a Project",
       button: true,
-      width: "68%",
+      width: "67%",
     },
   ];
   return (
     <section
       id="CardHolder"
       style={{ marginTop: marginTop }}
-      className={`h-[60vh] w-full px-20 flex gap-1`}
+      className={`h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] w-[95%] mx-auto flex gap-1.5`}
     >
       {cardData.map((card) => {
         return (
