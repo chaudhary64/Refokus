@@ -21,10 +21,10 @@ const Para = ({ category, heading, description, grid }) => {
       } flex flex-col border-b-[1px] border-[#1F1F23] text-white relative`}
     >
       <span
-        className={`grid ${
+        className={` ${
           grid
-            ? "grid-cols-[22%_78%]"
-            : "grid-cols-[20%_80%] min-[470px]:grid-cols-[17%_87%] sm:grid-cols-[16%_84%] md:grid-cols-[13%_87%] lg:grid-cols-[10%_90%]"
+            ? "flex gap-7"
+            : "grid grid-cols-[20%_80%] min-[470px]:grid-cols-[17%_87%] sm:grid-cols-[16%_84%] md:grid-cols-[13%_87%] lg:grid-cols-[10%_90%]"
         } items-center tracking-wider pointer-events-none`}
       >
         <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-[#dddde8]">

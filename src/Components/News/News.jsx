@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Para from "./Para";
 import Cards from "../Cards/Cards";
 import Footer from "../Footer/Footer";
@@ -463,6 +463,24 @@ const News = () => {
       return item.category.toLowerCase().includes(input.trim().toLowerCase());
     });
   }
+  useEffect(() => {
+    // Add an event listener for the resize event
+    window.addEventListener("resize", (e) => {
+      // Check if the window width is less than or equal to 768 pixels
+      if (window.innerWidth <= 768) {
+        // Update the state to set grid to false
+        setGrid(false);
+      }
+    });
+
+    // Clean up by removing the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", (e) => {
+        // Optionally, you could include some cleanup logic here if needed
+      });
+    };
+  }, []);
+
   return (
     <>
       <div className="h-fit w-[95%] mx-auto my-16 pr-10 flex justify-between items-center bg-black text-white">
@@ -476,11 +494,11 @@ const News = () => {
       </div>
       <div className="h-fit w-[95%] mx-auto py-5 pr-5 md:pr-10 border-t border-[#3e3e46] flex justify-between items-center relative">
         {/* LeftPart */}
-        <span className="hidden sm:inline-block h-fit w-fit relative">
+        <span className="max-[440px]:hidden inline-block h-fit w-fit relative">
           <IoIosSearch
             className={`${
               active ? "text-[#A88BF7]" : "text-[#d7d7dc]"
-            } absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none`}
+            } max-[440px]:h-2.5 h-3 sm:h-4 absolute left-[12.5%] top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none`}
           />
           <input
             onFocus={() => setActive(true)}
@@ -491,13 +509,13 @@ const News = () => {
               border: active ? "2px solid #A88BF7" : "2px solid transparent",
               outline: "none",
             }}
-            className="rounded-full lg:py-0.5 pl-10 pr-12 bg-[#3E3E46] text-lg tracking-wider text-[#d7d7dc]"
+            className="rounded-full lg:py-0.5 pl-[25%] pr-0.5 sm:pr-8 md:pr-12 bg-[#3E3E46] text-sm sm:text-base md:text-lg tracking-wider leading-none text-[#d7d7dc]"
             type="text"
             placeholder="Search Something"
           />
         </span>
         {/* RightPart */}
-        <span className="h-fit w-full sm:w-fit flex items-center max-sm:justify-between gap-5 md:gap-16 text-sm sm:text-base md:text-lg tracking-wider">
+        <span className="h-fit w-fit sm:w-fit flex items-center max-sm:justify-between gap-5 md:gap-16 text-sm sm:text-base md:text-lg tracking-wider">
           <div className="h-fit w-fit flex justify-center items-center gap-3">
             <span
               onClick={() => {
@@ -571,7 +589,7 @@ const News = () => {
               Resource
             </span>
           </div>
-          <div className="text-white flex items-center gap-3">
+          <div className="text-white hidden md:flex items-center gap-3">
             <p
               onClick={() => {
                 setGrid(false);
