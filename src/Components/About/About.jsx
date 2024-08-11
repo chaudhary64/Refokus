@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import BlurCards from "../Cards/BlurCards";
 import Marquees from "../Marquee/Marquees";
 import Expander from "./Expander";
@@ -166,40 +166,199 @@ const About = () => {
   });
 
   // ImagesScrolling Info
-  const image1Left = useTransform(scrollY, [0, 0.03], ["18%", "15%"]);
-  const image1Scale = useTransform(scrollY, [0.025, 0.035], [1, 0.8]);
 
-  const imageTop = useTransform(scrollY, [0, 0.03], ["0%", "-10%"]);
-  const image2Scale = useTransform(scrollY, [0.025, 0.035], [1, 0.8]);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  const image11Left = useTransform(scrollY, [0, 0.07], ["44%", "50%"]);
-  const image11Top = useTransform(scrollY, [0, 0.07], ["14%", "8%"]);
-  const image11Scale = useTransform(scrollY, [0.03, 0.07], [1, 0.8]);
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
 
-  const image4Top = useTransform(scrollY, [0, 0.1], ["54%", "40%"]);
-  const image4Scale = useTransform(scrollY, [0.08, 0.1], [1, 0.8]);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  const image5Top = useTransform(scrollY, [0, 0.095], ["40%", "30%"]);
-  const image5Right = useTransform(scrollY, [0, 0.095], ["18%", "30%"]);
-  const image5Scale = useTransform(scrollY, [0.06, 0.09], [1, 0.8]);
+  const getTransforms = () => {
+    if (screenWidth < 590) {
+      // Mobile (sm: 640px in Tailwind)
+      return {
+        image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
+        image1Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
 
-  const image6Left = useTransform(scrollY, [0, 0.13], ["13%", "0%"]);
-  const image6Scale = useTransform(scrollY, [0.1, 0.12], [1, 0.8]);
+        imageTop: useTransform(scrollY, [0, 0.03], ["2%", "-10%"]),
+        image2Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
 
-  const image7Left = useTransform(scrollY, [0, 0.15], ["50%", "40%"]);
-  const image7Top = useTransform(scrollY, [0, 0.15], ["70%", "55%"]);
-  const image7Scale = useTransform(scrollY, [0.1, 0.12], [1, 0.8]);
+        image11Left: useTransform(scrollY, [0, 0.07], ["48%", "55%"]),
+        image11Top: useTransform(scrollY, [0, 0.07], ["18%", "2%"]),
+        image11Scale: useTransform(scrollY, [0.03, 0.07], [1, 0.8]),
 
-  const image3Top = useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]);
+        image4Top: useTransform(scrollY, [0, 0.1], ["50%", "20%"]),
+        image4Scale: useTransform(scrollY, [0.08, 0.1], [1, 0.8]),
 
-  const image9Top = useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]);
-  const image9Right = useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]);
+        image5Top: useTransform(scrollY, [0, 0.095], ["41%", "25%"]),
+        image5Right: useTransform(scrollY, [0, 0.095], ["17%", "30%"]),
+        image5Scale: useTransform(scrollY, [0.06, 0.09], [1, 0.8]),
 
-  const image10Top = useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]);
+        image6Left: useTransform(scrollY, [0, 0.13], ["14%", "0%"]),
+        image6Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
 
-  const image8Left = useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]);
+        image7Left: useTransform(scrollY, [0, 0.15], ["54%", "40%"]),
+        image7Top: useTransform(scrollY, [0, 0.15], ["72%", "50%"]),
+        image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
 
-  const image12Left = useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]);
+        image3Top: useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]),
+
+        image9Top: useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]),
+        image9Right: useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]),
+
+        image10Top: useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]),
+
+        image8Left: useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]),
+
+        image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+      };
+    } else if (screenWidth >= 590 && screenWidth < 768) {
+      // Tablet (md: 768px and above in Tailwind)
+      return {
+        image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
+        image1Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        imageTop: useTransform(scrollY, [0, 0.03], ["2%", "-10%"]),
+        image2Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        image11Left: useTransform(scrollY, [0, 0.07], ["48%", "60%"]),
+        image11Top: useTransform(scrollY, [0, 0.07], ["18%", "5%"]),
+        image11Scale: useTransform(scrollY, [0.03, 0.07], [1, 0.8]),
+
+        image4Top: useTransform(scrollY, [0, 0.1], ["50%", "30%"]),
+        image4Scale: useTransform(scrollY, [0.08, 0.1], [1, 0.8]),
+
+        image5Top: useTransform(scrollY, [0, 0.095], ["41%", "30%"]),
+        image5Right: useTransform(scrollY, [0, 0.095], ["17%", "30%"]),
+        image5Scale: useTransform(scrollY, [0.06, 0.09], [1, 0.8]),
+
+        image6Left: useTransform(scrollY, [0, 0.13], ["14%", "0%"]),
+        image6Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image7Left: useTransform(scrollY, [0, 0.15], ["54%", "40%"]),
+        image7Top: useTransform(scrollY, [0, 0.15], ["72%", "55%"]),
+        image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image3Top: useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]),
+
+        image9Top: useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]),
+        image9Right: useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]),
+
+        image10Top: useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]),
+
+        image8Left: useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]),
+
+        image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+      };
+    } else if (screenWidth >= 768 && screenWidth < 1024) {
+      // Tablet (md: 768px and above in Tailwind)
+      return {
+        image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
+        image1Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        imageTop: useTransform(scrollY, [0, 0.03], ["2%", "-10%"]),
+        image2Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        image11Left: useTransform(scrollY, [0, 0.07], ["48%", "60%"]),
+        image11Top: useTransform(scrollY, [0, 0.07], ["18%", "5%"]),
+        image11Scale: useTransform(scrollY, [0.03, 0.07], [1, 0.8]),
+
+        image4Top: useTransform(scrollY, [0, 0.1], ["50%", "30%"]),
+        image4Scale: useTransform(scrollY, [0.08, 0.1], [1, 0.8]),
+
+        image5Top: useTransform(scrollY, [0, 0.095], ["41%", "30%"]),
+        image5Right: useTransform(scrollY, [0, 0.095], ["17%", "30%"]),
+        image5Scale: useTransform(scrollY, [0.06, 0.09], [1, 0.8]),
+
+        image6Left: useTransform(scrollY, [0, 0.13], ["14%", "0%"]),
+        image6Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image7Left: useTransform(scrollY, [0, 0.15], ["54%", "40%"]),
+        image7Top: useTransform(scrollY, [0, 0.15], ["72%", "55%"]),
+        image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image3Top: useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]),
+
+        image9Top: useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]),
+        image9Right: useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]),
+
+        image10Top: useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]),
+
+        image8Left: useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]),
+
+        image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+      };
+    } else if (screenWidth >= 1024) {
+      // Desktop (lg: 1024px and above in Tailwind)
+      return {
+        image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
+        image1Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        imageTop: useTransform(scrollY, [0, 0.03], ["2%", "-10%"]),
+        image2Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        image11Left: useTransform(scrollY, [0, 0.07], ["48%", "55%"]),
+        image11Top: useTransform(scrollY, [0, 0.07], ["18%", "8%"]),
+        image11Scale: useTransform(scrollY, [0.03, 0.07], [1, 0.8]),
+
+        image4Top: useTransform(scrollY, [0, 0.1], ["50%", "40%"]),
+        image4Scale: useTransform(scrollY, [0.08, 0.1], [1, 0.8]),
+
+        image5Top: useTransform(scrollY, [0, 0.095], ["41%", "30%"]),
+        image5Right: useTransform(scrollY, [0, 0.095], ["18%", "30%"]),
+        image5Scale: useTransform(scrollY, [0.06, 0.09], [1, 0.8]),
+
+        image6Left: useTransform(scrollY, [0, 0.13], ["14%", "2%"]),
+        image6Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image7Left: useTransform(scrollY, [0, 0.15], ["54%", "45%"]),
+        image7Top: useTransform(scrollY, [0, 0.15], ["72%", "55%"]),
+        image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image3Top: useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]),
+
+        image9Top: useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]),
+        image9Right: useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]),
+
+        image10Top: useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]),
+
+        image8Left: useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]),
+
+        image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+      };
+    }
+  };
+
+  const {
+    image1Left,
+    image1Scale,
+    imageTop,
+    image2Scale,
+    image11Left,
+    image11Top,
+    image11Scale,
+    image4Top,
+    image4Scale,
+    image5Top,
+    image5Right,
+    image5Scale,
+    image6Left,
+    image6Scale,
+    image7Left,
+    image7Top,
+    image7Scale,
+    image3Top,
+    image9Top,
+    image9Right,
+    image10Top,
+    image8Left,
+    image12Left,
+  } = getTransforms();
 
   // VideoHolder Width Increaser
   const holderWidth = useTransform(scrollYPinned, [0, 1], ["24%", "98%"]);
@@ -212,37 +371,39 @@ const About = () => {
   const para2 = useTransform(scrollY, [0.61, 0.7], [10, 112]);
   const para3 = useTransform(scrollY, [0.61, 0.7], [10, 192]);
 
-  useMotionValueEvent(scrollY, "change", (l) => console.log(l));
   return (
     <section className="h-fit w-full">
       <section
         id="ForwardThinking"
-        className="h-[115vh] w-full p-20 text-[200px] leading-[0.75] tracking-wide text-white relative"
+        className="h-[45vh] sm:h-[80vh] md:h-[95vh] lg:h-[115vh] w-full pt-10 pl-10 sm:p-20 text-7xl min-[410px]:text-8xl sm:text-9xl md:text-[150px] lg:text-[200px] leading-[0.75] tracking-wide text-white relative"
       >
         <p>Forward</p>
         <p>
-          <span className="tracking-[-50px]">--</span> Thinking
+          <span className="mr-2 sm:mr-6 lg:mr-0 tracking-[-15px] sm:tracking-[-50px]">
+            --
+          </span>{" "}
+          Thinking
         </p>
         {/* ImageContainer */}
         <div className="absolute z-[-1] inset-0 overflow-hidden">
           <motion.img
             src="/src/assets/images/about/01.webp"
             style={{
-              top: "0%",
+              top: "1%",
               left: image1Left,
               scale: image1Scale,
             }}
-            className="w-52 rounded-md absolute"
+            className="w-20 sm-custom:w-[90px] sm:w-36 md:w-44 lg:w-48 xl:w-52 rounded-md absolute"
             alt="01"
           />
           <motion.img
             src="/src/assets/images/about/02.webp"
             style={{
               top: imageTop,
-              right: "3%",
+              right: "4%",
               scale: image2Scale,
             }}
-            className="w-44 rounded-md absolute"
+            className="w-14 sm-custom:w-[70px] sm:w-28 md:w-36 lg:w-40 xl:w-44 rounded-md absolute"
             alt="02"
           />
           <motion.img
@@ -252,17 +413,17 @@ const About = () => {
               left: image11Left,
               scale: image11Scale,
             }}
-            className="w-36 rounded-md absolute"
+            className="w-14 sm-custom:w-[70px] sm:w-24 md:w-28 lg:w-32 xl:w-36 rounded-md absolute"
             alt="11"
           />
           <motion.img
             src="/src/assets/images/about/04.png"
             style={{
               top: image4Top,
-              left: "30%",
+              left: "34%",
               scale: image4Scale,
             }}
-            className="w-36 rounded-md absolute"
+            className="w-14 sm-custom:w-[70px] sm:w-24 md:w-28 lg:w-32 xl:w-36 rounded-md absolute"
             alt="04"
           />
           <motion.img
@@ -272,17 +433,16 @@ const About = () => {
               right: image5Right,
               scale: image5Scale,
             }}
-            className="w-56 rounded-md absolute"
+            className="w-20 sm-custom:w-[90px] sm:w-36 md:w-44 lg:w-52 xl:w-56 rounded-md absolute"
             alt="05"
           />
           <motion.img
             src="/src/assets/images/about/06.webp"
             style={{
-              top: "65%",
               left: image6Left,
               scale: image6Scale,
             }}
-            className="w-40 rounded-md absolute"
+            className="w-14 sm-custom:w-[70px] sm:w-24 md:w-28 lg:w-36 xl:w-40 rounded-md absolute top-[68%] sm:top-[65%]"
             alt="06"
           />
           <motion.img
@@ -292,7 +452,7 @@ const About = () => {
               left: image7Left,
               scale: image7Scale,
             }}
-            className="h-44 rounded-md absolute"
+            className="h-14 sm-custom:h-[70px] sm:h-[100px] md:h-28 lg:h-36 xl:w-40 rounded-md absolute"
             alt="07"
           />
         </div>
