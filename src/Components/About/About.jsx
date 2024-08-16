@@ -18,24 +18,60 @@ const About = () => {
       heading: "Our People",
       number: "25+",
       text: "We are a world-class team of experts working remotely across different time zones, mostly in Germany, the UK, Argentina, and the US East Coast—the world's leading hubs for creative talent.",
-      top: "5%",
-      left: "3%",
+      top: {
+        small_sm: "5%",
+        sm: "5%",
+        md: "5%",
+        lg: "5%",
+        xl: "5%",
+      },
+      left: {
+        small_sm: "5%",
+        sm: "5%",
+        md: "5%",
+        lg: "5%",
+        xl: "5%",
+      },
     },
     {
       id: 2,
       heading: "Our Awards",
       number: "77",
       text: "We are results-driven and people-focused (but awards are nice too!). We've won website of the day from multiple awards organizations and have been nominated twice for Webflow Agency of the year.",
-      top: "25%",
-      left: "55%",
+      top: {
+        small_sm: "37%",
+        sm: "32%",
+        md: "34%",
+        lg: "40%",
+        xl: "35%",
+      },
+      left: {
+        small_sm: "5%",
+        sm: "5%",
+        md: "5%",
+        lg: "5%",
+        xl: "5%",
+      },
     },
     {
       id: 3,
       heading: "Our History",
       number: "2021",
       text: "We are proud of our short history, positioning ourselves as market leaders and demonstrating that great work fuels growth.",
-      top: "55%",
-      left: "15%",
+      top: {
+        small_sm: "72%",
+        sm: "60%",
+        md: "56%",
+        lg: "55%",
+        xl: "60%",
+      },
+      left: {
+        small_sm: "5%",
+        sm: "12%",
+        md: "13%",
+        lg: "15.5%",
+        xl: "20%",
+      },
     },
   ];
   const marqueeDataWithoutNumber = [
@@ -457,9 +493,12 @@ const About = () => {
           />
         </div>
       </section>
-      <section id="BlurCards" className="h-[140vh] w-full relative">
+      <section
+        id="BlurCards"
+        className="h-[90vh] sm:h-screen md:h-[105vh] lg:h-[120vh] xl:h-[145vh] w-full relative border-2"
+      >
         {blurCardsData.map((data) => (
-          <BlurCards key={data.id} {...data} />
+          <BlurCards key={data.id} {...data} screenWidth={screenWidth} />
         ))}
         {/* ImagesHolder */}
         <div className="inset-0 absolute z-1 ">
