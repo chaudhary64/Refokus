@@ -23,7 +23,6 @@ const Expander = ({ question, answer }) => {
         para: heightPara,
         direction: "forward",
       });
-      console.log(heightContainer, heightPara);
     });
   }, []);
 

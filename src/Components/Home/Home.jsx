@@ -198,9 +198,6 @@ const Home = () => {
   const leftImageY = useTransform(scroll, [0.8, 1], [0, -85]);
   const rightImageX = useTransform(scroll, [0.85, 1], [0, 80]);
   const rightImageY = useTransform(scroll, [0.85, 1], [0, -80]);
-  useMotionValueEvent(scroll, "change", (latest) => {
-    console.log(latest);
-  });
   return (
     <>
       <section className="h-fit w-[95%] mx-auto pt-20 text-white">

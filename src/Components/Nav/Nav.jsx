@@ -10,7 +10,6 @@ const Nav = () => {
 
   useEffect(() => {
     setCurrentPath(location.pathname);
-    console.log(location.pathname);
   }, [location]);
 
   return (

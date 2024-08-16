@@ -495,7 +495,7 @@ const About = () => {
       </section>
       <section
         id="BlurCards"
-        className="h-[90vh] sm:h-screen md:h-[105vh] lg:h-[120vh] xl:h-[145vh] w-full relative border-2"
+        className="h-[90vh] sm:h-screen md:h-[105vh] lg:h-[120vh] xl:h-[145vh] w-full relative"
       >
         {blurCardsData.map((data) => (
           <BlurCards key={data.id} {...data} screenWidth={screenWidth} />
