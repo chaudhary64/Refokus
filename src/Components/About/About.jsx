@@ -570,7 +570,7 @@ const About = () => {
       </section>
       <section
         id="BlurCards"
-        className="h-screen md:h-[110vh] lg:h-[140vh] xl:h-[160vh] w-full relative border-2"
+        className="h-screen md:h-[110vh] lg:h-[140vh] xl:h-[160vh] w-full relative"
       >
         {blurCardsData.map((data) => (
           <BlurCards key={data.id} {...data} screenWidth={screenWidth} />
@@ -623,7 +623,7 @@ const About = () => {
       <section
         ref={pinnedElem}
         id="ExpandVideo"
-        className="h-[300vh] w-full mt-80 relative"
+        className="h-[300vh] w-full mt-24 sm:mt-28 md:mt-32 lg:mt-36 xl:mt-64 relative"
       >
         <div
           id="Holder"
