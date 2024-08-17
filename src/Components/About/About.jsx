@@ -216,7 +216,6 @@ const About = () => {
 
   const getTransforms = () => {
     if (screenWidth < 590) {
-      // Mobile (sm: 640px in Tailwind)
       return {
         image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
         image1Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
@@ -242,18 +241,18 @@ const About = () => {
         image7Top: useTransform(scrollY, [0, 0.15], ["72%", "50%"]),
         image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
 
-        image3Top: useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]),
+        image3Top: useTransform(scrollY, [0.00011, 0.2], ["25%", "0%"]),
 
-        image9Top: useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]),
-        image9Right: useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]),
+        image9Top: useTransform(scrollY, [0.00011, 0.12], ["40%", "51%"]),
+        image9Right: useTransform(scrollY, [0.00011, 0.12], ["7%", "10%"]),
 
-        image10Top: useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]),
+        image10Top: useTransform(scrollY, [0.00011, 0.12], ["63%", "48%"]),
 
-        image8Left: useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]),
+        image8Left: useTransform(scrollY, [0.028, 0.13], ["25%", "5%"]),
 
-        image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+        image12Left: useTransform(scrollY, [0.028, 0.14], ["35%", "55%"]),
       };
-    } else if (screenWidth >= 590 && screenWidth < 768) {
+    } else if (screenWidth >= 590 && screenWidth < 640) {
       // Tablet (md: 768px and above in Tailwind)
       return {
         image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
@@ -280,16 +279,54 @@ const About = () => {
         image7Top: useTransform(scrollY, [0, 0.15], ["72%", "55%"]),
         image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
 
-        image3Top: useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]),
+        image3Top: useTransform(scrollY, [0.0017, 0.09], ["25%", "15%"]),
 
-        image9Top: useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]),
-        image9Right: useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]),
+        image9Top: useTransform(scrollY, [0.0017, 0.15], ["40%", "51%"]),
+        image9Right: useTransform(scrollY, [0.0017, 0.15], ["10%", "15%"]),
 
-        image10Top: useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]),
+        image10Top: useTransform(scrollY, [0.0017, 0.115], ["61%", "45%"]),
 
-        image8Left: useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]),
+        image8Left: useTransform(scrollY, [0.0419, 0.157], ["18%", "7%"]),
 
-        image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+        image12Left: useTransform(scrollY, [0.0419, 0.161], ["30%", "40%"]),
+      };
+    } else if (screenWidth >= 640 && screenWidth < 768) {
+      // Tablet (md: 768px and above in Tailwind)
+      return {
+        image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
+        image1Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        imageTop: useTransform(scrollY, [0, 0.03], ["2%", "-10%"]),
+        image2Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        image11Left: useTransform(scrollY, [0, 0.07], ["48%", "60%"]),
+        image11Top: useTransform(scrollY, [0, 0.07], ["18%", "5%"]),
+        image11Scale: useTransform(scrollY, [0.03, 0.07], [1, 0.8]),
+
+        image4Top: useTransform(scrollY, [0, 0.1], ["50%", "30%"]),
+        image4Scale: useTransform(scrollY, [0.08, 0.1], [1, 0.8]),
+
+        image5Top: useTransform(scrollY, [0, 0.095], ["41%", "30%"]),
+        image5Right: useTransform(scrollY, [0, 0.095], ["17%", "30%"]),
+        image5Scale: useTransform(scrollY, [0.06, 0.09], [1, 0.8]),
+
+        image6Left: useTransform(scrollY, [0, 0.13], ["14%", "0%"]),
+        image6Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image7Left: useTransform(scrollY, [0, 0.15], ["54%", "40%"]),
+        image7Top: useTransform(scrollY, [0, 0.15], ["72%", "55%"]),
+        image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image3Top: useTransform(scrollY, [0.085, 0.19], ["35%", "15%"]),
+
+        image9Top: useTransform(scrollY, [0.085, 0.23], ["40%", "51%"]),
+        image9Right: useTransform(scrollY, [0.085, 0.23], ["10%", "15%"]),
+
+        image10Top: useTransform(scrollY, [0.085, 0.23], ["68%", "55%"]),
+
+        image8Left: useTransform(scrollY, [0.16, 0.29], ["26%", "7%"]),
+
+        image12Left: useTransform(scrollY, [0.16, 0.4], ["41%", "70%"]),
       };
     } else if (screenWidth >= 768 && screenWidth < 1024) {
       // Tablet (md: 768px and above in Tailwind)
@@ -318,18 +355,18 @@ const About = () => {
         image7Top: useTransform(scrollY, [0, 0.15], ["72%", "55%"]),
         image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
 
-        image3Top: useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]),
+        image3Top: useTransform(scrollY, [0.085, 0.19], ["37%", "20%"]),
 
-        image9Top: useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]),
-        image9Right: useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]),
+        image9Top: useTransform(scrollY, [0.085, 0.23], ["38%", "51%"]),
+        image9Right: useTransform(scrollY, [0.085, 0.23], ["9%", "20%"]),
 
-        image10Top: useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]),
+        image10Top: useTransform(scrollY, [0.085, 0.23], ["70%", "60%"]),
 
-        image8Left: useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]),
+        image8Left: useTransform(scrollY, [0.16, 0.29], ["28%", "7%"]),
 
-        image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+        image12Left: useTransform(scrollY, [0.16, 0.4], ["39%", "70%"]),
       };
-    } else if (screenWidth >= 1024) {
+    } else if (screenWidth >= 1024 && screenWidth < 1280) {
       // Desktop (lg: 1024px and above in Tailwind)
       return {
         image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
@@ -356,16 +393,54 @@ const About = () => {
         image7Top: useTransform(scrollY, [0, 0.15], ["72%", "55%"]),
         image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
 
-        image3Top: useTransform(scrollY, [0.085, 0.19], ["33%", "15%"]),
+        image3Top: useTransform(scrollY, [0.085, 0.19], ["40%", "28%"]),
 
-        image9Top: useTransform(scrollY, [0.085, 0.23], ["31%", "51%"]),
-        image9Right: useTransform(scrollY, [0.085, 0.23], ["20%", "30%"]),
+        image9Top: useTransform(scrollY, [0.085, 0.23], ["45%", "51%"]),
+        image9Right: useTransform(scrollY, [0.085, 0.23], ["8%", "15%"]),
 
-        image10Top: useTransform(scrollY, [0.085, 0.23], ["63%", "55%"]),
+        image10Top: useTransform(scrollY, [0.085, 0.23], ["80%", "60%"]),
 
-        image8Left: useTransform(scrollY, [0.16, 0.29], ["18%", "7%"]),
+        image8Left: useTransform(scrollY, [0.16, 0.29], ["35%", "2%"]),
 
         image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+      };
+    } else {
+      // For any other large screen size
+      return {
+        image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
+        image1Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        imageTop: useTransform(scrollY, [0, 0.03], ["2%", "-10%"]),
+        image2Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
+
+        image11Left: useTransform(scrollY, [0, 0.07], ["48%", "55%"]),
+        image11Top: useTransform(scrollY, [0, 0.07], ["18%", "8%"]),
+        image11Scale: useTransform(scrollY, [0.03, 0.07], [1, 0.8]),
+
+        image4Top: useTransform(scrollY, [0, 0.1], ["50%", "40%"]),
+        image4Scale: useTransform(scrollY, [0.08, 0.1], [1, 0.8]),
+
+        image5Top: useTransform(scrollY, [0, 0.095], ["41%", "30%"]),
+        image5Right: useTransform(scrollY, [0, 0.095], ["18%", "30%"]),
+        image5Scale: useTransform(scrollY, [0.06, 0.09], [1, 0.8]),
+
+        image6Left: useTransform(scrollY, [0, 0.13], ["14%", "2%"]),
+        image6Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image7Left: useTransform(scrollY, [0, 0.15], ["54%", "45%"]),
+        image7Top: useTransform(scrollY, [0, 0.15], ["72%", "55%"]),
+        image7Scale: useTransform(scrollY, [0.1, 0.12], [1, 0.8]),
+
+        image3Top: useTransform(scrollY, [0.085, 0.19], ["40%", "25%"]),
+
+        image9Top: useTransform(scrollY, [0.085, 0.23], ["36%", "51%"]),
+        image9Right: useTransform(scrollY, [0.085, 0.23], ["6%", "15%"]),
+
+        image10Top: useTransform(scrollY, [0.085, 0.3], ["80%", "50%"]),
+
+        image8Left: useTransform(scrollY, [0.16, 0.3], ["35%", "10%"]),
+
+        image12Left: useTransform(scrollY, [0.17, 0.42], ["40%", "60%"]),
       };
     }
   };
@@ -495,7 +570,7 @@ const About = () => {
       </section>
       <section
         id="BlurCards"
-        className="h-[90vh] sm:h-screen md:h-[105vh] lg:h-[120vh] xl:h-[145vh] w-full relative"
+        className="h-screen md:h-[110vh] lg:h-[140vh] xl:h-[160vh] w-full relative border-2"
       >
         {blurCardsData.map((data) => (
           <BlurCards key={data.id} {...data} screenWidth={screenWidth} />
@@ -506,9 +581,8 @@ const About = () => {
             src="/src/assets/images/about/03.webp"
             style={{
               top: image3Top,
-              left: "34%",
             }}
-            className="w-36 absolute rounded-md"
+            className="w-16 sm-custom:w-20 md:w-24 lg:w-28 xl:w-36 absolute rounded-md left-[54.5%] sm-custom:left-[30%] sm:left-[40%] xl:left-[30%]"
             alt="03"
           />
           <motion.img
@@ -517,34 +591,31 @@ const About = () => {
               top: image9Top,
               right: image9Right,
             }}
-            className="h-40 absolute rounded-md"
+            className="h-24 sm-custom:h-28 md:h-32 lg:h-36 xl:h-[150px] absolute rounded-md"
             alt="09"
           />
           <motion.img
             src="/src/assets/images/about/10.png"
             style={{
               top: image10Top,
-              left: "52%",
             }}
-            className="h-36 absolute rounded-md"
+            className="h-20 sm-custom:h-[85px] md:h-24 lg:h-28 xl:h-36 absolute rounded-md left-[35%] sm-custom:left-[55%] md:left-[54%] xl:left-[62%]"
             alt="10"
           />
           <motion.img
             src="/src/assets/images/about/08.webp"
             style={{
-              top: "80%",
               left: image8Left,
             }}
-            className="w-40 absolute rounded-md"
+            className="w-24 sm-custom:w-28 md:w-32 lg:w-36 xl:w-40 absolute rounded-md top-[76%] sm:top-[70%] md:top-[62%] xl:top-[70%]"
             alt="08"
           />
           <motion.img
             src="/src/assets/images/about/12.webp"
             style={{
-              top: "92%",
               left: image12Left,
             }}
-            className="w-56 absolute rounded-md"
+            className="w-28 sm-custom:w-32 md:w-36 lg:w-44 xl:w-56 absolute rounded-md top-[91%]"
             alt="12"
           />
         </div>
