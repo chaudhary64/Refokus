@@ -623,13 +623,13 @@ const About = () => {
       <section
         ref={pinnedElem}
         id="ExpandVideo"
-        className="h-[300vh] w-full mt-24 sm:mt-28 md:mt-32 lg:mt-36 xl:mt-64 relative"
+        className="h-[90vh] sm:h-screen md:h-[150vh] lg:h-[300vh] w-full mt-24 sm:mt-28 md:mt-32 lg:mt-36 xl:mt-64 relative"
       >
         <div
           id="Holder"
           style={{ perspective: "3000px" }}
           // The value from top is same as the height of the Navbar
-          className="h-[75vh] w-full sticky top-[15vh] flex flex-nowrap justify-center items-center gap-1 overflow-clip"
+          className="h-[25%] sm-custom:h-[35%] sm:h-[35%] lg:h-[25%] w-full sticky top-[15vh] flex flex-nowrap justify-center items-center gap-1 overflow-clip"
         >
           <motion.img
             style={{ scale: sideItemsScale, rotateY: sideRotation }}
@@ -645,14 +645,14 @@ const About = () => {
           />
           <motion.div
             style={{ width: holderWidth }}
-            className="h-full shrink-0 rounded-3xl overflow-hidden"
+            className="h-full shrink-0 rounded-lg sm:rounded-2xl lg:rounded-3xl overflow-hidden"
           >
             <video
               autoPlay
               muted
               loop
               src="/src/assets/videos/AboutPageVideo.webm"
-              className="h-full w-full object-cover rounded-3xl"
+              className="h-full w-full object-cover rounded-lg sm:rounded-2xl lg:rounded-3xl"
             ></video>
           </motion.div>
           <motion.img
