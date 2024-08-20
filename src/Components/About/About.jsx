@@ -251,6 +251,12 @@ const About = () => {
         image8Left: useTransform(scrollY, [0.028, 0.13], ["25%", "5%"]),
 
         image12Left: useTransform(scrollY, [0.028, 0.14], ["35%", "55%"]),
+
+        // Some Text
+
+        para1: useTransform(scrollY, [0.235, 0.316], [10, 30]),
+        para2: useTransform(scrollY, [0.235, 0.316], [10, 60]),
+        para3: useTransform(scrollY, [0.235, 0.316], [10, 95]),
       };
     } else if (screenWidth >= 590 && screenWidth < 640) {
       // Tablet (md: 768px and above in Tailwind)
@@ -289,6 +295,12 @@ const About = () => {
         image8Left: useTransform(scrollY, [0.0419, 0.157], ["18%", "7%"]),
 
         image12Left: useTransform(scrollY, [0.0419, 0.161], ["30%", "40%"]),
+
+        // Some Text
+
+        para1: useTransform(scrollY, [0.3024, 0.35], [10, 40]),
+        para2: useTransform(scrollY, [0.3024, 0.35], [10, 80]),
+        para3: useTransform(scrollY, [0.3024, 0.35], [10, 125]),
       };
     } else if (screenWidth >= 640 && screenWidth < 768) {
       // Tablet (md: 768px and above in Tailwind)
@@ -327,6 +339,12 @@ const About = () => {
         image8Left: useTransform(scrollY, [0.16, 0.29], ["26%", "7%"]),
 
         image12Left: useTransform(scrollY, [0.16, 0.4], ["41%", "70%"]),
+
+        // Some Text
+
+        para1: useTransform(scrollY, [0.36, 0.45], [10, 40]),
+        para2: useTransform(scrollY, [0.36, 0.45], [10, 80]),
+        para3: useTransform(scrollY, [0.36, 0.45], [10, 120]),
       };
     } else if (screenWidth >= 768 && screenWidth < 1024) {
       // Tablet (md: 768px and above in Tailwind)
@@ -365,6 +383,12 @@ const About = () => {
         image8Left: useTransform(scrollY, [0.16, 0.29], ["28%", "7%"]),
 
         image12Left: useTransform(scrollY, [0.16, 0.4], ["39%", "70%"]),
+
+        // Some Text
+
+        para1: useTransform(scrollY, [0.45, 0.526], [10, 40]),
+        para2: useTransform(scrollY, [0.45, 0.526], [10, 80]),
+        para3: useTransform(scrollY, [0.45, 0.526], [10, 130]),
       };
     } else if (screenWidth >= 1024 && screenWidth < 1280) {
       // Desktop (lg: 1024px and above in Tailwind)
@@ -403,9 +427,15 @@ const About = () => {
         image8Left: useTransform(scrollY, [0.16, 0.29], ["35%", "2%"]),
 
         image12Left: useTransform(scrollY, [0.16, 0.4], ["42%", "70%"]),
+
+        // Some Text
+
+        para1: useTransform(scrollY, [0.578, 0.638], [10, 40]),
+        para2: useTransform(scrollY, [0.578, 0.638], [10, 80]),
+        para3: useTransform(scrollY, [0.578, 0.638], [10, 135]),
       };
     } else {
-      // For any other large screen size
+      // For any other large screen size screenWidth >= 1280
       return {
         image1Left: useTransform(scrollY, [0, 0.03], ["18%", "15%"]),
         image1Scale: useTransform(scrollY, [0.025, 0.035], [1, 0.8]),
@@ -441,6 +471,12 @@ const About = () => {
         image8Left: useTransform(scrollY, [0.16, 0.3], ["35%", "10%"]),
 
         image12Left: useTransform(scrollY, [0.17, 0.42], ["40%", "60%"]),
+
+        // Some Text
+
+        para1: useTransform(scrollY, [0.61, 0.7], [10, 40]),
+        para2: useTransform(scrollY, [0.61, 0.7], [10, 112]),
+        para3: useTransform(scrollY, [0.61, 0.7], [10, 192]),
       };
     }
   };
@@ -469,18 +505,15 @@ const About = () => {
     image10Top,
     image8Left,
     image12Left,
+    para1,
+    para2,
+    para3,
   } = getTransforms();
 
   // VideoHolder Width Increaser
   const holderWidth = useTransform(scrollYPinned, [0, 1], ["24%", "98%"]);
   const sideItemsScale = useTransform(scrollYPinned, [0, 1], [1, 0.7]);
   const sideRotation = useTransform(scrollYPinned, [0.15, 0.5], [0, 180]);
-
-  // Some Text
-
-  const para1 = useTransform(scrollY, [0.61, 0.7], [10, 40]);
-  const para2 = useTransform(scrollY, [0.61, 0.7], [10, 112]);
-  const para3 = useTransform(scrollY, [0.61, 0.7], [10, 192]);
 
   return (
     <section className="h-fit w-full">
@@ -670,12 +703,10 @@ const About = () => {
         </div>
       </section>
       {/* Some Text */}
-      <div className="mt-32 text-white text-8xl leading-[0.9]">
+      <div className="mt-10 sm-custom:mt-12 sm:mt-16 md:mt-24 lg:mt-32 xl:mt-36 text-white text-2xl sm-custom:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] leading-none sm-custom:leading-none lg:leading-[0.9]">
         <motion.p style={{ paddingLeft: para1 }}>Design driven</motion.p>
         <motion.p style={{ paddingLeft: para2 }}>Technology empowered</motion.p>
-        <motion.p style={{ paddingLeft: para3 }} className="pl-48">
-          Human focused
-        </motion.p>
+        <motion.p style={{ paddingLeft: para3 }}>Human focused</motion.p>
       </div>
       <div className="mt-12 text-2xl text-[#dbd9e0] leading-none pl-10 flex justify-center gap-[7%]">
         <p className="h-full max-w-[30%]">
