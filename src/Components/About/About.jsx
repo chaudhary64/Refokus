@@ -708,7 +708,12 @@ const About = () => {
         <motion.p style={{ paddingLeft: para2 }}>Technology empowered</motion.p>
         <motion.p style={{ paddingLeft: para3 }}>Human focused</motion.p>
       </div>
-      <div className="mt-12 text-2xl text-[#dbd9e0] leading-none pl-10 flex justify-center gap-[7%]">
+      <div
+        style={{
+          lineHeight: "1",
+        }}
+        className="mt-8 sm:mt-9 md:mt-10 lg:mt-12 text-xs sm-custom:text-sm sm:text-lg md:text-xl lg:text-2xl text-[#dbd9e0]  pl-10 flex justify-center gap-[7%]"
+      >
         <p className="h-full max-w-[30%]">
           We believe that the synergy between design and technology is
           unprecedentedly sculpting our world, enhancing our lives, fuelling
