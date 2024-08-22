@@ -726,17 +726,23 @@ const About = () => {
           less time, and with a better experience for everyone involved.
         </p>
       </div>
-      <section id="Steffi&Leo" className="mt-16">
+      <section id="Steffi&Leo" className="mt-10 sm:mt-12 md:mt-14 lg:mt-16">
         <img
-          className="h-96 ml-10"
+          className="h-28 sm-custom:h-32 sm:h-36 md:h-40 lg:h-52 xl:h-80 ml-8 lg:ml-10"
           src="/src/assets/images/about/17.png"
           alt=""
         />
-        <div className="mt-10 text-white px-20 flex justify-between">
-          <p className="text-2xl min-w-fit leading-none">
+        <div className="mt-5 lg:mt-10 text-white px-10 lg:px-20 flex justify-between items-center">
+          <p
+            style={{ lineHeight: "0.9" }}
+            className="text-sm sm-custom:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl min-w-fit"
+          >
             Steffi & Leo <br /> Refokus Founders
           </p>
-          <p className="text-6xl max-w-[65%] leading-[0.9]">
+          <p
+            style={{ lineHeight: "0.9" }}
+            className="text-[9px] sm-custom:text-xs sm:text-sm md:text-base lg:text-lg xl:text-2xl max-w-[65%]"
+          >
             “Our goal is to create websites that tell stories, making them stand
             out in a digital world where uniqueness is increasingly rare.”
           </p>
