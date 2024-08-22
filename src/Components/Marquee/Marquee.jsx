@@ -11,12 +11,22 @@ const Marquee = ({ id, length, src, number }) => {
           : "border-[1px]"
       } border-[#3E3E46] flex justify-evenly items-center`}
     >
-      <img src={`${src}`} alt="" />
-      <p className="text-4xl text-white">{number}</p>
+      <img
+        className="w-9 sm-custom:w-10 sm:w-12 md:w-16 lg:w-24 xl:w-28"
+        src={`${src}`}
+        alt=""
+      />
+      <p className="text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl text-white">
+        {number}
+      </p>
     </div>
   ) : (
-    <div className={`h-full flex justify-evenly items-center`}>
-      <img src={`${src}`} alt="" />
+    <div className={`shrink-0 flex justify-evenly items-center`}>
+      <img
+        className="w-8 sm-custom:w-9 sm:w-12 md:w-14 lg:w-16 xl:w-24"
+        src={`${src}`}
+        alt=""
+      />
     </div>
   );
 };

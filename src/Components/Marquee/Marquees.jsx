@@ -10,7 +10,7 @@ const Marquees = ({
 }) => {
   return marqueeWithNumber ? (
     // Marquee with number
-    <div className="h-[10vh] w-full mt-[7vh] flex flex-nowrap overflow-hidden">
+    <div className="w-full mt-[7vh] flex flex-nowrap overflow-hidden">
       <MotionConfig
         animate={{
           x: ["0%", "-100%"], // Move from 0% to -100% of the container width
@@ -72,7 +72,7 @@ const Marquees = ({
         {/* First Marquee Conatiner */}
         <motion.div
           initial={{ x: reverse ? "-100%" : 0 }}
-          className="h-full w-full flex justify-evenly gap-5 shrink-0"
+          className="w-full flex justify-around items-center shrink-0"
         >
           {marqueeDataBrands.map((marquee) => {
             return (
@@ -83,7 +83,7 @@ const Marquees = ({
         {/* Second Marquee Conatiner */}
         <motion.div
           initial={{ x: reverse ? "-100%" : 0 }}
-          className="h-full w-full flex justify-evenly gap-5 shrink-0"
+          className="w-full flex justify-around items-center shrink-0"
         >
           {marqueeDataBrands.map((marquee) => {
             return (
