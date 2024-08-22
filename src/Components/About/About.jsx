@@ -254,9 +254,9 @@ const About = () => {
 
         // Some Text
 
-        para1: useTransform(scrollY, [0.235, 0.316], [10, 30]),
-        para2: useTransform(scrollY, [0.235, 0.316], [10, 60]),
-        para3: useTransform(scrollY, [0.235, 0.316], [10, 95]),
+        para1: useTransform(scrollY, [0.35, 0.4903], [10, 30]),
+        para2: useTransform(scrollY, [0.35, 0.4903], [10, 60]),
+        para3: useTransform(scrollY, [0.35, 0.4903], [10, 95]),
       };
     } else if (screenWidth >= 590 && screenWidth < 640) {
       // Tablet (md: 768px and above in Tailwind)
@@ -298,9 +298,9 @@ const About = () => {
 
         // Some Text
 
-        para1: useTransform(scrollY, [0.3024, 0.35], [10, 40]),
-        para2: useTransform(scrollY, [0.3024, 0.35], [10, 80]),
-        para3: useTransform(scrollY, [0.3024, 0.35], [10, 125]),
+        para1: useTransform(scrollY, [0.385, 0.5406], [10, 40]),
+        para2: useTransform(scrollY, [0.385, 0.5406], [10, 80]),
+        para3: useTransform(scrollY, [0.385, 0.5406], [10, 125]),
       };
     } else if (screenWidth >= 640 && screenWidth < 768) {
       // Tablet (md: 768px and above in Tailwind)
@@ -342,9 +342,9 @@ const About = () => {
 
         // Some Text
 
-        para1: useTransform(scrollY, [0.36, 0.45], [10, 40]),
-        para2: useTransform(scrollY, [0.36, 0.45], [10, 80]),
-        para3: useTransform(scrollY, [0.36, 0.45], [10, 120]),
+        para1: useTransform(scrollY, [0.451, 0.575], [10, 40]),
+        para2: useTransform(scrollY, [0.451, 0.575], [10, 80]),
+        para3: useTransform(scrollY, [0.451, 0.575], [10, 120]),
       };
     } else if (screenWidth >= 768 && screenWidth < 1024) {
       // Tablet (md: 768px and above in Tailwind)
@@ -386,9 +386,9 @@ const About = () => {
 
         // Some Text
 
-        para1: useTransform(scrollY, [0.45, 0.526], [10, 40]),
-        para2: useTransform(scrollY, [0.45, 0.526], [10, 80]),
-        para3: useTransform(scrollY, [0.45, 0.526], [10, 130]),
+        para1: useTransform(scrollY, [0.525, 0.622], [10, 40]),
+        para2: useTransform(scrollY, [0.525, 0.622], [10, 80]),
+        para3: useTransform(scrollY, [0.525, 0.622], [10, 130]),
       };
     } else if (screenWidth >= 1024 && screenWidth < 1280) {
       // Desktop (lg: 1024px and above in Tailwind)
@@ -430,9 +430,9 @@ const About = () => {
 
         // Some Text
 
-        para1: useTransform(scrollY, [0.578, 0.638], [10, 40]),
-        para2: useTransform(scrollY, [0.578, 0.638], [10, 80]),
-        para3: useTransform(scrollY, [0.578, 0.638], [10, 135]),
+        para1: useTransform(scrollY, [0.626, 0.693], [10, 40]),
+        para2: useTransform(scrollY, [0.626, 0.693], [10, 80]),
+        para3: useTransform(scrollY, [0.626, 0.693], [10, 135]),
       };
     } else {
       // For any other large screen size screenWidth >= 1280
@@ -474,9 +474,9 @@ const About = () => {
 
         // Some Text
 
-        para1: useTransform(scrollY, [0.61, 0.7], [10, 40]),
-        para2: useTransform(scrollY, [0.61, 0.7], [10, 112]),
-        para3: useTransform(scrollY, [0.61, 0.7], [10, 192]),
+        para1: useTransform(scrollY, [0.635, 0.72], [10, 40]),
+        para2: useTransform(scrollY, [0.635, 0.72], [10, 112]),
+        para3: useTransform(scrollY, [0.635, 0.72], [10, 192]),
       };
     }
   };
@@ -712,7 +712,7 @@ const About = () => {
         style={{
           lineHeight: "1",
         }}
-        className="mt-8 sm:mt-9 md:mt-10 lg:mt-12 text-xs sm-custom:text-sm sm:text-lg md:text-xl lg:text-2xl text-[#dbd9e0]  pl-10 flex justify-center gap-[7%]"
+        className="mt-5 sm:mt-7 md:mt-9 lg:mt-12 text-xs sm-custom:text-sm sm:text-lg md:text-xl lg:text-2xl text-[#dbd9e0]  pl-10 flex justify-center gap-[7%]"
       >
         <p className="h-full max-w-[30%]">
           We believe that the synergy between design and technology is
