@@ -762,7 +762,7 @@ const About = () => {
           reverse={true}
         />
       </section>
-      <section className="h-fit w-full mt-52 px-20">
+      <section id="Expander" className="h-fit w-[95%] mx-auto mt-10 sm:mt-12 md:mt-14 lg:mt-16">
         {expanderData.map((data) => (
           <Expander key={data.id} {...data} />
         ))}

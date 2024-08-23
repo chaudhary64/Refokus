@@ -12,16 +12,21 @@ const Expander = ({ question, answer }) => {
     container: 0,
     para: 0,
     direction: "forward",
+    padding: 0,
   });
 
   useEffect(() => {
     document.fonts.ready.then(() => {
       let heightContainer = container.current.getBoundingClientRect().height;
       let heightPara = paraToAppear.current.getBoundingClientRect().height;
+      let paddingTop = Number.parseInt(
+        window.getComputedStyle(paraToAppear.current).paddingTop
+      );
       setData({
         container: heightContainer,
         para: heightPara,
         direction: "forward",
+        padding: paddingTop,
       });
     });
   }, []);
@@ -36,7 +41,7 @@ const Expander = ({ question, answer }) => {
       transition: { delay: 0.3, duration: 0.5 },
     });
     paraControls.start({
-      top: data.container - 12,
+      top: data.container - data.padding,
       y: 0,
       transition: { duration: 0.5 },
     });
@@ -76,7 +81,7 @@ const Expander = ({ question, answer }) => {
         onClick={() =>
           data.direction === "forward" ? beginAnimation() : closeAnimation()
         }
-        className="shrink-0 w-full text-[#e8e3e3] text-4xl tracking-wide py-3 flex justify-between border-b border-[#807E7E] select-none relative overflow-clip"
+        className="shrink-0 w-full text-[#e8e3e3] text-[13px] sm-custom:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl tracking-wide py-1 xl:py-3 flex justify-between border-b border-[#807E7E] select-none relative overflow-clip cursor-grab"
       >
         <p className="h-fit pointer-events-none">{question}</p>
         <motion.p
@@ -90,7 +95,8 @@ const Expander = ({ question, answer }) => {
           ref={paraToAppear}
           initial={{ top: 0, y: "-100%", opacity: 0 }}
           animate={paraControls}
-          className="absolute left-0 h-fit w-fit pt-3 pb-1 text-xl leading-none pointer-events-none"
+          style={{ lineHeight: "1" }}
+          className="absolute left-0 h-fit w-fit pt-0.5 lg:pt-1.5 xl:pt-2.5 pb-1 text-[10px] sm-custom:text-xs sm:text-[13px] md:text-base lg:text-lg xl:text-xl pointer-events-none"
         >
           {answer}
         </motion.p>
