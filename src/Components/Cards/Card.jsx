@@ -42,7 +42,7 @@ const Card = ({ heading, text, footer, header, button, width, id }) => {
       {/* Bottom Part Conditional Rendering */}
       <span className="flex flex-col gap-5 sm:gap-7 md:gap-9 lg:gap-11">
         {header && (
-          <p className="shrink-0 inline-block h-fit text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-[GreyQo-Regular] tracking-wider">
+          <p className="shrink-0 inline-block h-fit text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-[GreyQo-Regular] tracking-wider">
             {header}
           </p>
         )}
