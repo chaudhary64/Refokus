@@ -357,7 +357,7 @@ const Home = () => {
           </p>
         </motion.div>
       </section>
-      <Cards marginTop={"20vh"} />
+      <Cards />
       <Footer />
     </>
   );

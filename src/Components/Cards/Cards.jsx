@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-const Cards = ({ marginTop }) => {
+const Cards = () => {
   const cardData = [
     {
       id: 1,
@@ -23,8 +23,7 @@ const Cards = ({ marginTop }) => {
   return (
     <section
       id="CardHolder"
-      style={{ marginTop: marginTop }}
-      className={`h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] w-[95%] mx-auto flex gap-1.5`}
+      className={`h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] w-[95%] mx-auto mt-20 sm-custom:mt-24 sm:mt-36 md:mt-40 lg:mt-48 xl:mt-72 flex gap-1.5`}
     >
       {cardData.map((card) => {
         return (

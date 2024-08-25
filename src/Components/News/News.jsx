@@ -657,7 +657,7 @@ const News = () => {
         )}
       </section>
 
-      <Cards marginTop={"35vh"} />
+      <Cards />
       <Footer />
     </>
   );
