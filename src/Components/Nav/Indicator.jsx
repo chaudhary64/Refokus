@@ -11,7 +11,7 @@ const Indicator = () => {
       exit={{ opacity: 0, transition: { delay: 1.75 } }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 1.75 } }}
-      className="h-[4.25px] w-[4.25px] rounded-full absolute top-1/2 left-0 -translate-x-[105%] -translate-y-1/2"
+      className="h-[2.6px] sm-custom:h-[2.8px] sm:h-[3px] md:h-[3.25px] lg:h-[3.5px] xl:h-[4.15px] w-[2.6px] sm-custom:w-[2.8px] sm:w-[3px] md:w-[3.25px] lg:w-[3.5px] xl:w-[4.15px] rounded-full absolute top-1/2 left-0 -translate-x-[105%] -translate-y-1/2"
     ></motion.span>
   );
 };
