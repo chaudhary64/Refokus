@@ -13,13 +13,13 @@ const Nav = () => {
   }, [location]);
 
   return (
-    <nav className="h-[10vh] w-full sticky top-0 z-[9999] grid grid-cols-8 justify-center items-center font-[Satoshi-Regular] backdrop-blur-md overflow-hidden">
+    <nav className="h-[10vh] w-[95%] mx-auto sticky top-0 z-[9999] flex justify-between items-center lg:gap-14 xl:gap-28 font-[Satoshi-Regular] backdrop-blur-md overflow-hidden">
       {/* Refokus Logo */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 84 22"
         fill="none"
-        className="w-16 lg:w-20 pl-5 md:pl-0 justify-self-center self-center"
+        className="w-12 sm:w-14 md:w-[65px] lg:w-[75px] xl:w-20 justify-self-center self-center"
       >
         <path
           fillRule="evenodd"
@@ -45,7 +45,7 @@ const Nav = () => {
         />
       </svg>
       {/* Navigation Links */}
-      <div className="text-xs lg:text-sm tracking-wider text-[#f3f0f0] col-[2_/_7] flex justify-start items-center pl-10 sm:pl-14 gap-[5%] sm:gap-7">
+      <div className="text-[9.5px] sm:text-[12px] lg:text-sm tracking-wider text-[#f3f0f0] flex justify-start items-center gap-5 sm:gap-7 md:gap-5 lg:gap-9">
         <NavLink to="/" className="relative px-1">
           {({ isActive }) => (
             <>
@@ -97,10 +97,10 @@ const Nav = () => {
           )}
         </NavLink>
       </div>
-      <div className="col-[7_/_-1] flex gap-4 justify-center border-yellow-500">
+      <div className="lg:ml-auto hidden sm:flex gap-4 lg:gap-6 xl:gap-8 justify-center overflow-hidden">
         <div
           id="Languages"
-          className="hidden md:flex gap-2 tracking-wide text-sm font-sans"
+          className="hidden md:flex gap-2 tracking-wide text-[10px] sm:text-[13px] lg:text-sm font-sans"
         >
           <span className="flex justify-center items-center text-white">
             EN
