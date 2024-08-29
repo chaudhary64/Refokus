@@ -110,7 +110,7 @@ const Nav = () => {
           </span>
         </div>
         <span className="hidden sm:inline-block">
-          <Button text={"Start a Project"} />
+          <Button text={"Start a project"} />
         </span>
       </div>
     </nav>
