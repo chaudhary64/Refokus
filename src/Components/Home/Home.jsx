@@ -200,14 +200,17 @@ const Home = () => {
   const rightImageY = useTransform(scroll, [0.85, 1], [0, -80]);
   return (
     <>
-      <section className="h-fit w-[95%] mx-auto pt-20 text-white">
-        <span className="text-9xl leading-[0.95] tracking-wider">
+      <section className="h-fit w-[95%] mx-auto pt-8 sm:pt-10 md:pt-14 xl:pt-20 text-white">
+        <span
+          style={{ lineHeight: "0.95" }}
+          className="inline-block h-fit w-fit text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl tracking-wider"
+        >
           <div className="overflow-hidden">
             <motion.p
               initial={{ top: 200 }}
               animate={{ top: 0 }}
               transition={{ duration: 1.2 }}
-              className="relative pl-20"
+              className="relative pl-10 sm:pl-14 xl:pl-20"
             >
               We Develop
             </motion.p>
@@ -217,7 +220,7 @@ const Home = () => {
               initial={{ top: 200 }}
               animate={{ top: 0 }}
               transition={{ duration: 1.2, delay: 0.3 }}
-              className="relative pl-40"
+              className="relative pl-20 sm:pl-28 xl:pl-40"
             >
               <span
                 style={{
@@ -228,7 +231,7 @@ const Home = () => {
                 }}
                 className="inline-block h-fit text-transparent"
               >
-                amazing
+                amazing&nbsp;
               </span>
               websites
             </motion.p>
@@ -238,9 +241,9 @@ const Home = () => {
               initial={{ top: 200 }}
               animate={{ top: 0 }}
               transition={{ duration: 1.2, delay: 0.6 }}
-              className="relative pl-[270px]"
+              className="relative pl-[125px] sm:pl-[170px] xl:pl-[250px]"
             >
-              for your
+              for your&nbsp;
               <span
                 style={{
                   color: "transparent",
@@ -256,7 +259,7 @@ const Home = () => {
             </motion.p>
           </div>
         </span>
-        <span className="mt-20 text-lg inline-block h-fit w-full tracking-wider overflow-hidden">
+        <span className="mt-3 sm:mt-5 md:mt-7 lg:mt-9 xl:mt-20 text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-lg inline-block h-fit w-full tracking-wider overflow-hidden">
           <motion.p
             initial={{ top: 200 }}
             animate={{ top: 0 }}
