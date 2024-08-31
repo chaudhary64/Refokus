@@ -272,7 +272,10 @@ const Home = () => {
           </motion.p>
         </span>
       </section>
-      <section id="BrandMarquees" className="mt-[20vh] flex flex-col gap-10">
+      <section
+        id="BrandMarquees"
+        className="mt-8 sm:mt-10 md:mt-14 xl:mt-20 flex flex-col gap-2 sm:gap-4 xl:gap-6"
+      >
         <Marquees
           marqueeDataWithoutNumber={marqueeDataWithoutNumber[0]}
           marqueeWithNumber={false}
