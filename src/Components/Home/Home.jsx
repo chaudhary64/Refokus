@@ -288,12 +288,12 @@ const Home = () => {
       </section>
       <section
         id="overviewWork"
-        className="h-fit w-[95%] mx-auto mt-20 flex flex-col gap-8 items-center"
+        className="h-fit w-[95%] mx-auto mt-8 sm:mt-10 md:mt-14 xl:mt-20 flex flex-col gap-6 sm:gap-8 md:gap-9 lg:gap-11 xl:gap-12 items-center"
       >
         {overviewWorkData.map((data) => (
           <OverviewWork key={data.id} {...data} />
         ))}
-        <Link to="/work" className="mt-10">
+        <Link to="/work">
           <Button text={"View All Work"} bgColor="transparent" />
         </Link>
       </section>
