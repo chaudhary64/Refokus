@@ -10,7 +10,7 @@ const Marquees = ({
 }) => {
   return marqueeWithNumber ? (
     // Marquee with number
-    <div className="w-full mt-[7vh] flex flex-nowrap overflow-hidden">
+    <div className="w-full mt-6 sm:mt-8 md:mt-9 lg:mt-11 xl:mt-12 flex flex-nowrap overflow-hidden">
       <MotionConfig
         animate={{
           x: ["0%", "-100%"], // Move from 0% to -100% of the container width
