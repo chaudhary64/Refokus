@@ -293,10 +293,12 @@ const Home = () => {
         {overviewWorkData.map((data) => (
           <OverviewWork key={data.id} {...data} />
         ))}
+      </section>
+      <div className="h-fit w-fit mx-auto mt-6 sm:mt-8 md:mt-9 lg:mt-11 xl:mt-12">
         <Link to="/work">
           <Button text={"View All Work"} bgColor="transparent" />
         </Link>
-      </section>
+      </div>
       <Marquees
         marqueeDataWithNumber={marqueeDataWithNumber}
         marqueeWithNumber={true}
