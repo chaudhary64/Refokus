@@ -304,32 +304,46 @@ const Home = () => {
         marqueeWithNumber={true}
       />
       {/* ForwardThinking */}
-      <section className="h-fit w-[95%] mx-auto mt-36 flex justify-evenly text-white relative">
+      <section className="h-fit w-[95%] mx-auto mt-12 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-36 flex flex-col md:flex-row justify-evenly text-white relative border-2">
         <div>
-          <span className="text-[180px] leading-[0.8] tracking-wide">
-            <p>Forward</p>
-            <p className="pl-20">Thinking</p>
-          </span>
-          <p className="mt-12 pl-20 text-xl tracking-wider">
-            Redefining the creative world with design, <br /> innovation, and
-            forward-thinking as a <br /> leading Webflow Agency.
+          <pre
+            style={{
+              lineHeight: "0.8",
+            }}
+            className="h-fit w-fit mx-auto text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-[GreyQo-Regular] tracking-wider"
+          >
+            Forward Thinking
+          </pre>
+          <p
+            style={{
+              lineHeight: "1",
+            }}
+            className="mt-4 md:mt-8 xl:mt-14 xl:pl-20 text-sm sm:text-base md:text-base xl:text-xl text-center tracking-wider"
+          >
+            Redefining the creative world with design, innovation, and
+            forward-thinking as a leading Webflow Agency.
           </p>
-          <span className="inline-block pl-20 mt-10">
+          <div className="h-fit w-fit mx-auto xl:pl-20 mt-4 md:mt-7 lg:mt-6 xl:mt-8">
             <Button text={"News & Insights"} bgColor="transparent" />
-          </span>
+          </div>
         </div>
         <motion.span
           style={{ y: videoElem }}
-          className="flex flex-col gap-5 relative"
+          className="mt-5 flex flex-col gap-5 relative"
         >
           <video
             autoPlay
             muted
             loop
             src="/src/assets/videos/Refokus-2022.webm"
-            className="h-screen w-full object-cover rounded-2xl relative"
+            className="h-60 sm:h-64 md:h-72 lg:h-96 xl:h-[70vh] mx-auto object-cover rounded-xl lg:rounded-2xl relative"
           ></video>
-          <p className="text-white text-xl tracking-wider">
+          <p
+            style={{
+              lineHeight: "1",
+            }}
+            className="text-white text-sm sm:text-base md:text-base xl:text-xl text-center tracking-wider"
+          >
             Refokus 2022 Offsite Where Work Meets Play, Innovation, and Homemade
             Pasta.
           </p>
