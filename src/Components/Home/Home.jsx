@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Marquees from "../Marquee/Marquees";
 import OverviewWork from "./OverviewWork";
 import Button from "../Buttons/Button";
@@ -193,11 +193,76 @@ const Home = () => {
   ];
 
   const { scrollYProgress: scroll } = useScroll();
-  const videoElem = useTransform(scroll, [0.7, 0.9], [0, -300]);
-  const leftImageX = useTransform(scroll, [0.8, 1], [0, -85]);
-  const leftImageY = useTransform(scroll, [0.8, 1], [0, -85]);
-  const rightImageX = useTransform(scroll, [0.85, 1], [0, 80]);
-  const rightImageY = useTransform(scroll, [0.85, 1], [0, -80]);
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const getTransforms = () => {
+    if (screenWidth < 590) {
+      return {
+        videoElem: useTransform(scroll, [0.58, 0.92], [0, -35]),
+        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
+        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
+        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
+        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+      };
+    } else if (screenWidth >= 590 && screenWidth < 640) {
+      // Tablet (md: 768px and above in Tailwind)
+      return {
+        videoElem: useTransform(scroll, [0.61, 0.94], [0, -35]),
+        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
+        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
+        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
+        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+      };
+    } else if (screenWidth >= 640 && screenWidth < 768) {
+      return {
+        videoElem: useTransform(scroll, [0.65, 0.96], [0, -35]),
+        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
+        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
+        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
+        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+      };
+    } else if (screenWidth >= 768 && screenWidth < 1024) {
+      // Tablet (md: 768px and above in Tailwind)
+      return {
+        videoElem: useTransform(scroll, [0.66, 0.9], [0, -60]),
+        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
+        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
+        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
+        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+      };
+    } else if (screenWidth >= 1024 && screenWidth < 1280) {
+      // Desktop (lg: 1024px and above in Tailwind)
+      return {
+        videoElem: useTransform(scroll, [0.69, 0.9], [0, -105]),
+        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
+        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
+        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
+        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+      };
+    } else {
+      return {
+        videoElem: useTransform(scroll, [0.69, 0.9], [0, -110]),
+        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
+        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
+        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
+        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+      };
+    }
+  };
+
+  const { videoElem, leftImageX, leftImageY, rightImageX, rightImageY } =
+    getTransforms();
+
   return (
     <>
       <section className="h-fit w-[95%] mx-auto pt-8 sm:pt-10 md:pt-14 xl:pt-20 text-white">
@@ -304,7 +369,7 @@ const Home = () => {
         marqueeWithNumber={true}
       />
       {/* ForwardThinking */}
-      <section className="h-fit w-[95%] mx-auto mt-12 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-36 flex flex-col md:flex-row justify-evenly text-white relative border-2">
+      <section className="h-fit w-[95%] mx-auto mt-12 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-36 flex flex-col md:flex-row justify-evenly text-white relative">
         <div>
           <pre
             style={{
