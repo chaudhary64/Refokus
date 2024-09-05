@@ -209,59 +209,61 @@ const Home = () => {
     if (screenWidth < 590) {
       return {
         videoElem: useTransform(scroll, [0.58, 0.92], [0, -35]),
-        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
-        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
-        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
-        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+        leftImageX: useTransform(scroll, [0.86, 1], [0, -30]),
+        leftImageY: useTransform(scroll, [0.86, 1], [0, -30]),
+        rightImageX: useTransform(scroll, [0.86, 1], [0, 30]),
+        rightImageY: useTransform(scroll, [0.86, 1], [0, -30]),
       };
     } else if (screenWidth >= 590 && screenWidth < 640) {
       // Tablet (md: 768px and above in Tailwind)
       return {
         videoElem: useTransform(scroll, [0.61, 0.94], [0, -35]),
-        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
-        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
-        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
-        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+        leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
+        leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
+        rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
+        rightImageY: useTransform(scroll, [0.87, 1], [0, -30]),
       };
     } else if (screenWidth >= 640 && screenWidth < 768) {
       return {
         videoElem: useTransform(scroll, [0.65, 0.96], [0, -35]),
-        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
-        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
-        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
-        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+        leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
+        leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
+        rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
+        rightImageY: useTransform(scroll, [0.87, 1], [0, -30]),
       };
     } else if (screenWidth >= 768 && screenWidth < 1024) {
       // Tablet (md: 768px and above in Tailwind)
       return {
         videoElem: useTransform(scroll, [0.66, 0.9], [0, -60]),
-        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
-        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
-        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
-        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+        leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
+        leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
+        rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
+        rightImageY: useTransform(scroll, [0.87, 1], [0, -30]),
       };
     } else if (screenWidth >= 1024 && screenWidth < 1280) {
       // Desktop (lg: 1024px and above in Tailwind)
       return {
         videoElem: useTransform(scroll, [0.69, 0.9], [0, -105]),
-        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
-        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
-        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
-        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+        leftImageX: useTransform(scroll, [0.87, 1], [0, -50]),
+        leftImageY: useTransform(scroll, [0.87, 1], [0, -50]),
+        rightImageX: useTransform(scroll, [0.87, 1], [0, 50]),
+        rightImageY: useTransform(scroll, [0.87, 1], [0, -50]),
       };
     } else {
       return {
         videoElem: useTransform(scroll, [0.69, 0.9], [0, -110]),
-        leftImageX: useTransform(scroll, [0.8, 1], [0, -85]),
-        leftImageY: useTransform(scroll, [0.8, 1], [0, -85]),
-        rightImageX: useTransform(scroll, [0.85, 1], [0, 80]),
-        rightImageY: useTransform(scroll, [0.85, 1], [0, -80]),
+        leftImageX: useTransform(scroll, [0.87, 1], [0, -60]),
+        leftImageY: useTransform(scroll, [0.87, 1], [0, -60]),
+        rightImageX: useTransform(scroll, [0.87, 1], [0, 60]),
+        rightImageY: useTransform(scroll, [0.87, 1], [0, -60]),
       };
     }
   };
 
   const { videoElem, leftImageX, leftImageY, rightImageX, rightImageY } =
     getTransforms();
+
+  useMotionValueEvent(scroll, "change", (l) => console.log(l));
 
   return (
     <>
@@ -414,31 +416,41 @@ const Home = () => {
           </p>
         </motion.span>
       </section>
-      <section className="h-[90vh] w-[95%] mx-auto mt-40 text-white relative">
+      <section className="h-[45vh] sm-custom:h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] w-[95%] mx-auto mt-5 sm:mt-8 md:mt-9 lg:mt-11 xl:mt-12 text-white relative">
         <motion.div
           style={{ y: leftImageY, x: leftImageX }}
-          className="absolute left-[15%] top-0"
+          className="w-28 sm-custom:w-32 sm:w-36 md:w-40 lg:w-44 xl:w-60 absolute left-[7%] sm-custom:left-[3%] top-0"
         >
           <img
-            className="w-80 rounded-2xl"
+            className="w-24 sm-custom:w-28 sm:w-36 md:w-40 lg:w-44 xl:w-60 mx-auto rounded-lg xl:rounded-2xl"
             src="/src/assets/images/about/03.webp"
             alt=""
           />
-          <p className="mt-5 text-center text-xl tracking-wider">
+          <p
+            style={{
+              lineHeight: "1",
+            }}
+            className="mt-2 text-center text-xs sm-custom:text-sm md:text-base xl:text-lg tracking-wider"
+          >
             Why Refokus is the Best Partner to Build Your <br /> Venture Capital
             Website
           </p>
         </motion.div>
         <motion.div
           style={{ y: rightImageY, x: rightImageX }}
-          className="absolute right-[15%] bottom-0"
+          className="w-32 sm-custom:w-36 sm:w-44 md:w-48 lg:w-52 xl:w-80 absolute right-[3%] bottom-0"
         >
           <img
-            className="w-96 rounded-2xl"
+            className="w-28 sm-custom:w-36 sm:w-44 md:w-48 lg:w-52 xl:w-80 mx-auto rounded-lg xl:rounded-2xl"
             src="/src/assets/images/home/webflow-enterprise-partner.png"
             alt=""
           />
-          <p className="mt-3 text-center text-xl tracking-wider">
+          <p
+            style={{
+              lineHeight: "1",
+            }}
+            className="mt-2 text-center text-xs sm-custom:text-sm md:text-base xl:text-lg tracking-wider"
+          >
             Webflow Agency Case Study of Refokus as a leading <br /> Webflow
             Enterprise Partner
           </p>
