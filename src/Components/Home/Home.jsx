@@ -208,7 +208,7 @@ const Home = () => {
   const getTransforms = () => {
     if (screenWidth < 590) {
       return {
-        videoElem: useTransform(scroll, [0.58, 0.92], [0, -35]),
+        videoElem: useTransform(scroll, [0.68, 0.96], [0, -15]),
         leftImageX: useTransform(scroll, [0.86, 1], [0, -30]),
         leftImageY: useTransform(scroll, [0.86, 1], [0, -30]),
         rightImageX: useTransform(scroll, [0.86, 1], [0, 30]),
@@ -217,7 +217,7 @@ const Home = () => {
     } else if (screenWidth >= 590 && screenWidth < 640) {
       // Tablet (md: 768px and above in Tailwind)
       return {
-        videoElem: useTransform(scroll, [0.61, 0.94], [0, -35]),
+        videoElem: useTransform(scroll, [0.69, 0.97], [0, -25]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
@@ -225,7 +225,7 @@ const Home = () => {
       };
     } else if (screenWidth >= 640 && screenWidth < 768) {
       return {
-        videoElem: useTransform(scroll, [0.65, 0.96], [0, -35]),
+        videoElem: useTransform(scroll, [0.71, 0.98], [0, -25]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
@@ -234,7 +234,7 @@ const Home = () => {
     } else if (screenWidth >= 768 && screenWidth < 1024) {
       // Tablet (md: 768px and above in Tailwind)
       return {
-        videoElem: useTransform(scroll, [0.66, 0.9], [0, -60]),
+        videoElem: useTransform(scroll, [0.66, 0.92], [75, -75]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
@@ -243,7 +243,7 @@ const Home = () => {
     } else if (screenWidth >= 1024 && screenWidth < 1280) {
       // Desktop (lg: 1024px and above in Tailwind)
       return {
-        videoElem: useTransform(scroll, [0.69, 0.9], [0, -105]),
+        videoElem: useTransform(scroll, [0.73, 0.9], [100, -100]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -50]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -50]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 50]),
@@ -251,7 +251,7 @@ const Home = () => {
       };
     } else {
       return {
-        videoElem: useTransform(scroll, [0.69, 0.9], [0, -110]),
+        videoElem: useTransform(scroll, [0.73, 0.9], [200, -200]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -60]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -60]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 60]),
@@ -371,7 +371,7 @@ const Home = () => {
         marqueeWithNumber={true}
       />
       {/* ForwardThinking */}
-      <section className="h-fit w-[95%] mx-auto mt-12 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-36 flex flex-col md:flex-row justify-evenly text-white relative">
+      <section className="h-fit w-[95%] mx-auto mt-12 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-36 flex flex-col md:flex-row gap-5 justify-evenly text-white relative">
         <div>
           <pre
             style={{
@@ -394,27 +394,27 @@ const Home = () => {
             <Button text={"News & Insights"} bgColor="transparent" />
           </div>
         </div>
-        <motion.span
+        <motion.div
           style={{ y: videoElem }}
-          className="mt-5 flex flex-col gap-5 relative"
+          className="mx-auto w-32 sm:w-40 md:w-64 lg:w-72 xl:w-96 border border-purple-700"
         >
           <video
             autoPlay
             muted
             loop
             src="/src/assets/videos/Refokus-2022.webm"
-            className="h-60 sm:h-64 md:h-72 lg:h-96 xl:h-[70vh] mx-auto object-cover rounded-xl lg:rounded-2xl relative"
+            className="w-32 sm:w-40 md:w-64 lg:w-72 xl:w-96 object-cover rounded-md sm:rounded-lg md:rounded-xl xl:rounded-2xl"
           ></video>
           <p
             style={{
               lineHeight: "1",
             }}
-            className="text-white text-sm sm:text-base md:text-base xl:text-xl text-center tracking-wider"
+            className="mt-3 text-white text-xs sm:text-sm md:text-base xl:text-xl text-center tracking-wider"
           >
             Refokus 2022 Offsite Where Work Meets Play, Innovation, and Homemade
             Pasta.
           </p>
-        </motion.span>
+        </motion.div>
       </section>
       <section className="h-[45vh] sm-custom:h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] w-[95%] mx-auto mt-5 sm:mt-8 md:mt-9 lg:mt-11 xl:mt-12 text-white relative">
         <motion.div
