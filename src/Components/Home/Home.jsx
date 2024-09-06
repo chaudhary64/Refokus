@@ -208,24 +208,24 @@ const Home = () => {
   const getTransforms = () => {
     if (screenWidth < 590) {
       return {
-        videoElem: useTransform(scroll, [0.68, 0.96], [0, -15]),
+        videoElem: useTransform(scroll, [0.68, 1], [0, -25]),
         leftImageX: useTransform(scroll, [0.86, 1], [0, -30]),
         leftImageY: useTransform(scroll, [0.86, 1], [0, -30]),
-        rightImageX: useTransform(scroll, [0.86, 1], [0, 30]),
-        rightImageY: useTransform(scroll, [0.86, 1], [0, -30]),
+        rightImageX: useTransform(scroll, [0.86, 1], [0, 15]),
+        rightImageY: useTransform(scroll, [0.86, 1], [0, -15]),
       };
     } else if (screenWidth >= 590 && screenWidth < 640) {
       // Tablet (md: 768px and above in Tailwind)
       return {
-        videoElem: useTransform(scroll, [0.69, 0.97], [0, -25]),
+        videoElem: useTransform(scroll, [0.69, 1], [0, -30]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
-        rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
-        rightImageY: useTransform(scroll, [0.87, 1], [0, -30]),
+        rightImageX: useTransform(scroll, [0.87, 1], [0, 25]),
+        rightImageY: useTransform(scroll, [0.87, 1], [0, -25]),
       };
     } else if (screenWidth >= 640 && screenWidth < 768) {
       return {
-        videoElem: useTransform(scroll, [0.71, 0.98], [0, -25]),
+        videoElem: useTransform(scroll, [0.72, 1], [0, -35]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
@@ -234,7 +234,7 @@ const Home = () => {
     } else if (screenWidth >= 768 && screenWidth < 1024) {
       // Tablet (md: 768px and above in Tailwind)
       return {
-        videoElem: useTransform(scroll, [0.66, 0.92], [75, -75]),
+        videoElem: useTransform(scroll, [0.73, 0.92], [80, -80]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -30]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -30]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 30]),
@@ -243,7 +243,7 @@ const Home = () => {
     } else if (screenWidth >= 1024 && screenWidth < 1280) {
       // Desktop (lg: 1024px and above in Tailwind)
       return {
-        videoElem: useTransform(scroll, [0.73, 0.9], [100, -100]),
+        videoElem: useTransform(scroll, [0.75, 0.94], [100, -100]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -50]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -50]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 50]),
@@ -251,7 +251,7 @@ const Home = () => {
       };
     } else {
       return {
-        videoElem: useTransform(scroll, [0.73, 0.9], [200, -200]),
+        videoElem: useTransform(scroll, [0.76, 0.97], [150, -150]),
         leftImageX: useTransform(scroll, [0.87, 1], [0, -60]),
         leftImageY: useTransform(scroll, [0.87, 1], [0, -60]),
         rightImageX: useTransform(scroll, [0.87, 1], [0, 60]),
@@ -390,13 +390,13 @@ const Home = () => {
             Redefining the creative world with design, innovation, and
             forward-thinking as a leading Webflow Agency.
           </p>
-          <div className="h-fit w-fit mx-auto xl:pl-20 mt-4 md:mt-7 lg:mt-6 xl:mt-8">
+          <div className="h-fit w-fit mx-auto xl:pl-20 mt-3 lg:mt-4 xl:mt-5">
             <Button text={"News & Insights"} bgColor="transparent" />
           </div>
         </div>
         <motion.div
           style={{ y: videoElem }}
-          className="mx-auto w-32 sm:w-40 md:w-64 lg:w-72 xl:w-96 border border-purple-700"
+          className="mx-auto w-32 sm:w-40 md:w-64 lg:w-72 xl:w-96"
         >
           <video
             autoPlay
@@ -416,7 +416,7 @@ const Home = () => {
           </p>
         </motion.div>
       </section>
-      <section className="h-[45vh] sm-custom:h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] w-[95%] mx-auto mt-5 sm:mt-8 md:mt-9 lg:mt-11 xl:mt-12 text-white relative">
+      <section className="h-[45vh] sm-custom:h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] w-[95%] mx-auto mt-12 sm:mt-16 lg:mt-11 xl:mt-12 mb-[-8vh] sm:mb-[-16vh] xl:mb-[-30vh] text-white relative">
         <motion.div
           style={{ y: leftImageY, x: leftImageX }}
           className="w-28 sm-custom:w-32 sm:w-36 md:w-40 lg:w-44 xl:w-60 absolute left-[7%] sm-custom:left-[3%] top-0"
