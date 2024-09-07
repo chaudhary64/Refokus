@@ -224,6 +224,7 @@ const Work = () => {
         marqueeWithNumber={true}
       />
       {/* <SliderSection /> */}
+      <SliderSection />
       <section
         id="BrandMarquees"
         className="mt-10 sm:mt-12 md:mt-14 lg:mt-16 xl:mt-20 flex flex-col gap-1.5 sm:gap-2.5 md:gap-3 lg:gap-4 xl:gap-4.5"
