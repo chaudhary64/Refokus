@@ -201,11 +201,16 @@ const Work = () => {
   };
   return (
     <>
-      <section className="h-[90vh] w-full py-5 flex flex-col justify-end items-center gap-10 relative overflow-hidden">
-        <p className="text-[37vw] font-[Raleway-Medium] text-white font-thin tracking-tight leading-[0.8] select-none overflow-hidden">
+      <section className="h-fit w-full xl:py-5 mt-2 sm-custom:mt-3 sm:mt-9 md:mt-10 flex flex-col items-center gap-1 sm-custom:gap-3 sm:gap-3.5 lg:gap-4 xl:gap-10 relative overflow-hidden">
+        <p
+          style={{
+            lineHeight: "0.8",
+          }}
+          className="text-[150px] sm-custom:text-[210px] sm:text-[260px] md:text-[310px] lg:text-[410px] xl:text-[560px] font-[Raleway-Medium] text-white font-thin tracking-tight select-none overflow-hidden"
+        >
           work
         </p>
-        <p className="text-2xl text-[#646464] font-[SmoochSans-Light]">
+        <p className="text-sm sm-custom:text-base sm:text-lg md:text-xl xl:text-2xl tracking-wider sm-custom:tracking-widest text-[#646464] font-[SmoochSans-Light]">
           Web Design, Webflow Development, Creative Development
         </p>
         {/* Rendering the images on scroll */}
@@ -223,7 +228,6 @@ const Work = () => {
         marqueeDataWithNumber={marqueeDataWithNumber}
         marqueeWithNumber={true}
       />
-      {/* <SliderSection /> */}
       <SliderSection />
       <section
         id="BrandMarquees"
