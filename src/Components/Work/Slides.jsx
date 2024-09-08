@@ -58,16 +58,25 @@ const Slides = ({
         backgroundColor: hide ? "" : bgColor,
         transition: "all 0.8s cubic-bezier(.86,0,.07,1)",
       }}
-      className="h-[37vh] w-full px-20 font-[Satoshi-Regular] flex justify-between items-center hover:scale-y-[1.05]"
+      className="h-[25vh] sm:h-[20vh] md:h-[25vh] lg:h-[30vh] xl:h-[35vh] w-full font-[Satoshi-Regular] flex justify-between items-center hover:scale-y-[1.05]"
     >
-      <span className="flex text-white w-[65%] text-5xl pointer-events-none">
+      <span className="flex text-white text-[16px] sm-custom:text-2xl lg:text-3xl xl:text-5xl pointer-events-none">
         <p>{heading}</p>
       </span>
-      <div className="w-[35%] flex flex-col justify-evenly gap-5 pointer-events-none">
-        <p className="text-white text-[18px] w-[69%]">{description}</p>
+      <div className="w-[38%] flex flex-col justify-evenly gap-1.5 sm:gap-2 pointer-events-none">
+        <p
+          style={{
+            lineHeight: "1.1",
+          }}
+          className="text-white text-[10px] sm:text-[11px] lg:text-xs xl:text-sm xl:w-[70%]"
+        >
+          {description}
+        </p>
         <span
           style={{ transition: "opacity 0.3s linear" }}
-          className={`flex gap-5 ${hide ? "opacity-0" : "opacity-1"}`}
+          className={`flex flex-wrap gap-1 xl:gap-5 ${
+            hide ? "opacity-0" : "opacity-1"
+          }`}
         >
           <Button />
           {caseStudy && <Button text={"Case Study"} />}

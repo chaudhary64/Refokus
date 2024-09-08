@@ -301,7 +301,7 @@ const SliderSection = () => {
   );
 
   return (
-    <section id="sliderSection" className="w-full mt-[14vh] relative">
+    <section id="sliderSection" className="w-[95%] mx-auto mt-[14vh] relative border-2">
       {data.map((slide) => {
         return (
           <Slides
