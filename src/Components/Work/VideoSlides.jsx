@@ -20,7 +20,7 @@ const VideoSlides = ({ src, id, videoSlidesControls, play }) => {
         autoPlay={play}
         loop
         muted
-        className="h-full w-full pointer-events-none object-cover rounded-3xl"
+        className="h-full w-full pointer-events-none object-cover rounded-lg md:rounded-xl lg:rounded-2xl"
       ></motion.video>
     </>
   );

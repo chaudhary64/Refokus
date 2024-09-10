@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import Slides from "./Slides";
 import VideoSlides from "./VideoSlides";
-import { motion, useTransform, useMotionValue } from "framer-motion";
-import { useAnimation } from "framer-motion";
-import { useAnimate } from "framer-motion";
+import {
+  motion,
+  useTransform,
+  useMotionValue,
+  useAnimation,
+} from "framer-motion";
 
-const SliderSection = () => {
+const SliderSection = ({ screenWidth }) => {
   const data = [
     {
       id: 1,
@@ -275,9 +278,31 @@ const SliderSection = () => {
 
   // This function is used to move the video wrapper to the corresponding slide and it was called in the Slides component so we need to pass it as a prop to the Slides component
   const MoveVideoWrapper = async (id) => {
-    await Wrappercontrols.start({
-      top: `${id * 37}vh`,
-    });
+    if (screenWidth < 590) {
+      await Wrappercontrols.start({
+        top: `${id * 25}vh`,
+      });
+    } else if (screenWidth >= 590 && screenWidth < 640) {
+      await Wrappercontrols.start({
+        top: `${id * 25}vh`,
+      });
+    } else if (screenWidth >= 640 && screenWidth < 768) {
+      await Wrappercontrols.start({
+        top: `${id * 20}vh`,
+      });
+    } else if (screenWidth >= 768 && screenWidth < 1024) {
+      await Wrappercontrols.start({
+        top: `${id * 25}vh`,
+      });
+    } else if (screenWidth >= 1024 && screenWidth < 1280) {
+      await Wrappercontrols.start({
+        top: `${id * 30}vh`,
+      });
+    } else {
+      await Wrappercontrols.start({
+        top: `${id * 35}vh`,
+      });
+    }
     videoSlidesControls.start(
       { y: `-${(id - 1) * 100}%` },
       { duration: 0.25, ease: "easeInOut" }
@@ -293,32 +318,38 @@ const SliderSection = () => {
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
+
   const xMoveVideoWrapper = useTransform(x, [-0.5, 0, 0.5], [-100, 0, 100]);
   const yMoveVideoWrapper = useTransform(
     y,
     [-0.5, 0, 0.5],
-    ["-95%", "-85%", "-75%"]
+    ["-150%", "-100%", "-50%"]
   );
 
   return (
-    <section id="sliderSection" className="w-[95%] mx-auto mt-[14vh] relative border-2">
-      {data.map((slide) => {
-        return (
-          <Slides
-            key={slide.id}
-            id={slide.id}
-            heading={slide.heading}
-            description={slide.description}
-            caseStudy={slide.caseStudy}
-            bgColor={slide.bgColor}
-            MoveVideoWrapper={MoveVideoWrapper}
-            setVideoData={setVideoData}
-            opacityController={opacityController}
-            x={x}
-            y={y}
-          />
-        );
-      })}
+    <section
+      id="sliderSection"
+      className="w-full mt-[14vh] relative"
+    >
+      <div className="slidesContainer">
+        {data.map((slide) => {
+          return (
+            <Slides
+              key={slide.id}
+              id={slide.id}
+              heading={slide.heading}
+              description={slide.description}
+              caseStudy={slide.caseStudy}
+              bgColor={slide.bgColor}
+              MoveVideoWrapper={MoveVideoWrapper}
+              setVideoData={setVideoData}
+              opacityController={opacityController}
+              x={x}
+              y={y}
+            />
+          );
+        })}
+      </div>
       <span
         id="videoSlidesWrapper"
         className="inline-block absolute inset-0 pointer-events-none"
@@ -328,11 +359,10 @@ const SliderSection = () => {
           animate={Wrappercontrols}
           id="videoSlidesWrapperContainer"
           style={{
-            top: "37vh",
             x: xMoveVideoWrapper,
             y: yMoveVideoWrapper,
           }}
-          className="h-[50vh] w-fit absolute left-[30%] flex flex-col pointer-events-none rounded-3xl overflow-hidden"
+          className="h-[25vh] sm:h-[20vh] md:h-[25vh] lg:h-[30vh] xl:h-[35vh] w-fit absolute left-[30%] top-[25vh] sm:top-[20vh] md:top-[25vh] lg:top-[35vh] xl:top-[35vh] flex flex-col pointer-events-none rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden border-2"
         >
           {videoData.map((item) => {
             return (

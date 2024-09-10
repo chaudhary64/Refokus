@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Marquees from "../Marquee/Marquees";
 import SliderSection from "./SliderSection";
 import Cards from "../Cards/Cards";
@@ -163,6 +163,17 @@ const Work = () => {
   const [images, setImages] = useState(imagesData);
   const { scrollYProgress } = useScroll();
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useMotionValueEvent(scrollYProgress, "change", () => showImages());
 
   const showImages = () => {
@@ -228,7 +239,7 @@ const Work = () => {
         marqueeDataWithNumber={marqueeDataWithNumber}
         marqueeWithNumber={true}
       />
-      <SliderSection />
+      <SliderSection screenWidth={screenWidth} />
       <section
         id="BrandMarquees"
         className="mt-10 sm:mt-12 md:mt-14 lg:mt-16 xl:mt-20 flex flex-col gap-1.5 sm:gap-2.5 md:gap-3 lg:gap-4 xl:gap-4.5"
