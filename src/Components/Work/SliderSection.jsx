@@ -327,10 +327,7 @@ const SliderSection = ({ screenWidth }) => {
   );
 
   return (
-    <section
-      id="sliderSection"
-      className="w-full mt-[14vh] relative"
-    >
+    <section id="sliderSection" className="w-full mt-[14vh] relative">
       <div className="slidesContainer">
         {data.map((slide) => {
           return (
@@ -362,7 +359,7 @@ const SliderSection = ({ screenWidth }) => {
             x: xMoveVideoWrapper,
             y: yMoveVideoWrapper,
           }}
-          className="h-[25vh] sm:h-[20vh] md:h-[25vh] lg:h-[30vh] xl:h-[35vh] w-fit absolute left-[30%] top-[25vh] sm:top-[20vh] md:top-[25vh] lg:top-[35vh] xl:top-[35vh] flex flex-col pointer-events-none rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden border-2"
+          className="h-[25vh] sm:h-[20vh] md:h-[25vh] lg:h-[30vh] xl:h-[35vh] w-fit absolute left-[30%] top-[25vh] sm:top-[20vh] md:top-[25vh] lg:top-[35vh] xl:top-[35vh] flex flex-col pointer-events-none rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden"
         >
           {videoData.map((item) => {
             return (
