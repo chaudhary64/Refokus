@@ -121,21 +121,21 @@ const Work = () => {
       id: 1,
       src: "/src/assets/images/work/01.png",
       display: "none",
-      top: "34%",
+      top: "32%",
       left: "40%",
     },
     {
       id: 2,
       src: "/src/assets/images/work/02.png",
       display: "none",
-      top: "40%",
+      top: "38%",
       left: "37%",
     },
     {
       id: 3,
       src: "/src/assets/images/work/03.png",
       display: "none",
-      top: "28%",
+      top: "26%",
       left: "43%",
     },
     {
@@ -149,14 +149,14 @@ const Work = () => {
       id: 5,
       src: "/src/assets/images/work/05.png",
       display: "none",
-      top: "40%",
+      top: "38%",
       left: "45%",
     },
     {
       id: 6,
       src: "/src/assets/images/work/06.png",
       display: "none",
-      top: "39%",
+      top: "37%",
       left: "40%",
     },
   ];
@@ -174,41 +174,210 @@ const Work = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useMotionValueEvent(scrollYProgress, "change", () => showImages());
+  useMotionValueEvent(scrollYProgress, "change", () => {
+    showImages();
+  });
 
   const showImages = () => {
-    let scroll = Math.round(scrollYProgress.get() * 100);
-    setImages((prevImages) => {
-      return prevImages.map((image) => {
-        if (scroll >= 0 && scroll < 1) {
-          return { ...image, display: "none" };
-        } else if (image.id === 1 && scroll >= 1 && scroll) {
-          return { ...image, display: "inline-block" };
-        } else if (image.id === 2 && scroll <= 2) {
-          return { ...image, display: "none" };
-        } else if (image.id === 2 && scroll >= 2) {
-          return { ...image, display: "inline-block" };
-        } else if (image.id === 3 && scroll <= 3) {
-          return { ...image, display: "none" };
-        } else if (image.id === 3 && scroll >= 3) {
-          return { ...image, display: "inline-block" };
-        } else if (image.id === 4 && scroll <= 4) {
-          return { ...image, display: "none" };
-        } else if (image.id === 4 && scroll >= 4) {
-          return { ...image, display: "inline-block" };
-        } else if (image.id === 5 && scroll <= 5) {
-          return { ...image, display: "none" };
-        } else if (image.id === 5 && scroll >= 5) {
-          return { ...image, display: "inline-block" };
-        } else if (image.id === 6 && scroll <= 6) {
-          return { ...image, display: "none" };
-        } else if (image.id === 6 && scroll >= 6) {
-          return { ...image, display: "inline-block" };
-        } else {
-          return image;
-        }
+    let scroll = scrollYProgress.get() * 100;
+    if (screenWidth < 590) {
+      return setImages((prevImages) => {
+        return prevImages.map((image) => {
+          if (scroll >= 0 && scroll < 0.58) {
+            return { ...image, display: "none" };
+          } else if (image.id === 1 && scroll >= 0.58) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 2 && scroll <= 1.16) {
+            return { ...image, display: "none" };
+          } else if (image.id === 2 && scroll >= 1.16) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 3 && scroll <= 1.74) {
+            return { ...image, display: "none" };
+          } else if (image.id === 3 && scroll >= 1.74) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 4 && scroll <= 2.32) {
+            return { ...image, display: "none" };
+          } else if (image.id === 4 && scroll >= 2.32) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 5 && scroll <= 2.9) {
+            return { ...image, display: "none" };
+          } else if (image.id === 5 && scroll >= 2.9) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 6 && scroll <= 3.48) {
+            return { ...image, display: "none" };
+          } else if (image.id === 6 && scroll >= 3.48) {
+            return { ...image, display: "inline-block" };
+          } else {
+            return image;
+          }
+        });
       });
-    });
+    } else if (screenWidth >= 590 && screenWidth < 640) {
+      // Tablet (md: 768px and above in Tailwind)
+      return setImages((prevImages) => {
+        return prevImages.map((image) => {
+          if (scroll >= 0 && scroll < 0.93) {
+            return { ...image, display: "none" };
+          } else if (image.id === 1 && scroll >= 0.93) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 2 && scroll <= 1.86) {
+            return { ...image, display: "none" };
+          } else if (image.id === 2 && scroll >= 1.86) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 3 && scroll <= 2.79) {
+            return { ...image, display: "none" };
+          } else if (image.id === 3 && scroll >= 2.79) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 4 && scroll <= 3.72) {
+            return { ...image, display: "none" };
+          } else if (image.id === 4 && scroll >= 3.72) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 5 && scroll <= 4.65) {
+            return { ...image, display: "none" };
+          } else if (image.id === 5 && scroll >= 4.65) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 6 && scroll <= 5.58) {
+            return { ...image, display: "none" };
+          } else if (image.id === 6 && scroll >= 5.58) {
+            return { ...image, display: "inline-block" };
+          } else {
+            return image;
+          }
+        });
+      });
+    } else if (screenWidth >= 640 && screenWidth < 768) {
+      // Tablet (md: 768px and above in Tailwind)
+      return setImages((prevImages) => {
+        return prevImages.map((image) => {
+          if (scroll >= 0 && scroll < 1.47) {
+            return { ...image, display: "none" };
+          } else if (image.id === 1 && scroll >= 1.47) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 2 && scroll <= 2.94) {
+            return { ...image, display: "none" };
+          } else if (image.id === 2 && scroll >= 2.94) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 3 && scroll <= 3) {
+            return { ...image, display: "none" };
+          } else if (image.id === 3 && scroll >= 3) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 4 && scroll <= 4.41) {
+            return { ...image, display: "none" };
+          } else if (image.id === 4 && scroll >= 4.41) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 5 && scroll <= 5.88) {
+            return { ...image, display: "none" };
+          } else if (image.id === 5 && scroll >= 5.88) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 6 && scroll <= 6.35) {
+            return { ...image, display: "none" };
+          } else if (image.id === 6 && scroll >= 6.35) {
+            return { ...image, display: "inline-block" };
+          } else {
+            return image;
+          }
+        });
+      });
+    } else if (screenWidth >= 768 && screenWidth < 1024) {
+      // Tablet (md: 768px and above in Tailwind)
+      return setImages((prevImages) => {
+        return prevImages.map((image) => {
+          if (scroll >= 0 && scroll < 1.49) {
+            return { ...image, display: "none" };
+          } else if (image.id === 1 && scroll >= 1.49) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 2 && scroll <= 2.98) {
+            return { ...image, display: "none" };
+          } else if (image.id === 2 && scroll >= 2.98) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 3 && scroll <= 4.47) {
+            return { ...image, display: "none" };
+          } else if (image.id === 3 && scroll >= 4.47) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 4 && scroll <= 5.96) {
+            return { ...image, display: "none" };
+          } else if (image.id === 4 && scroll >= 5.96) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 5 && scroll <= 7.45) {
+            return { ...image, display: "none" };
+          } else if (image.id === 5 && scroll >= 7.45) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 6 && scroll <= 8.94) {
+            return { ...image, display: "none" };
+          } else if (image.id === 6 && scroll >= 8.94) {
+            return { ...image, display: "inline-block" };
+          } else {
+            return image;
+          }
+        });
+      });
+    } else if (screenWidth >= 1024 && screenWidth < 1280) {
+      // Desktop (lg: 1024px and above in Tailwind)
+      return setImages((prevImages) => {
+        return prevImages.map((image) => {
+          if (scroll >= 0 && scroll < 1.5) {
+            return { ...image, display: "none" };
+          } else if (image.id === 1 && scroll >= 1.5) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 2 && scroll <= 3) {
+            return { ...image, display: "none" };
+          } else if (image.id === 2 && scroll >= 3) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 3 && scroll <= 4.5) {
+            return { ...image, display: "none" };
+          } else if (image.id === 3 && scroll >= 4.5) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 4 && scroll <= 6) {
+            return { ...image, display: "none" };
+          } else if (image.id === 4 && scroll >= 6) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 5 && scroll <= 7.5) {
+            return { ...image, display: "none" };
+          } else if (image.id === 5 && scroll >= 7.5) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 6 && scroll <= 9) {
+            return { ...image, display: "none" };
+          } else if (image.id === 6 && scroll >= 9) {
+            return { ...image, display: "inline-block" };
+          } else {
+            return image;
+          }
+        });
+      });
+    } else {
+      // For any other large screen size screenWidth >= 1280
+      return setImages((prevImages) => {
+        return prevImages.map((image) => {
+          if (scroll >= 0 && scroll < 1.48) {
+            return { ...image, display: "none" };
+          } else if (image.id === 1 && scroll >= 1.48) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 2 && scroll <= 2.98) {
+            return { ...image, display: "none" };
+          } else if (image.id === 2 && scroll >= 2.98) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 3 && scroll <= 4.8) {
+            return { ...image, display: "none" };
+          } else if (image.id === 3 && scroll >= 4.8) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 4 && scroll <= 5.8) {
+            return { ...image, display: "none" };
+          } else if (image.id === 4 && scroll >= 5.8) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 5 && scroll <= 7.3) {
+            return { ...image, display: "none" };
+          } else if (image.id === 5 && scroll >= 7.3) {
+            return { ...image, display: "inline-block" };
+          } else if (image.id === 6 && scroll <= 8.8) {
+            return { ...image, display: "none" };
+          } else if (image.id === 6 && scroll >= 8.8) {
+            return { ...image, display: "inline-block" };
+          } else {
+            return image;
+          }
+        });
+      });
+    }
   };
   return (
     <>
