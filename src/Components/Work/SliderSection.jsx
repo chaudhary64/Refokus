@@ -327,7 +327,10 @@ const SliderSection = ({ screenWidth }) => {
   );
 
   return (
-    <section id="sliderSection" className="w-full mt-[14vh] relative">
+    <section
+      id="sliderSection"
+      className="w-full mt-10 md:mt-12 lg:mt-14 xl:mt-20 relative"
+    >
       <div className="slidesContainer">
         {data.map((slide) => {
           return (
