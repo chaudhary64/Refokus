@@ -531,7 +531,7 @@ const About = () => {
         {/* ImageContainer */}
         <div className="absolute z-[-1] inset-0 overflow-hidden">
           <motion.img
-            src="/src/assets/images/about/01.webp"
+            src="/assets/images/about/01.webp"
             style={{
               top: "1%",
               left: image1Left,
@@ -541,7 +541,7 @@ const About = () => {
             alt="01"
           />
           <motion.img
-            src="/src/assets/images/about/02.webp"
+            src="/assets/images/about/02.webp"
             style={{
               top: imageTop,
               right: "4%",
@@ -551,7 +551,7 @@ const About = () => {
             alt="02"
           />
           <motion.img
-            src="/src/assets/images/about/11.webp"
+            src="/assets/images/about/11.webp"
             style={{
               top: image11Top,
               left: image11Left,
@@ -561,7 +561,7 @@ const About = () => {
             alt="11"
           />
           <motion.img
-            src="/src/assets/images/about/04.png"
+            src="/assets/images/about/04.png"
             style={{
               top: image4Top,
               left: "34%",
@@ -571,7 +571,7 @@ const About = () => {
             alt="04"
           />
           <motion.img
-            src="/src/assets/images/about/05.webp"
+            src="/assets/images/about/05.webp"
             style={{
               top: image5Top,
               right: image5Right,
@@ -581,7 +581,7 @@ const About = () => {
             alt="05"
           />
           <motion.img
-            src="/src/assets/images/about/06.webp"
+            src="/assets/images/about/06.webp"
             style={{
               left: image6Left,
               scale: image6Scale,
@@ -590,7 +590,7 @@ const About = () => {
             alt="06"
           />
           <motion.img
-            src="/src/assets/images/about/07.png"
+            src="/assets/images/about/07.png"
             style={{
               top: image7Top,
               left: image7Left,
@@ -611,7 +611,7 @@ const About = () => {
         {/* ImagesHolder */}
         <div className="inset-0 absolute z-1 ">
           <motion.img
-            src="/src/assets/images/about/03.webp"
+            src="/assets/images/about/03.webp"
             style={{
               top: image3Top,
             }}
@@ -619,7 +619,7 @@ const About = () => {
             alt="03"
           />
           <motion.img
-            src="/src/assets/images/about/09.webp"
+            src="/assets/images/about/09.webp"
             style={{
               top: image9Top,
               right: image9Right,
@@ -628,7 +628,7 @@ const About = () => {
             alt="09"
           />
           <motion.img
-            src="/src/assets/images/about/10.png"
+            src="/assets/images/about/10.png"
             style={{
               top: image10Top,
             }}
@@ -636,7 +636,7 @@ const About = () => {
             alt="10"
           />
           <motion.img
-            src="/src/assets/images/about/08.webp"
+            src="/assets/images/about/08.webp"
             style={{
               left: image8Left,
             }}
@@ -644,7 +644,7 @@ const About = () => {
             alt="08"
           />
           <motion.img
-            src="/src/assets/images/about/12.webp"
+            src="/assets/images/about/12.webp"
             style={{
               left: image12Left,
             }}
@@ -667,13 +667,13 @@ const About = () => {
           <motion.img
             style={{ scale: sideItemsScale, rotateY: sideRotation }}
             className="h-[40%] shrink-0"
-            src="/src/assets/images/about/13.webp"
+            src="/assets/images/about/13.webp"
             alt="13"
           />
           <motion.img
             style={{ scale: sideItemsScale, rotateY: sideRotation }}
             className="h-[65%] shrink-0"
-            src="/src/assets/images/about/14.webp"
+            src="/assets/images/about/14.webp"
             alt="14"
           />
           <motion.div
@@ -684,20 +684,20 @@ const About = () => {
               autoPlay
               muted
               loop
-              src="/src/assets/videos/AboutPageVideo.webm"
+              src="/assets/videos/AboutPageVideo.webm"
               className="h-full w-full object-cover rounded-lg sm:rounded-2xl lg:rounded-3xl"
             ></video>
           </motion.div>
           <motion.img
             style={{ scale: sideItemsScale, rotateY: sideRotation }}
             className="h-[65%] shrink-0"
-            src="/src/assets/images/about/15.webp"
+            src="/assets/images/about/15.webp"
             alt="15"
           />
           <motion.img
             style={{ scale: sideItemsScale, rotateY: sideRotation }}
             className="h-[40%] shrink-0"
-            src="/src/assets/images/about/16.webp"
+            src="/assets/images/about/16.webp"
             alt="16"
           />
         </div>
@@ -729,7 +729,7 @@ const About = () => {
       <section id="Steffi&Leo" className="mt-10 sm:mt-12 md:mt-14 lg:mt-16">
         <img
           className="h-28 sm-custom:h-32 sm:h-36 md:h-40 lg:h-52 xl:h-80 ml-8 lg:ml-10"
-          src="/src/assets/images/about/17.png"
+          src="/assets/images/about/17.png"
           alt=""
         />
         <div className="mt-5 lg:mt-10 text-white px-10 lg:px-20 flex justify-between items-center">

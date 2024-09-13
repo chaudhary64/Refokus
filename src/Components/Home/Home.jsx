@@ -126,9 +126,9 @@ const Home = () => {
     {
       id: 1,
       heading: "ARQITEL",
-      img1: "/src/assets/images/home/1u.webp",
-      img2: "/src/assets/images/home/1l.webp",
-      video: "/src/assets/videos/Arqitel.webm",
+      img1: "/assets/images/home/1u.webp",
+      img2: "/assets/images/home/1l.webp",
+      video: "/assets/videos/Arqitel.webm",
       bgColor: "#5355EE",
       rightUpperText: "Concept, Design, 3D, Webflow+WebGL Development",
       rightLowerText:
@@ -137,9 +137,9 @@ const Home = () => {
     {
       id: 2,
       heading: "Cula",
-      img1: "/src/assets/images/home/2u.png",
-      img2: "/src/assets/images/home/2l.png",
-      video: "/src/assets/videos/Cula.mp4",
+      img1: "/assets/images/home/2u.png",
+      img2: "/assets/images/home/2l.png",
+      video: "/assets/videos/Cula.mp4",
       bgColor: "#4A576B",
       rightUpperText: "Concept, Design, 3D, Webflow+WebGL Development",
       rightLowerText:
@@ -148,9 +148,9 @@ const Home = () => {
     {
       id: 3,
       heading: "INTENSEYE",
-      img1: "/src/assets/images/home/3u.webp",
-      img2: "/src/assets/images/home/3l.webp",
-      video: "/src/assets/videos/Intenseye.webm",
+      img1: "/assets/images/home/3u.webp",
+      img2: "/assets/images/home/3l.webp",
+      video: "/assets/videos/Intenseye.webm",
       bgColor: "#1626F3",
       rightUpperText: "Concept, Design, Webflow Development",
       rightLowerText:
@@ -159,9 +159,9 @@ const Home = () => {
     {
       id: 4,
       heading: "TTR",
-      img1: "/src/assets/images/home/4u.jpg",
-      img2: "/src/assets/images/home/4l.jpg",
-      video: "/src/assets/videos/TTR.webm",
+      img1: "/assets/images/home/4u.jpg",
+      img2: "/assets/images/home/4l.jpg",
+      video: "/assets/videos/TTR.webm",
       bgColor: "#4A576B",
       rightUpperText:
         "Concept, Design, 3D, Webflow+WebGL Development, AI Integrations",
@@ -171,9 +171,9 @@ const Home = () => {
     {
       id: 5,
       heading: "Maniv",
-      img1: "/src/assets/images/home/5u.png",
-      img2: "/src/assets/images/home/5l.png",
-      video: "/src/assets/videos/Maniv.mp4",
+      img1: "/assets/images/home/5u.png",
+      img2: "/assets/images/home/5l.png",
+      video: "/assets/videos/Maniv.mp4",
       bgColor: "#2DCB76",
       rightUpperText: "Branding, Design, Webflow+GSAP Development",
       rightLowerText:
@@ -182,9 +182,9 @@ const Home = () => {
     {
       id: 6,
       heading: "SILVR",
-      img1: "/src/assets/images/home/6u.jpg",
-      img2: "/src/assets/images/home/6l.jpg",
-      video: "/src/assets/videos/Silvr.webm",
+      img1: "/assets/images/home/6u.jpg",
+      img2: "/assets/images/home/6l.jpg",
+      video: "/assets/videos/Silvr.webm",
       bgColor: "#FF7548",
       rightUpperText: "Design, Webflow Development",
       rightLowerText:
@@ -402,7 +402,7 @@ const Home = () => {
             autoPlay
             muted
             loop
-            src="/src/assets/videos/Refokus-2022.webm"
+            src="/assets/videos/Refokus-2022.webm"
             className="w-32 sm:w-40 md:w-64 lg:w-72 xl:w-96 object-cover rounded-md sm:rounded-lg md:rounded-xl xl:rounded-2xl"
           ></video>
           <p
@@ -423,7 +423,7 @@ const Home = () => {
         >
           <img
             className="w-24 sm-custom:w-28 sm:w-36 md:w-40 lg:w-44 xl:w-60 mx-auto rounded-lg xl:rounded-2xl"
-            src="/src/assets/images/about/03.webp"
+            src="/assets/images/about/03.webp"
             alt=""
           />
           <p
@@ -442,7 +442,7 @@ const Home = () => {
         >
           <img
             className="w-28 sm-custom:w-36 sm:w-44 md:w-48 lg:w-52 xl:w-80 mx-auto rounded-lg xl:rounded-2xl"
-            src="/src/assets/images/home/webflow-enterprise-partner.png"
+            src="/assets/images/home/webflow-enterprise-partner.png"
             alt=""
           />
           <p
