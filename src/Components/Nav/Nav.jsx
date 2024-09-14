@@ -13,7 +13,7 @@ const Nav = () => {
   }, [location]);
 
   return (
-    <nav className="h-[10vh] w-full sticky top-0 z-[9999] backdrop-blur-md overflow-hidden">
+    <nav className="h-[4vh] sm:h-[6vh] xl:h-[8vh] w-full sticky top-0 z-[9999] backdrop-blur-md overflow-hidden">
       <div className="h-full w-[95%] mx-auto flex justify-between items-center lg:gap-14 xl:gap-28 font-[Satoshi-Regular] backdrop-blur-md overflow-hidden">
         {/* Refokus Logo */}
         <svg
